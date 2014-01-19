@@ -12,164 +12,155 @@
 	<body>
 
 		<!-- FIXED MENU -->
-		<div id="header-fixed">
-			<div class="container">
+		<div class="header-fixed">
+			<div class="wrapper">
 				<img src="img/logo.gif" alt="Iris Theatre Logo" width="55px" height="55px">
-				<nav id="nav-fixed">
+				<nav class="nav-fixed">
 				</nav>
 			</div>		
 		</div>
 
-		<!-- PAGE WRAPPER -->
-		<div class="page-wrapping">
 
-			<!-- HEADER -->
-			<header>
-				<div class="container" id="header-wrapper">
-					<a class="a-logo" href="#"><img src="img/logo.gif" alt="Iris Theatre Logo" id="logo"></a>
-					<nav id="nav-header">
-						<ul>
-							<li><a href="#">WHAT'S ON</a></li>
-							<li><a href="#">TICKETS</a></li>
-							<li><a href="#">SCHOOLS</a></li>
-							<li><a href="#">FRIENDS</a></li>
-							<li><a href="#">CONTACT</a></li>
-						</ul>
-					</nav>
-				</div>
-				<div class="container" id="intro">
-					<h5 id="description">
-						<a href="#">Iris Theatre</a> is a dynamic young <a href="#">company</a> resident at the world famous <a href="#">Actors Church in Covent Garden.</a> 
-					</h5>
-					<i class="icon-circle" id="dot"></i>
-					<div class="quote">
-						<h5 id="text">
-							"makes one of the best-known conclusions in drama feel fresh and immediate."	
-						</h5>
-						<h5 id="name">Sally Stott</h5>
-						<h5 id="source">The Gaurdian</h5>
-					</div>
-				</div>
+		<!-- HEADER -->
+		<div class="wrapper">
+			<header class="site-header" id="header">
+				<a class="logo__link" href="#"><img class="logo" src="img/logo.gif" alt="Iris Theatre Logo"></a>
+				<nav class="nav-main">
+					<ul class="nav-main__items">
+						<li class="nav-main__item"><a class="main-main__link" href="#">WHAT'S ON</a></li>
+						<li class="nav-main__item"><a class="main-main__link" href="#">TICKETS</a></li>
+						<li class="nav-main__item"><a class="main-main__link" href="#">SCHOOLS</a></li>
+						<li class="nav-main__item"><a class="main-main__link" href="#">FRIENDS</a></li>
+						<li class="nav-main__item"><a class="main-main__link" href="#">CONTACT</a></li>
+					</ul>
+				</nav>
 			</header>
+		</div>
 
-			<!-- MAIN CONTENT WRAPPER -->
-			<div class="container" id="content">
+		<div class="wrapper">
+			<!-- MAIN CONTENT -->
+			<main class="site-content" id="content">
 
-				<!-- HERO -->
-				<div id="hero">
+				<!-- MASTHEAD -->
+				<section class="masthead">
 					<a href="#"><span class="a-div"></span></a>
-					<div id="slide">
+					<div class="masthead__slide">
 					</div>
-					<div class="caption">
+					<div class="masthead__caption">
 						<h2>
 							NOW SHOWING: CIRCUIT EPISODE 2 | NOVEMBER 1ST - 10TH	
 						</h2>
 					</div>
-				</div>
+				</section>
 
-				<!-- SHOWS -->
-				<div id="shows">
-					<div class="show" id="herackles">
-						<a href="#"><span class="a-div"></span></a>
-						<div class="detail">
-							<h3 class="info">MAY 10  |  
+				<!-- SHOW-LISTING -->
+				<section class="show-listings">
+					<div class="show-listings__show show--herackles">
+						<a class="show-listing__link" href="#"><span class="link-div"></span></a>
+						<div class="show-listings__detail">
+							<h3 class="show-listings__info">MAY 10  |  
 								<i class="icon-star"></i>
 								<i class="icon-star"></i>
 								<i class="icon-star"></i>
 								<i class="icon-star"></i>
 								<i class="icon-star"></i>
 							</h3>
-							<h3>HERACKLES</h3>
+							<h3 class="show-listings__heading">HERACKLES</h3>
 						</div>
 					</div>
-					<div class="show" id="caesar">
-						<a href="#"><span class="a-div"></span></a>
-						<div class="detail">
-							<h3 class="info">JUN - JUL  |  
+					<div class="show-listings__show show--caesar">
+						<a class="show-listings__link" href="#"><span class="link-div"></span></a>
+						<div class="show-listings__detail">
+							<h3 class="show-listings__info">JUN - JUL  |  
 								<i class="icon-star"></i>
 								<i class="icon-star"></i>
 								<i class="icon-star"></i>
 								<i class="icon-star"></i>
 								<i class="icon-star"></i>
 							</h3>
-							<h3>JULIUS CAESAR</h3>
+							<h3 class="show-listings__heading">JULIUS CAESAR</h3>
 						</div>
 					</div>
-					<div class="show" id="snark">
-						<a href="#"><span class="a-div"></span></a>
-						<div class="detail">
-							<h3 class="info">SEP 1  |  
+					<div class="show-listings__show show-snark">
+						<a class="show-listings__link" href="#"><span class="link-div"></span></a>
+						<div class="show-listings__detail">
+							<h3 class="show-listings__info">SEP 1  |  
 								<i class="icon-star"></i>
 								<i class="icon-star"></i>
 								<i class="icon-star"></i>
 								<i class="icon-star"></i>
 								<i class="icon-star"></i>
 							</h3>
-							<h3>THE HUNTING OF THE SNARK</h3>
+							<h3 class="show-listings__heading">THE HUNTING OF THE SNARK</h3>
 						</div>
 					</div>
-				</div>
+				</section>
 
 				<!-- WHATS ON -->
-				<div id="whats-on">
-					<h1>WHATS ON</h1>	
-					<h4> 
-						<div id="month-1">
-							<b>JUL:</b>&nbsp;&nbsp; 19  |  <a class="a-dates" href="#"><span class="red">20</span></a>  |  21  |  <a class="a-dates" href="#"><span class="red">23</span></a>  |  <a class="a-dates" href="#"><span class="red">24</span></a>  |  <a class="a-dates" href="#"><span class="red">25</span></a>  |  26  |  27  |  28  |  29  |  30  |  31  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-						</div>
-						<div id="month-2">
-							<b>AUG:</b>&nbsp;&nbsp; 01  |  <a class="a-dates" href="#"><span class="red">02</span></a>  |  03  |  04
-						</div>
-					</h4>
-				</div>
+				<section class="calendar">
+					<h1 class="calendar__heading">WHATS ON</h1>	
+					<div class="calendar--compact">
+						<h4> 
+							<div class="calendar--compact__month-1">
+								<b>JUL:</b>&nbsp;&nbsp; 19  |  <a class="a-dates" href="#"><span class="red">20</span></a>  |  21  |  <a class="a-dates" href="#"><span class="red">23</span></a>  |  <a class="a-dates" href="#"><span class="red">24</span></a>  |  <a class="a-dates" href="#"><span class="red">25</span></a>  |  26  |  27  |  28  |  29  |  30  |  31  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							</div>
+							<div class="calendar--compact__month-2">
+								<b>AUG:</b>&nbsp;&nbsp; 01  |  <a class="a-dates" href="#"><span class="red">02</span></a>  |  03  |  04
+							</div>
+						</h4>
+					</div>
+					<div class="calendar--full">
+						
+					</div>
+				</section>
 
 				<!-- SOCIAL -->
-				<div id="social">
-					<div id="twitter">
+				<section class="social">
+					<div class="social--twitter">
 						<a class="twitter-timeline" href="https://twitter.com/Iristheatre" data-widget-id="355308937475670017" width="100%" height="500px" data-border-color="#333">Tweets by @Iristheatre</a>
 						<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 					</div>
-					<div id="facebook">
-						<iframe src="http://www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Fpages%2FIris-Theatre%2F212084672144025%3Ffref%3Dts&amp;width=470&amp;height=496&amp;colorscheme=dark&amp;show_faces=true&amp;header=false&amp;stream=true&amp;show_border=false&amp;appId=204310156318532" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:100%; height:496px;" allowTransparency="true"></iframe>
-					</div>
-				</div>
- 			</div>
- 			<!-- FOOTER  -->
-			<footer>
-				<div class="container" id="footer-wrapper">
-					<a href="#" class="a-logo"><img src="img/logo-red.gif" alt="Iris Theatre Logo" id="logo-red"></a>
-					<div id="tag-line">
-						<h5>
-							Supporting the next generation of professional theatre practitioners.
-						</h5>
-					</div>
-					<div id="social-buttons">
-						<h5>Social:	
-							&nbsp;<a href="#"><i class="icon-facebook"></i></a>
-							&nbsp;<a href="#"><i class="icon-twitter"></i></a>
-							&nbsp;<a href="#"><i class="icon-youtube-play"></i></a>
-						</h5>	
-					</div>
-					<hr>
-					<nav id="nav-footer">
-						<ul>
-							<li><a href="#">ABOUT US</a></li>
-							<li><a href="#">TICKETS</a></li>
-							<li><a href="#">SCHOOLS</a></li>
-							<li><a href="#">FRIENDS</a></li>
-							<li><a href="#">CONTACT</a></li>
-						</ul>
-					</nav>
-					<div id="copyright">
-						<h6>Copyright &copy; 2013 Iris Theatre</h6>
-						<h6>Registered Charity 1132295</h6>
-					</div>
-				</div>
-			</footer>
+					<div class="social--flickr"></div>
+				</section>
+
+			</main>
 		</div>
+
+		<!-- FOOTER  -->
+		<div class="wrapper wrapper--footer">
+		<footer class="site-footer" id="footer">
+				<a class="logo__link" href="#" class="a-logo"><img class="logo logo--red" src="img/logo-red.gif" alt="Iris Theatre Logo"></a>
+				<div class="tag-line">
+					<h5>
+						Supporting the next generation of professional theatre practitioners.
+					</h5>
+				</div>
+				<div class="social-buttons">
+					<h5 class="social-buttons__icons">Social:	
+						&nbsp;<a class="social-buttons__link" href="#"><i class="social-buttons__icon icon-facebook"></i></a>
+						&nbsp;<a class="social-buttons__link" href="#"><i class="social-buttons__icon icon-twitter"></i></a>
+						&nbsp;<a class="social-buttons__link" href="#"><i class="social-buttons__icon icon-youtube-play"></i></a>
+					</h5>	
+				</div>
+				<hr>
+				<nav class="nav-footer">
+					<ul class="nav-footer__items">
+						<li class="nav-footer__item"><a class="nav-footer__link" href="#">ABOUT US</a></li>
+						<li class="nav-footer__item"><a class="nav-footer__link" href="#">TICKETS</a></li>
+						<li class="nav-footer__item"><a class="nav-footer__link" href="#">SCHOOLS</a></li>
+						<li class="nav-footer__item"><a class="nav-footer__link" href="#">FRIENDS</a></li>
+						<li class="nav-footer__item"><a class="nav-footer__link" href="#">CONTACT</a></li>
+					</ul>
+				</nav>
+				<div class="copyright">
+					<h6 class="copyright__header">Copyright &copy; 2013 Iris Theatre</h6>
+					<h6 class="copyright__header">Registered Charity 1132295</h6>
+				</div>
+			</div>
+		</footer>
+
 		<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
 		<script src="js/waypoints.min.js"></script>
 		<script src="js/main.js"></script>
 	</body>
 </html>
-

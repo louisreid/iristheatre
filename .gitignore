@@ -11,6 +11,6 @@ sitemap.xml
 wp-content/cache/
 wp-content/backups/
 sitemap.xml.gz
-node-modules/
+node_modules/
 *.sublime-project
 *.sublime-workspace

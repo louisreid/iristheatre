@@ -1,0 +1,13 @@
+{
+  "name": "iristheatre-flat",
+  "title": "",
+  "version": "0.1.0",
+  "description": "",
+  "devDependencies": {
+    "grunt": "~0.4.2",
+    "grunt-browser-sync": "~0.4.9",
+    "grunt-concat": "~0.1.6",
+    "grunt-contrib-compass": "~0.7.0",
+    "grunt-contrib-watch": "~0.5.3"
+  }
+}

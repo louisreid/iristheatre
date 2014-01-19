@@ -1,0 +1,527 @@
+@import "normalize";
+@import "toolkit";
+
+// ************ MAIN
+
+
+.wrapper {
+	position: relative;
+	top:0; right:0; left:0;
+}
+
+.container {
+	position: relative;
+	padding: 0;
+	width:960px;
+	@include breakpoint(tab) {width:768px;}
+	@include breakpoint(mob) {
+		width:100%;
+		padding: 0; 
+	}
+	margin:0 auto;
+}
+
+.a-div {
+	position:absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	padding:0; margin:0;
+	font-weight:400;
+	font-style:normal;
+}
+
+h1 {
+	font-weight: 700;
+	font: {
+		family: 'Montserrat', sans;
+		size: 2.4375em;
+	}
+	@include breakpoint(tab) {
+	    font-size: 2em;
+	}
+	@include breakpoint(mob) {
+	    font-size: 2em;
+	}
+}
+
+h2 {
+	font: {
+		family: 'Montserrat', sans;
+		size: 1.5625em;
+	}
+	@include breakpoint(tab) {
+	    font-size: 1.4em;
+	}
+	@include breakpoint(mob) {
+	    font-size: 1em;
+	}
+}
+
+h3 {
+	font: {
+		family: 'Montserrat', sans;
+		size: 1.125em;
+	}
+	@include breakpoint(tab) {
+	    font-size: 0.9em;
+	}
+	@include breakpoint(mob) {
+		font-size: 1em;
+	 }
+}
+
+h4 {
+	font: {
+		family: 'Montserrat', sans;
+		size: 1.375em;
+	}
+	@include breakpoint(tab) {
+	    font-size: 1.09em;
+	}
+	@include breakpoint(mob) {
+	    font-size: 1.09em;
+	}
+}
+
+h5 {
+	font: {
+		family: 'Open Sans', sans;
+		size: 1.375em;
+		weight: 300;
+	}
+	@include breakpoint(tab) {
+	    font-size: 1em;
+	}
+	@include breakpoint(mob) {
+	    font-size: 1em;
+	}
+}
+
+h6 {
+	font: {
+		family: 'Open Sans', sans;
+		size: 0.875em;
+		weight: 300;
+	}
+}
+
+// ************ HEADER 
+
+header {
+	background-color: $grey;
+	z-index: 0;
+}
+
+#header-wrapper, #intro {
+	box-sizing: border-box;
+	@include breakpoint(mob) {
+		padding: 0 1.25em 0 1.25em;
+	}
+}
+
+#logo {
+	padding:1.5625em 0 1.5625em 0;
+	position: relative;
+}
+
+nav { 
+	ul {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		li {
+			float: left;
+			font: {
+				family: 'Montserrat', sans;
+				weight: 400;
+				size: 1.375em;
+			}
+			@include breakpoint(tab) { font-size: 1em; }
+		}
+	}
+}
+
+#nav-header {
+	ul {
+		li {
+			padding:0 0 0 1.8em;
+			@include breakpoint(mob) {
+				float:none;
+			    padding:0 0 0.63em 0;
+			}
+			 
+		}
+	}
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	margin:6.70em 0 0 0;
+	@include breakpoint(mob) {
+		padding-right:20px;
+		text-align: right;
+		margin-top: 1em;    
+	}
+	a {
+		text-decoration: none;
+		color: $tan;
+	}
+}
+
+#intro {
+	color: $tan;
+	padding-bottom: 90px;
+	@include breakpoint(mob) {
+	    padding-bottom: 60px;
+	}
+	 
+	#description {
+		position: relative;
+		top:0;
+		left:0;
+		width: 46%;
+		@include breakpoint(mob) {
+			width:90%;
+		}
+	}
+	.quote {
+		@include breakpoint(mob) {
+			display:none;
+		}
+		position: absolute;
+		top:0;
+		right: 0;
+		width: 46%;
+		#text {font-style: italic;}
+		#name {font-weight:400;}
+		#name, #source {
+			line-height: 1.2em;
+			text-align: right;
+		}
+	}
+	#dot {
+		@include breakpoint(mob) {
+			display:none;
+		}
+		position: absolute;
+		top: 40px;
+		left: 49.3%;
+		margin: 0 auto;
+		font-size: 0.5em;	
+	}
+	a {
+		text-decoration: underline;
+		color: $tan;
+	}
+}
+
+// ************ HERO 
+
+#content {
+	z-index: 1;
+	background-color: $tan;
+	padding: 1.25em 1.25em 0 1.25em;
+	@include breakpoint(mob) {
+	   padding:1.25em 0 0 0; 
+	}
+	position: relative;
+	top:-2.625em;
+}
+
+#hero {
+	position: relative;
+}
+
+#slide {
+	background: {
+		image: url("../img/hero-slide-1.jpg");
+		repeat: no-repeat;
+		position: center;
+	}
+	width:100%;
+	height: 487px;
+	@include breakpoint(mob) {
+		// height: 389.6px;
+		height: 200px;
+	    background-size: 768px 389.6px;
+	}
+}
+
+.caption {
+	position:relative;
+	top:-20px;
+	background-color: $red;
+	margin:0 auto;
+	width:90%;
+	text-align:center;
+	color: $white;
+	h2 {
+		line-height: 1.9em;
+	}
+	@include breakpoint(mob) {
+	    width:100%;
+	}
+}
+
+// ************ SHOWS
+
+#shows {
+	width:100%;
+	margin:0;
+	padding:0;
+	overflow:auto;
+}
+
+.show {
+	position: relative;
+	float:left;
+	width: 306px;
+	height: 290px;
+	background: {
+		repeat: no-repeat;
+		position: top center;
+		color: $off-white;
+	} 
+	@include breakpoint(tab) {
+		width: 242px;	    
+		height: 280px;
+	}
+	@include breakpoint(mob) {
+	    width:100%;
+	    height:100px;
+	    margin:0 0 0.5em 0;
+	    background-position: left;
+	    background-size: 150px 100px; 
+	}
+	 
+}
+
+#herackles {
+	margin-right:1.25em;
+	background-image:url("../img/thumb-herackles.jpg");
+}
+#caesar {
+	margin-right:1.25em;
+	background-image:url("../img/thumb-caesar.jpg");
+}
+#snark {
+	background-image:url("../img/thumb-snark.jpg");
+}
+
+.detail {
+	color:$grey;
+	padding:225px 0 0 15px;
+	@include breakpoint(mob) {
+	    padding: 20px 0 0 180px;
+	}
+}
+
+.info {
+	color: $steel;
+	font-weight: 700;
+}
+
+
+// ************ WHATS ON 
+
+#whats-on {
+	width: 100%;
+	margin: 20px 0 0 0;
+	padding: 20px;
+	box-sizing: border-box;
+	overflow:auto;
+	background-color: $off-white;
+	color: $grey;
+	h4 {
+		letter-spacing: 0em;
+		line-height: 1.6em;
+	}
+}
+
+.red {
+	color: $off-white;
+	font-style: normal;
+	background-color: $red;
+	border-radius: 50px;
+	padding: 5px;
+}
+
+#month-1, #month-2 {
+	padding:10px 0 0 0;
+	float: left;
+	@include breakpoint(mob) {
+		padding:20px 0 0 0;	    
+	}
+}
+
+.a-dates {
+	text-decoration:none;
+	color:$off-white;
+}
+
+
+// ************ SOCIAL 
+
+#social {
+	@include breakpoint(mob) {
+	    display:none;
+	}
+	padding: 20px 0 0 0;
+	width:100%;
+	overflow:auto;
+}
+
+.twitter-timeline {
+	background-color: $grey-mid;
+}
+
+#twitter, #facebook {
+	float:left;
+	width:470px;
+	@include breakpoint(tab) {
+	    width:374px;
+	}
+	 
+}
+
+#twitter {padding-right:20px;}
+#facebook {background-color: $grey-mid;}
+
+// ************ FOOTER 
+
+footer {
+	background-color: $off-white;
+	border-top: thin solid $steel-light;
+	color:$steel;
+	height: 250px;
+}
+
+#footer-wrapper {
+	box-sizing: border-box;
+	@include breakpoint(mob) {
+	    padding:0 0 0 1.25em;
+	}
+	 
+}
+
+#logo-red {
+	padding: 27px 0 27px 0;
+	@include breakpoint(mob) {
+	    padding-bottom: 100px;
+	}
+	 
+}
+
+#tag-line {
+	@include breakpoint(mob) {
+	    display: none;
+	}
+	position:absolute;
+	top:50px;
+	left: 170px;
+	width: 350px;
+}
+
+#social-buttons {
+	position:absolute;
+	top:50px;
+	right:0;
+	padding-right: 1.25em;
+	@include breakpoint(mob) {
+	    left: 1.25em;
+	    text-align: left;
+	    top: 160px;
+	}
+	h5 {
+		a {
+			color: $steel;
+			text-decoration: none;
+		}
+	} 
+}
+
+hr {
+	color: $steel;
+	background-color: $steel-light;
+}
+
+#nav-footer {
+	position: absolute; 
+	top: 195px;
+	@media only screen and (min-width:61.875em) { 
+		left: 0;
+	};
+	@include breakpoint(mob) {
+		position: absolute;
+		text-align: right;
+	    top: 27px;
+	    right: 20px;
+	}
+	li {
+		padding:0 1.8em 0 0;
+		@include breakpoint(mob) {
+			float:none;
+		    padding:0 0 0 0;
+		}
+		 
+	}
+	a {
+		text-decoration: none;
+		color: $steel;
+	}
+}
+
+#copyright {
+	text-align: right;
+	position: absolute;
+	right:0px;
+	top:190px;
+	@include breakpoint(mob) {
+	    left: 1.25em;
+		text-align: left;
+	}	
+}
+
+
+// ************ FIXED MENU 
+
+#header-fixed {
+	display:none;
+	position: fixed;
+	top: 0; right: 0; left: 0;
+	z-index:10;
+	height: 70px;
+	background-color: $grey;
+	.container {
+		img {
+			padding-top:7px;
+		}
+	}
+	@include breakpoint(tab) {
+	    display: none;
+	}
+	@include breakpoint(mob) {
+	     display: none;
+	}
+}
+
+#nav-fixed {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	margin:1.4em 0 0 0;
+	ul {
+		li {
+			padding:0 0 0 1.8em;
+			a {
+				text-decoration: none;
+				color: $tan;
+			}
+		}
+	}
+}
+

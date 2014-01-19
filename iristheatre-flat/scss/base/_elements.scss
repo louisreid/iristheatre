@@ -1,0 +1,13 @@
+/*------------------------------------*\
+    BASE/ELEMENTS.SCSS
+\*------------------------------------*/
+
+hr {
+    margin:0;
+    border:0;
+    width: 100%;
+    height: 1px;
+    @include breakpoint(mob) {
+        display: none;    
+    }
+}

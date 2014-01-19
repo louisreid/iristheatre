@@ -1,0 +1,37 @@
+@charset "UTF-8";
+/*------------------------------------*\
+    IRIS THEATRE
+\*------------------------------------*/
+
+/**
+ * The SCSS in this project is written in an Object Orientated manner (OOCSS), 
+ * https://github.com/stubbornella/oocss/wiki and follows some Scalable and
+ * Modular Architecture for CSS (SMACSS) principles.
+ */
+
+/*------------------------------------*\
+    $CONTENTS
+\*------------------------------------*/
+
+/**
+ *
+ * The stylesheet is laid out into roughly five rule sets:
+ * 1 - Base rules
+ * 2 - Layout rules
+ * 3 - Module rules
+ * 4 - State rules
+ * 5 - Theme rules
+ * 
+ */
+
+/*------------------------------------*\
+    1. BASE RULES
+\*------------------------------------*/
+
+@import "base/imports";
+@import "base/reset";
+@import "base/vars";
+@import "base/page";
+@import "base/elements";
+
+@import "main-old";

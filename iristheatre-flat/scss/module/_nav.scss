@@ -1,0 +1,65 @@
+/*------------------------------------*\
+    MODULE/NAV-MAIN.SCSS
+\*------------------------------------*/
+
+.nav-main {
+    @extend .nav-menu;
+    @extend .font-heading;
+    font: {
+        weight: 400;
+        size: 1.375em;
+    }
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    margin:6.70em 0 0 0;
+    ul {
+        li {
+            padding:0 0 0 1.8em;
+            @include breakpoint(mob) {
+                float:none;
+                padding:0 0 0.63em 0;
+            }
+             
+        }
+    }
+    a {
+        text-decoration: none;
+        color: $tan;
+    }
+    @include breakpoint(tab) { font-size: 1em; }
+    @include breakpoint(mob) {
+        padding-right:20px;
+        text-align: right;
+        margin-top: 1em;    
+    }
+}
+
+.nav-footer {
+    @extend .nav-menu;
+    @extend .font-heading;
+    font: {
+        weight: 400;
+        size: 1.375em;
+    }
+    position: absolute; 
+    top: 195px;
+    li {
+        padding:0 1.8em 0 0;
+        @include breakpoint(mob) {
+            float:none;
+            padding:0 0 0 0;
+        }
+    }
+    a {
+        text-decoration: none;
+        color: $steel;
+    }
+    @media only screen and (min-width:61.875em) { left: 0; }
+    @include breakpoint(mob) {
+        position: absolute;
+        text-align: right;
+        top: 27px;
+        right: 20px;
+    }
+}

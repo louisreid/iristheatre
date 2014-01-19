@@ -1,5 +1,11 @@
-// ************ MIXINS 
+/*------------------------------------*\
+    BASE/MIXINS
+\*------------------------------------*/
 
+
+/**
+ * Media Query Mixin
+ */
 @mixin breakpoint($point) {
 	// Tablet (Portrait) - browser width less than 960px 
 	@if $point == tab {

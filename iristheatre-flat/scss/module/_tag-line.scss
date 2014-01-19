@@ -1,0 +1,18 @@
+/*------------------------------------*\
+    MODULE/TAG-LINE.SCSS
+\*------------------------------------*/
+
+
+.tag-line {
+    position:absolute;
+    top:50px;
+    left: 170px;
+    width: 350px;
+    @include breakpoint(mob) { display: none; }
+}
+
+.tag-line__heading {
+    font-size: 1.375em;
+    @include breakpoint(mob) { font-size: 1em; }
+    @include breakpoint(tab) { font-size: 1em; }
+}

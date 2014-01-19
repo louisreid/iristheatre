@@ -8,7 +8,7 @@ module.exports = function(grunt) {
 
         watch: {
             scss: {
-                files: 'iristheatre-flat/scss/*.scss',
+                files: 'iristheatre-flat/scss/**/*.scss',
                 tasks: ['compass'],
             },
         },

@@ -1,0 +1,23 @@
+/*------------------------------------*\
+    BASE/EXTENDS.SCSS
+\*------------------------------------*/
+
+.font-heading {
+    /* Monserrat 400 */
+    font-family: 'Monserrat', sans;
+    font-weight: 400;
+}
+
+.font-body {
+    /* Open Sans 300 */
+    font-family: 'Open Sans', sans;
+    font-weight: 300;
+}
+
+.nav-menu { 
+    ul {
+        li {
+            float: left;
+        }
+    }
+}

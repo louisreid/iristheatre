@@ -1,0 +1,40 @@
+/*------------------------------------*\
+    LAYOUT/PAGE.SCSS
+\*------------------------------------*/
+
+
+.wrapper {
+    padding: 0;
+    margin: 0 auto;
+    max-width: 960px;
+    @include breakpoint(tab) { max-width:768px; }
+    @include breakpoint(mob) {
+        width: 100%;
+    }
+}
+
+.wrapper--footer {
+    box-sizing: border-box;
+    @include breakpoint(mob) { padding:0 0 0 1.25em; }
+}
+
+.site-header {
+    z-index: 0;
+}
+
+.site-content {
+    background-color: $tan;
+    padding: 1.25em 1.25em 0 1.25em;
+    @include breakpoint(mob) {
+       padding:1.25em 0 0 0; 
+    }
+    position: relative;
+    top:-2.625em;
+}
+
+.site-footer {
+    background-color: $off-white;
+    border-top: thin solid $steel-light;
+    color:$steel;
+    height: 250px;
+}

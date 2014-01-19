@@ -9,6 +9,7 @@
  * Modular Architecture for CSS (SMACSS) principles.
  */
 
+
 /*------------------------------------*\
     $CONTENTS
 \*------------------------------------*/
@@ -24,6 +25,7 @@
  * 
  */
 
+
 /*------------------------------------*\
     1. BASE RULES
 \*------------------------------------*/
@@ -31,7 +33,50 @@
 @import "base/imports";
 @import "base/reset";
 @import "base/vars";
-@import "base/page";
+@import "base/mixins";
+@import "base/extends";
 @import "base/elements";
 
-@import "main-old";
+
+/*------------------------------------*\
+    2. LAYOUT RULES
+\*------------------------------------*/
+
+@import "layout/page";
+// @import "layout/grid";
+
+
+/*------------------------------------*\
+    3. MODULE RULES
+\*------------------------------------*/
+
+@import "module/nav";
+@import "module/header-fixed";
+@import "module/masthead";
+@import "module/caption";
+@import "module/show-listings";
+@import "module/calendar";
+@import "module/social";
+@import "module/logo";
+@import "module/tag-line";
+@import "module/social-buttons";
+@import "module/copyright";
+@import "module/link";
+
+
+/*------------------------------------*\
+    4. STATE RULES
+\*------------------------------------*/
+
+
+
+/*------------------------------------*\
+    5. THEME RULES
+\*------------------------------------*/
+
+@import "theme/site-header";
+@import "theme/site-content";
+@import "theme/site-footer";
+
+
+// @import "main-old";

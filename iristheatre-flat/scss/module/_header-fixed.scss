@@ -1,0 +1,40 @@
+/*------------------------------------*\
+    MODULE/HEADER-FIXED.SCSS
+\*------------------------------------*/
+
+.header-fixed {
+    display:none;
+    position: fixed;
+    top: 0; right: 0; left: 0;
+    z-index:10;
+    height: 70px;
+    background-color: $grey;
+    .container {
+        img {
+            padding-top:7px;
+        }
+    }
+    @include breakpoint(tab) {
+        display: none;
+    }
+    @include breakpoint(mob) {
+         display: none;
+    }
+}
+
+.nav-fixed {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    margin:1.4em 0 0 0;
+    ul {
+        li {
+            padding:0 0 0 1.8em;
+            a {
+                text-decoration: none;
+                color: $tan;
+            }
+        }
+    }
+}
+

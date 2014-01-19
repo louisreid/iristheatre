@@ -6,6 +6,8 @@
  * A custom normalized reset. Thanks to Nicolas Gallagher.
  *
  * Customisations include:
+ * ul, li 
+ * h1, h2, h3, h4, h5, h6
  */
 
 /*! normalize.css v2.1.3 | MIT License | git.io/normalize */
@@ -426,3 +428,18 @@ th {
     padding: 0;
 }
 
+
+/*------------------------------------*\
+    CUSTOMISATIONS
+\*------------------------------------*/
+
+ul, li {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    padding:0; 
+    margin:0;
+}

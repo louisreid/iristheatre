@@ -672,21 +672,19 @@ h1, h2, h3, h4, 5, h6 {
 .nav-footer {
   font-weight: 400;
   font-size: 1.375em;
-  position: absolute;
-  top: 195px;
 }
-/* line 47, ../scss/module/_nav.scss */
+/* line 45, ../scss/module/_nav.scss */
 .nav-footer li {
   padding: 0 1.8em 0 0;
 }
 @media only screen and (max-width: 47.9375em) {
-  /* line 47, ../scss/module/_nav.scss */
+  /* line 45, ../scss/module/_nav.scss */
   .nav-footer li {
     float: none;
     padding: 0 0 0 0;
   }
 }
-/* line 54, ../scss/module/_nav.scss */
+/* line 52, ../scss/module/_nav.scss */
 .nav-footer a {
   text-decoration: none;
   color: #7f8c8d;

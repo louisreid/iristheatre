@@ -1,0 +1,16 @@
+/*------------------------------------*\
+    MODULE/NAV-MAIN.SCSS
+\*------------------------------------*/
+
+.nav-main {
+    float: right;
+    position: relative;
+    top: 42px;
+    ul {
+        li {
+            @extend .header--white-block;
+            float: left;
+            padding-left: $gutter-std;
+        } 
+    }
+}

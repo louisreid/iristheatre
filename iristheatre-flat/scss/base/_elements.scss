@@ -16,10 +16,3 @@ hr {
     background-color: $steel-light;
     @include breakpoint(mob) { display: none; }
 }
-
-h1, h2, h3, h4, 5, h6 {
-    padding:0; 
-    margin:0;
-    font-weight:400;
-    font-style:normal;
-}

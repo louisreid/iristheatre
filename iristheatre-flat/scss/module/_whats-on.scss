@@ -1,0 +1,14 @@
+/*------------------------------------*\
+    MODULE/WHATS-ON.SCSS
+\*------------------------------------*/
+
+.whats-on {
+    width: 100%;
+    background-color: $off-white; 
+    padding: $gutter-std;
+    padding-bottom: $gutter-std/2;
+}
+
+.whats-on__header {
+    @extend .header--black-block;
+}

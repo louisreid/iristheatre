@@ -2,22 +2,25 @@
     BASE/EXTENDS.SCSS
 \*------------------------------------*/
 
-.font-heading {
-    /* Monserrat 400 */
-    font-family: 'Monserrat', sans;
-    font-weight: 400;
+
+/**
+ * Clear Fix
+ * thanks to: nicolasgallagher.com
+ */
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
 }
 
-.font-body {
-    /* Open Sans 300 */
-    font-family: 'Open Sans', sans;
-    font-weight: 300;
+.cf:after {
+    clear: both;
 }
 
-.nav-menu { 
-    ul {
-        li {
-            float: left;
-        }
-    }
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+    *zoom: 1;
 }

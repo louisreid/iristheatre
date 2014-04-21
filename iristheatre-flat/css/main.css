@@ -1,11 +1,8 @@
-@import url("http://fonts.googleapis.com/css?family=Montserrat:400,700");
-@import url("http://fonts.googleapis.com/css?family=Open+Sans:300italic,300,400");
-@import url("http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css");
 /*------------------------------------*\
     IRIS THEATRE
 \*------------------------------------*/
 /**
- * The SCSS in this project is written in an Object Orientated manner (OOCSS), 
+ * The SCSS in this project is written in an Object Orientated manner (OOCSS),
  * https://github.com/stubbornella/oocss/wiki and follows some Scalable and
  * Modular Architecture for CSS (SMACSS) principles.
  */
@@ -20,7 +17,7 @@
  * 3 - Module rules
  * 4 - State rules
  * 5 - Theme rules
- * 
+ *
  */
 /*------------------------------------*\
     1. BASE RULES
@@ -32,8 +29,11 @@
  * Google Font Imports
  */
 /* Monserrat */
+@import url("http://fonts.googleapis.com/css?family=Montserrat:400,700");
 /* Open Sans */
+@import url("http://fonts.googleapis.com/css?family=Open+Sans:300italic,300,400");
 /* Font Awesome (for icons) */
+@import url("http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css");
 /*------------------------------------*\
     BASE/RESET
 \*------------------------------------*/
@@ -492,11 +492,28 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0;
 }
 
+/* line 447, ../scss/base/_reset.scss */
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
 /*------------------------------------*\
-    BASE/RESET
+    BASE/VARS
 \*------------------------------------*/
 /**
- * Colour variables
+ * Colour Variables
+ */
+/**
+ * Font Variables
+ */
+/**
+ * Size Variables
+ */
+/**
+ * Spacing Variables
  */
 /*------------------------------------*\
     BASE/MIXINS
@@ -507,23 +524,35 @@ h1, h2, h3, h4, h5, h6 {
 /*------------------------------------*\
     BASE/EXTENDS.SCSS
 \*------------------------------------*/
-/* line 5, ../scss/base/_extends.scss */
-.font-heading, .nav-main, .nav-footer, .calendar__heading {
-  /* Monserrat 400 */
-  font-family: 'Monserrat', sans;
-  font-weight: 400;
-}
-
+/**
+ * Clear Fix
+ * thanks to: nicolasgallagher.com
+ */
 /* line 11, ../scss/base/_extends.scss */
-.font-body {
-  /* Open Sans 300 */
-  font-family: 'Open Sans', sans;
-  font-weight: 300;
+.cf:before, .site-header:before, .site-content:before, .cal-bar:before, .more-shows:before,
+.cf:after,
+.site-header:after,
+.site-content:after,
+.cal-bar:after,
+.more-shows:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
 }
 
-/* line 19, ../scss/base/_extends.scss */
-.nav-menu ul li, .nav-main ul li, .nav-footer ul li {
-  float: left;
+/* line 16, ../scss/base/_extends.scss */
+.cf:after, .site-header:after, .site-content:after, .cal-bar:after, .more-shows:after {
+  clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+/* line 24, ../scss/base/_extends.scss */
+.cf, .site-header, .site-content, .cal-bar, .more-shows {
+  *zoom: 1;
 }
 
 /*------------------------------------*\
@@ -551,12 +580,49 @@ hr {
   }
 }
 
-/* line 20, ../scss/base/_elements.scss */
-h1, h2, h3, h4, 5, h6 {
+/*------------------------------------*\
+    BASE/TYPOGRAPHY.SCSS
+\*------------------------------------*/
+/**
+ * FONTS
+ */
+/* line 9, ../scss/base/_typography.scss */
+.font-heading, .header--white-block, .slider__caption, .tile__caption, .show-tile__caption, .nav-main ul li, .header--black-block, .cal-bar__item, .cal-bar__month, .cal-bar__date, .whats-on__header {
+  /* Monserrat 400 */
+  font-family: 'Montserrat', Arial, sans;
+  font-weight: normal;
+}
+
+/* line 15, ../scss/base/_typography.scss */
+.font-body {
+  /* Open Sans 300 */
+  font-family: 'Open Sans', Arial, sans;
+  font-weight: 300;
+}
+
+/**
+ * HEADERS
+ */
+/* line 25, ../scss/base/_typography.scss */
+h1, h2, h3, h4, h5, h6 {
   padding: 0;
   margin: 0;
   font-weight: 400;
   font-style: normal;
+}
+
+/* line 32, ../scss/base/_typography.scss */
+.header--white-block, .slider__caption, .tile__caption, .show-tile__caption, .nav-main ul li {
+  text-transform: uppercase;
+  font-size: 1.4em;
+  color: white;
+}
+
+/* line 39, ../scss/base/_typography.scss */
+.header--black-block, .cal-bar__item, .cal-bar__month, .cal-bar__date, .whats-on__header {
+  text-transform: uppercase;
+  font-size: 1.4em;
+  color: #252525;
 }
 
 /*------------------------------------*\
@@ -565,598 +631,233 @@ h1, h2, h3, h4, 5, h6 {
 /*------------------------------------*\
     LAYOUT/PAGE.SCSS
 \*------------------------------------*/
-/* line 6, ../scss/layout/_page.scss */
-.wrapper {
-  padding: 0;
-  margin: 0 auto;
-  max-width: 960px;
+/* line 5, ../scss/layout/_page.scss */
+.wrapper, .wrapper--site-header, .wrapper--site-footer {
+  width: 100%;
 }
-@media only screen and (min-width: 48em) and (max-width: 61.875em) {
-  /* line 6, ../scss/layout/_page.scss */
-  .wrapper {
-    max-width: 768px;
-  }
+
+/* line 9, ../scss/layout/_page.scss */
+.wrapper--site-header {
+  background-color: #d95b43;
+}
+
+/* line 14, ../scss/layout/_page.scss */
+.wrapper--site-footer {
+  background-color: #ececec;
+  border-top: 1px solid #b5bcbc;
+}
+
+/* line 20, ../scss/layout/_page.scss */
+.page-constrained, .site-header, .site-content, .site-footer {
+  margin: 0 auto;
+  padding: 20px;
+  max-width: 1025px;
+}
+
+/**
+ * Site areas
+ */
+/* line 30, ../scss/layout/_page.scss */
+.site-header {
+  padding-bottom: 60px;
+}
+
+/* line 36, ../scss/layout/_page.scss */
+.site-content {
+  position: relative;
+  top: -40px;
+  background-color: #e0ded3;
+}
+
+/**
+ * Columns
+ */
+/* line 52, ../scss/layout/_page.scss */
+.column, .column-left, .column-right {
+  width: 50%;
+  float: left;
+  padding-top: 20px;
 }
 @media only screen and (max-width: 47.9375em) {
-  /* line 6, ../scss/layout/_page.scss */
-  .wrapper {
+  /* line 52, ../scss/layout/_page.scss */
+  .column, .column-left, .column-right {
     width: 100%;
   }
 }
 
-/* line 16, ../scss/layout/_page.scss */
-.wrapper--footer {
-  box-sizing: border-box;
+/* line 65, ../scss/layout/_page.scss */
+.column-right {
+  padding-left: 20px;
 }
 @media only screen and (max-width: 47.9375em) {
-  /* line 16, ../scss/layout/_page.scss */
-  .wrapper--footer {
-    padding: 0 0 0 1.25em;
+  /* line 65, ../scss/layout/_page.scss */
+  .column-right {
+    margin-top: 20px;
+    padding-left: 0;
   }
-}
-
-/* line 21, ../scss/layout/_page.scss */
-.site-header {
-  z-index: 0;
-}
-
-/* line 25, ../scss/layout/_page.scss */
-.site-content {
-  background-color: #e0ded3;
-  padding: 1.25em 1.25em 0 1.25em;
-  position: relative;
-  top: -2.625em;
-}
-@media only screen and (max-width: 47.9375em) {
-  /* line 25, ../scss/layout/_page.scss */
-  .site-content {
-    padding: 1.25em 0 0 0;
-  }
-}
-
-/* line 35, ../scss/layout/_page.scss */
-.site-footer {
-  background-color: #ececec;
-  border-top: thin solid #b5bcbc;
-  color: #7f8c8d;
-  height: 250px;
 }
 
 /*------------------------------------*\
     3. MODULE RULES
 \*------------------------------------*/
 /*------------------------------------*\
-    MODULE/NAV-MAIN.SCSS
-\*------------------------------------*/
-/* line 5, ../scss/module/_nav.scss */
-.nav-main {
-  font-weight: 400;
-  font-size: 1.375em;
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  margin: 6.70em 0 0 0;
-}
-/* line 17, ../scss/module/_nav.scss */
-.nav-main ul li {
-  padding: 0 0 0 1.8em;
-}
-@media only screen and (max-width: 47.9375em) {
-  /* line 17, ../scss/module/_nav.scss */
-  .nav-main ul li {
-    float: none;
-    padding: 0 0 0.63em 0;
-  }
-}
-/* line 26, ../scss/module/_nav.scss */
-.nav-main a {
-  text-decoration: none;
-  color: #e0ded3;
-}
-@media only screen and (min-width: 48em) and (max-width: 61.875em) {
-  /* line 5, ../scss/module/_nav.scss */
-  .nav-main {
-    font-size: 1em;
-  }
-}
-@media only screen and (max-width: 47.9375em) {
-  /* line 5, ../scss/module/_nav.scss */
-  .nav-main {
-    padding-right: 20px;
-    text-align: right;
-    margin-top: 1em;
-  }
-}
-
-/* line 38, ../scss/module/_nav.scss */
-.nav-footer {
-  font-weight: 400;
-  font-size: 1.375em;
-}
-/* line 45, ../scss/module/_nav.scss */
-.nav-footer li {
-  padding: 0 1.8em 0 0;
-}
-@media only screen and (max-width: 47.9375em) {
-  /* line 45, ../scss/module/_nav.scss */
-  .nav-footer li {
-    float: none;
-    padding: 0 0 0 0;
-  }
-}
-/* line 52, ../scss/module/_nav.scss */
-.nav-footer a {
-  text-decoration: none;
-  color: #7f8c8d;
-}
-@media only screen and (min-width: 61.875em) {
-  /* line 38, ../scss/module/_nav.scss */
-  .nav-footer {
-    left: 0;
-  }
-}
-@media only screen and (max-width: 47.9375em) {
-  /* line 38, ../scss/module/_nav.scss */
-  .nav-footer {
-    position: absolute;
-    text-align: right;
-    top: 27px;
-    right: 20px;
-  }
-}
-
-/*------------------------------------*\
-    MODULE/HEADER-FIXED.SCSS
-\*------------------------------------*/
-/* line 5, ../scss/module/_header-fixed.scss */
-.header-fixed {
-  display: none;
-  position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
-  z-index: 10;
-  height: 70px;
-  background-color: #252525;
-}
-/* line 13, ../scss/module/_header-fixed.scss */
-.header-fixed .container img {
-  padding-top: 7px;
-}
-@media only screen and (min-width: 48em) and (max-width: 61.875em) {
-  /* line 5, ../scss/module/_header-fixed.scss */
-  .header-fixed {
-    display: none;
-  }
-}
-@media only screen and (max-width: 47.9375em) {
-  /* line 5, ../scss/module/_header-fixed.scss */
-  .header-fixed {
-    display: none;
-  }
-}
-
-/* line 25, ../scss/module/_header-fixed.scss */
-.nav-fixed {
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  margin: 1.4em 0 0 0;
-}
-/* line 31, ../scss/module/_header-fixed.scss */
-.nav-fixed ul li {
-  padding: 0 0 0 1.8em;
-}
-/* line 33, ../scss/module/_header-fixed.scss */
-.nav-fixed ul li a {
-  text-decoration: none;
-  color: #e0ded3;
-}
-
-/*------------------------------------*\
-    MODULE/MASTHEAD.SCSS
-\*------------------------------------*/
-/* line 6, ../scss/module/_masthead.scss */
-.masthead {
-  position: relative;
-}
-
-/* line 10, ../scss/module/_masthead.scss */
-.masthead__slide {
-  background-image: url("../img/hero-slide-1.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  width: 100%;
-  height: 487px;
-}
-@media only screen and (max-width: 47.9375em) {
-  /* line 10, ../scss/module/_masthead.scss */
-  .masthead__slide {
-    height: 200px;
-    background-size: 768px 389.6px;
-  }
-}
-
-/* line 25, ../scss/module/_masthead.scss */
-.caption {
-  position: relative;
-  top: -20px;
-  background-color: #ec5947;
-  margin: 0 auto;
-  width: 90%;
-  text-align: center;
-  color: white;
-}
-/* line 33, ../scss/module/_masthead.scss */
-.caption h2 {
-  line-height: 1.9em;
-}
-@media only screen and (max-width: 47.9375em) {
-  /* line 25, ../scss/module/_masthead.scss */
-  .caption {
-    width: 100%;
-  }
-}
-
-/*------------------------------------*\
     MODULE/CAPTION.SCSS
 \*------------------------------------*/
 /* line 5, ../scss/module/_caption.scss */
-.caption {
-  position: relative;
-  top: -20px;
-  background-color: #ec5947;
-  margin: 0 auto;
-  width: 90%;
+.caption, .slider__caption {
+  padding: 0.5em;
+  position: absolute;
+  left: 16px;
+  right: 16px;
+  bottom: 0;
   text-align: center;
-  color: white;
-}
-@media only screen and (max-width: 47.9375em) {
-  /* line 5, ../scss/module/_caption.scss */
-  .caption {
-    width: 100%;
-  }
-}
-
-/* line 18, ../scss/module/_caption.scss */
-.caption__heading {
-  line-height: 1.9em;
-  font-size: 1.5625em;
-}
-@media only screen and (min-width: 48em) and (max-width: 61.875em) {
-  /* line 18, ../scss/module/_caption.scss */
-  .caption__heading {
-    font-size: 1.4em;
-  }
-}
-@media only screen and (max-width: 47.9375em) {
-  /* line 18, ../scss/module/_caption.scss */
-  .caption__heading {
-    font-size: 1em;
-  }
 }
 
 /*------------------------------------*\
-    MODULE/SHOW-LISTINGS.SCSS
+    MODULE/SLIDER.SCSS
 \*------------------------------------*/
-/* line 6, ../scss/module/_show-listings.scss */
-.show-listings {
+/* line 5, ../scss/module/_slider.scss */
+.slider {
   width: 100%;
+  position: relative;
+  padding-bottom: 20px;
+}
+
+/* line 11, ../scss/module/_slider.scss */
+.slider__caption {
+  background-color: #d95b43;
+}
+
+/* line 17, ../scss/module/_slider.scss */
+.slider__image {
+  width: 100%;
+}
+
+/*------------------------------------*\
+    MODULE/TILE.SCSS
+\*------------------------------------*/
+/* line 5, ../scss/module/_tile.scss */
+.tile {
   margin: 0;
   padding: 0;
-  overflow: auto;
-}
-
-/* line 13, ../scss/module/_show-listings.scss */
-.show-listings__show {
+  width: 33.33333%;
+  padding-left: 20px;
+  float: left;
   position: relative;
-  float: left;
-  width: 306px;
-  height: 290px;
-  background-repeat: no-repeat;
-  background-position: top center;
-  background-color: #ececec;
-}
-@media only screen and (min-width: 48em) and (max-width: 61.875em) {
-  /* line 13, ../scss/module/_show-listings.scss */
-  .show-listings__show {
-    width: 242px;
-    height: 280px;
-  }
-}
-@media only screen and (max-width: 47.9375em) {
-  /* line 13, ../scss/module/_show-listings.scss */
-  .show-listings__show {
-    width: 100%;
-    height: 100px;
-    margin: 0 0 0.5em 0;
-    background-position: left;
-    background-size: 150px 100px;
-  }
 }
 
-/* line 37, ../scss/module/_show-listings.scss */
-.show--herackles {
-  margin-right: 1.25em;
-  background-image: url("../img/thumb-herackles.jpg");
+/* line 14, ../scss/module/_tile.scss */
+.tile__caption, .show-tile__caption {
+  background-color: #d95b43;
+  position: absolute;
+  left: 20px;
+  right: 0;
+  bottom: 0;
 }
 
-/* line 41, ../scss/module/_show-listings.scss */
-.show--caesar {
-  margin-right: 1.25em;
-  background-image: url("../img/thumb-caesar.jpg");
-}
-
-/* line 45, ../scss/module/_show-listings.scss */
-.show--snark {
-  background-image: url("../img/thumb-snark.jpg");
-}
-
-/* line 49, ../scss/module/_show-listings.scss */
-.show-listings__detail {
-  color: #252525;
-  padding: 225px 0 0 15px;
-}
-@media only screen and (max-width: 47.9375em) {
-  /* line 49, ../scss/module/_show-listings.scss */
-  .show-listings__detail {
-    padding: 20px 0 0 180px;
-  }
-}
-
-/* line 57, ../scss/module/_show-listings.scss */
-.show-listings__info, .show-listings__heading {
-  font-weight: 700;
-  font-family: 'Montserrat', sans;
-  font-size: 1.125em;
-}
-@media only screen and (min-width: 48em) and (max-width: 61.875em) {
-  /* line 57, ../scss/module/_show-listings.scss */
-  .show-listings__info, .show-listings__heading {
-    font-size: 0.9em;
-  }
-}
-@media only screen and (max-width: 47.9375em) {
-  /* line 57, ../scss/module/_show-listings.scss */
-  .show-listings__info, .show-listings__heading {
-    font-size: 1em;
-  }
-}
-
-/* line 67, ../scss/module/_show-listings.scss */
-.show-listings__info {
-  color: #7f8c8d;
+/* line 23, ../scss/module/_tile.scss */
+.tile__image {
+  width: 100%;
 }
 
 /*------------------------------------*\
-    MODULE/CALENDAR.SCSS
+    MODULE/CAL-BAR.SCSS
 \*------------------------------------*/
-/* line 5, ../scss/module/_calendar.scss */
-.calendar {
+/* line 7, ../scss/module/_cal-bar.scss */
+.cal-bar {
+  padding: 20px 0;
+  margin-left: -10px;
   width: 100%;
-  margin: 20px 0 0 0;
-  padding: 20px;
-  box-sizing: border-box;
-  overflow: auto;
-  background-color: #ececec;
-  color: #252525;
-}
-/* line 13, ../scss/module/_calendar.scss */
-.calendar h4 {
-  letter-spacing: 0em;
-  line-height: 1.6em;
 }
 
-/* line 19, ../scss/module/_calendar.scss */
-.red {
-  color: #ececec;
-  font-style: normal;
-  background-color: #ec5947;
-  border-radius: 50px;
-  padding: 5px;
-}
-
-/* line 27, ../scss/module/_calendar.scss */
-.calendar--compact__month--1, .calendar--compact__month--2 {
-  padding: 10px 0 0 0;
+/* line 14, ../scss/module/_cal-bar.scss */
+.cal-bar__item, .cal-bar__month, .cal-bar__date {
+  margin-bottom: 5px;
+  padding: 0 10px;
   float: left;
 }
-@media only screen and (max-width: 47.9375em) {
-  /* line 27, ../scss/module/_calendar.scss */
-  .calendar--compact__month--1, .calendar--compact__month--2 {
-    padding: 20px 0 0 0;
-  }
-}
 
-/* line 35, ../scss/module/_calendar.scss */
-.a-dates {
-  text-decoration: none;
-  color: #ececec;
-}
-
-/* line 40, ../scss/module/_calendar.scss */
-.calendar__heading {
-  font-weight: 700;
-  font-size: 2.4375em;
-}
-@media only screen and (min-width: 48em) and (max-width: 61.875em) {
-  /* line 40, ../scss/module/_calendar.scss */
-  .calendar__heading {
-    font-size: 2em;
-  }
-}
-@media only screen and (max-width: 47.9375em) {
-  /* line 40, ../scss/module/_calendar.scss */
-  .calendar__heading {
-    font-size: 2em;
-  }
-}
-
-/* line 54, ../scss/module/_calendar.scss */
-.calendar--font {
-  font-family: 'Montserrat', sans;
-  font-size: 1.375em;
-}
-@media only screen and (min-width: 48em) and (max-width: 61.875em) {
-  /* line 54, ../scss/module/_calendar.scss */
-  .calendar--font {
-    font-size: 1.09em;
-  }
-}
-@media only screen and (max-width: 47.9375em) {
-  /* line 54, ../scss/module/_calendar.scss */
-  .calendar--font {
-    font-size: 1.09em;
-  }
-}
-
-/*------------------------------------*\
-    MODULE/SOCIAL.SCSS
-\*------------------------------------*/
-/* line 5, ../scss/module/_social.scss */
-.social {
-  padding: 20px 0 0 0;
-  width: 100%;
-  overflow: auto;
-}
-@media only screen and (max-width: 47.9375em) {
-  /* line 5, ../scss/module/_social.scss */
-  .social {
-    display: none;
-  }
-}
-
-/* line 14, ../scss/module/_social.scss */
-.twitter-timeline {
-  background-color: #333333;
-}
-
-/* line 18, ../scss/module/_social.scss */
-.social--twitter {
-  float: left;
-  width: 470px;
-  padding-right: 20px;
-}
-@media only screen and (min-width: 48em) and (max-width: 61.875em) {
-  /* line 18, ../scss/module/_social.scss */
-  .social--twitter {
-    width: 374px;
-  }
+/* line 25, ../scss/module/_cal-bar.scss */
+.cal-bar__date {
+  border-right: 1px solid #252525;
 }
 
 /*------------------------------------*\
     MODULE/LOGO.SCSS
 \*------------------------------------*/
-/* line 5, ../scss/module/_logo.scss */
-.logo--red {
-  padding: 27px 0 27px 0;
-}
-@media only screen and (max-width: 47.9375em) {
-  /* line 5, ../scss/module/_logo.scss */
-  .logo--red {
-    padding-bottom: 100px;
-  }
+/* line 9, ../scss/module/_logo.scss */
+.logo--header {
+  float: left;
 }
 
-/* line 12, ../scss/module/_logo.scss */
-.logo {
-  padding: 1.5625em 0 1.5625em 0;
+/*------------------------------------*\
+    MODULE/NAV-MAIN.SCSS
+\*------------------------------------*/
+/* line 5, ../scss/module/_nav-main.scss */
+.nav-main {
+  float: right;
   position: relative;
+  top: 42px;
+}
+/* line 10, ../scss/module/_nav-main.scss */
+.nav-main ul li {
+  float: left;
+  padding-left: 20px;
 }
 
 /*------------------------------------*\
-    MODULE/TAG-LINE.SCSS
+    MODULE/MORE-SHOWS.SCSS
 \*------------------------------------*/
-/* line 6, ../scss/module/_tag-line.scss */
-.tag-line {
-  position: absolute;
-  top: 50px;
-  left: 170px;
-  width: 350px;
-}
-@media only screen and (max-width: 47.9375em) {
-  /* line 6, ../scss/module/_tag-line.scss */
-  .tag-line {
-    display: none;
-  }
+/* line 5, ../scss/module/_more-shows.scss */
+.more-shows {
+  margin: 0;
+  margin-left: -20px;
+  padding: 20px 0;
 }
 
-/* line 14, ../scss/module/_tag-line.scss */
-.tag-line__heading {
-  font-size: 1.375em;
-}
-@media only screen and (max-width: 47.9375em) {
-  /* line 14, ../scss/module/_tag-line.scss */
-  .tag-line__heading {
-    font-size: 1em;
-  }
-}
-@media only screen and (min-width: 48em) and (max-width: 61.875em) {
-  /* line 14, ../scss/module/_tag-line.scss */
-  .tag-line__heading {
-    font-size: 1em;
-  }
+/* line 12, ../scss/module/_more-shows.scss */
+.show-tile__caption {
+  text-align: left;
+  padding: 0.2em;
 }
 
 /*------------------------------------*\
-    MODULE/SOCIAL-BUTTONS.SCSS
+    MODULE/WHATS-ON.SCSS
 \*------------------------------------*/
-/* line 6, ../scss/module/_social-buttons.scss */
-.social-buttons {
-  position: absolute;
-  top: 50px;
-  right: 0;
-  padding-right: 1.25em;
-}
-@media only screen and (max-width: 47.9375em) {
-  /* line 6, ../scss/module/_social-buttons.scss */
-  .social-buttons {
-    left: 1.25em;
-    text-align: left;
-    top: 160px;
-  }
-}
-/* line 17, ../scss/module/_social-buttons.scss */
-.social-buttons h5 a {
-  color: #7f8c8d;
-  text-decoration: none;
-}
-
-/*------------------------------------*\
-    MODULE/COPYRIGHT.SCSS
-\*------------------------------------*/
-/* line 5, ../scss/module/_copyright.scss */
-.copyright {
-  text-align: right;
-  position: absolute;
-  right: 0px;
-  top: 190px;
-}
-@media only screen and (max-width: 47.9375em) {
-  /* line 5, ../scss/module/_copyright.scss */
-  .copyright {
-    left: 1.25em;
-    text-align: left;
-  }
-}
-
-/* line 16, ../scss/module/_copyright.scss */
-.copyright__header {
-  font-family: 'Open Sans', sans;
-  font-size: 0.875em;
-  font-weight: 300;
-}
-
-/*------------------------------------*\
-    MODULE/LINK.SCSS
-\*------------------------------------*/
-/* line 5, ../scss/module/_link.scss */
-.link-div {
-  position: absolute;
+/* line 5, ../scss/module/_whats-on.scss */
+.whats-on {
   width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
+  background-color: #ececec;
+  padding: 20px;
+  padding-bottom: 10px;
+}
+
+/*------------------------------------*\
+    MODULE/NEWS-FLASH.SCSS
+\*------------------------------------*/
+/* line 5, ../scss/module/_news-flash.scss */
+.news-flash {
+  margin-bottom: 20px;
+}
+
+/*------------------------------------*\
+    MODULE/TWITTER.SCSS
+\*------------------------------------*/
+/*------------------------------------*\
+    MODULE/PHOTO-GRID.SCSS
+\*------------------------------------*/
+/*------------------------------------*\
+    MODULE/FOOTER.SCSS
+\*------------------------------------*/
+/* line 5, ../scss/module/_footer.scss */
+.footer__head {
+  padding-bottom: 20px;
+  border-bottom: 1px solid #b5bcbc;
+}
+
+/* line 10, ../scss/module/_footer.scss */
+.footer__body {
+  padding-top: 20px;
 }
 
 /*------------------------------------*\
@@ -1168,11 +869,6 @@ h1, h2, h3, h4, 5, h6 {
 /*------------------------------------*\
     THEME/SITE-HEADER.SCSS
 \*------------------------------------*/
-/* line 5, ../scss/theme/_site-header.scss */
-.site-header {
-  background-colour: grey;
-}
-
 /*------------------------------------*\
     THEME/SITE-CONTENT.SCSS
 \*------------------------------------*/

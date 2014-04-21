@@ -36,6 +36,7 @@
 @import "base/mixins";
 @import "base/extends";
 @import "base/elements";
+@import "base/typography";
 
 
 /*------------------------------------*\
@@ -43,25 +44,25 @@
 \*------------------------------------*/
 
 @import "layout/page";
-// @import "layout/grid";
 
 
 /*------------------------------------*\
     3. MODULE RULES
 \*------------------------------------*/
 
-@import "module/nav";
-@import "module/header-fixed";
-@import "module/masthead";
 @import "module/caption";
-@import "module/show-listings";
-@import "module/calendar";
-@import "module/social";
+@import "module/slider";
+@import "module/tile";
+@import "module/cal-bar";
 @import "module/logo";
-@import "module/tag-line";
-@import "module/social-buttons";
-@import "module/copyright";
-@import "module/link";
+
+@import "module/nav-main";
+@import "module/more-shows";
+@import "module/whats-on";
+@import "module/news-flash";
+@import "module/twitter";
+@import "module/photo-grid";
+@import "module/footer";
 
 
 /*------------------------------------*\
@@ -77,6 +78,3 @@
 @import "theme/site-header";
 @import "theme/site-content";
 @import "theme/site-footer";
-
-
-// @import "main-old";

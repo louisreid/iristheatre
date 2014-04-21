@@ -1,0 +1,16 @@
+/*------------------------------------*\
+    MODULE/MORE-SHOWS.SCSS
+\*------------------------------------*/
+
+.more-shows {
+    @extend .cf;
+    margin: 0;
+    margin-left: -$gutter-std;
+    padding: $gutter-std 0;
+}
+
+.show-tile__caption {
+    @extend .tile__caption;
+    text-align: left;
+    padding: 0.2em;
+}

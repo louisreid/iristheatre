@@ -1,0 +1,19 @@
+/*------------------------------------*\
+    MODULE/SLIDER.SCSS
+\*------------------------------------*/
+
+.slider {
+    width: 100%;
+    position: relative;
+    padding-bottom: $gutter-std;
+}
+
+.slider__caption {
+    @extend .caption;
+    @extend .header--white-block;
+    background-color: $red;
+}
+
+.slider__image {
+    width: 100%;
+}

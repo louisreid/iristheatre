@@ -3,21 +3,12 @@
 \*------------------------------------*/
 
 .caption {
-    position:relative;
-    top:-20px;
-    background-color: $red;
-    margin:0 auto;
-    width:90%;
-    text-align:center;
-    color: $white;
-    @include breakpoint(mob) {
-        width:100%;
-    }
+    padding: 0.5em;
+    position: absolute;
+    left: $base-unit;
+    right: $base-unit;
+    // bottom: 0.2*$base-unit;
+    bottom: 0;
+    text-align: center;
 }
 
-.caption__heading {
-    line-height: 1.9em;
-    font-size: 1.5625em; 
-    @include breakpoint(tab) { font-size: 1.4em; }
-    @include breakpoint(mob) { font-size: 1em; }
-}

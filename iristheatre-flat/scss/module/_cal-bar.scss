@@ -1,0 +1,28 @@
+/*------------------------------------*\
+    MODULE/CAL-BAR.SCSS
+\*------------------------------------*/
+
+$gutter-cal-bar: $gutter-std * 0.5;
+
+.cal-bar {
+    @extend .cf;
+    padding: $gutter-std 0;
+    margin-left: -$gutter-cal-bar;
+    width: 100%;
+}
+
+.cal-bar__item {
+    @extend .header--black-block;
+    margin-bottom: $gutter-cal-bar/2;
+    padding: 0 $gutter-cal-bar;
+    float: left;
+}
+
+.cal-bar__month  {
+    @extend .cal-bar__item;
+}
+
+.cal-bar__date  {
+    @extend .cal-bar__item;
+    border-right: 1px solid $grey;
+}

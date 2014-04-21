@@ -2,39 +2,71 @@
     LAYOUT/PAGE.SCSS
 \*------------------------------------*/
 
-
 .wrapper {
-    padding: 0;
-    margin: 0 auto;
-    max-width: 960px;
-    @include breakpoint(tab) { max-width:768px; }
-    @include breakpoint(mob) {
+    width: 100%;
+}
+
+.wrapper--site-header {
+    @extend .wrapper;
+    background-color: $red;
+}
+
+.wrapper--site-footer {
+    @extend .wrapper;
+    background-color: $off-white;
+    border-top: 1px solid $steel-light;
+}
+
+.page-constrained {
+    margin: 0 auto;    
+    padding: $gutter-std;
+    max-width: $site-max-width;
+}
+
+/**
+ * Site areas
+ */
+
+.site-header {
+    @extend .page-constrained;
+    @extend .cf;
+    padding-bottom: 3*$gutter-std;
+}
+
+.site-content {
+    @extend .page-constrained;
+    @extend .cf;
+    position: relative;
+    top: -2*$gutter-std;
+    background-color: $tan;
+}
+
+.site-footer {
+    @extend .page-constrained;
+}
+
+/**
+ * Columns
+ */
+
+.column {
+    width: 50%;
+    float: left;
+    padding-top: $gutter-std;
+    @include breakpoint(mob){
         width: 100%;
     }
 }
 
-.wrapper--footer {
-    box-sizing: border-box;
-    @include breakpoint(mob) { padding:0 0 0 1.25em; }
+.column-left {
+    @extend .column;
 }
 
-.site-header {
-    z-index: 0;
-}
-
-.site-content {
-    background-color: $tan;
-    padding: 1.25em 1.25em 0 1.25em;
+.column-right {
+    @extend .column;
+    padding-left: $gutter-std;
     @include breakpoint(mob) {
-       padding:1.25em 0 0 0; 
+        margin-top: $gutter-std;
+        padding-left: 0;
     }
-    position: relative;
-    top:-2.625em;
-}
-
-.site-footer {
-    background-color: $off-white;
-    border-top: thin solid $steel-light;
-    color: $steel;
-    height: 250px;
 }

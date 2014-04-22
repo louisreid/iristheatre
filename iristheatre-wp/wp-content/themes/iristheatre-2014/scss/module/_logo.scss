@@ -1,0 +1,15 @@
+/*------------------------------------*\
+    MODULE/LOGO.SCSS
+\*------------------------------------*/
+
+.logo {
+
+}
+
+.logo--header {
+    @extend .logo !optional; 
+    float: left;
+    @include breakpoint(mob){
+        width: 15%; 
+    }
+}

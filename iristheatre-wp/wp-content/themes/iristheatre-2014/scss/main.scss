@@ -1,0 +1,83 @@
+@charset "UTF-8";
+/*------------------------------------*\
+    IRIS THEATRE
+\*------------------------------------*/
+
+/**
+ * The SCSS in this project is written in an Object Orientated manner (OOCSS),
+ * https://github.com/stubbornella/oocss/wiki and follows some Scalable and
+ * Modular Architecture for CSS (SMACSS) principles.
+ */
+
+
+/*------------------------------------*\
+    $CONTENTS
+\*------------------------------------*/
+
+/**
+ *
+ * The stylesheet is laid out into roughly five rule sets:
+ * 1 - Base rules
+ * 2 - Layout rules
+ * 3 - Module rules
+ * 4 - State rules
+ * 5 - Theme rules
+ *
+ */
+
+
+/*------------------------------------*\
+    1. BASE RULES
+\*------------------------------------*/
+
+@import "base/imports";
+@import "base/reset";
+@import "base/vars";
+@import "base/mixins";
+@import "base/extends";
+@import "base/elements";
+@import "base/typography";
+
+
+/*------------------------------------*\
+    2. LAYOUT RULES
+\*------------------------------------*/
+
+@import "layout/page";
+
+
+/*------------------------------------*\
+    3. MODULE RULES
+\*------------------------------------*/
+
+@import "module/caption";
+@import "module/slider";
+@import "module/tile";
+@import "module/cal-bar";
+@import "module/logo";
+
+@import "module/media";
+
+@import "module/nav-main";
+@import "module/more-shows";
+@import "module/whats-on";
+@import "module/news-flash";
+@import "module/twitter";
+@import "module/photo-grid";
+@import "module/footer";
+
+
+/*------------------------------------*\
+    4. STATE RULES
+\*------------------------------------*/
+
+
+
+/*------------------------------------*\
+    5. THEME RULES
+\*------------------------------------*/
+
+@import "theme/site-header";
+@import "theme/site-content";
+@import "theme/site-footer";
+

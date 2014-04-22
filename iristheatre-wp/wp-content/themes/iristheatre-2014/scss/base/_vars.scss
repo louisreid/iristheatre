@@ -1,0 +1,38 @@
+/*------------------------------------*\
+    BASE/VARS
+\*------------------------------------*/
+
+
+/**
+ * Colour Variables
+ */
+$tan: #e0ded3;
+$grey-light: #676767;
+$grey-mid: #333;
+$grey: #252525;
+$red: #d95b43;
+$white: #fff;
+$off-white: #ececec;
+$steel: #7f8c8d;
+$steel-light: #b5bcbc;
+
+/**
+ * Size Variables
+ */
+$base-unit: 16px;
+$site-max-width: 1025px;
+
+/**
+ * Font Variables
+ */
+$font-size: $base-unit;
+$font-size--tab: 0.9;
+$font-size--mob: 0.8;
+
+
+/**
+ * Spacing Variables
+ */
+$gutter-std: $base-unit*1.25;
+$gutter-mob: $gutter-std*0.5;
+$gutter-caption: $gutter-std*0.4;

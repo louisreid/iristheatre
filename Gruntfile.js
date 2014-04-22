@@ -8,7 +8,7 @@ module.exports = function(grunt) {
 
         watch: {
             scss: {
-                files: 'iristheatre-flat/scss/**/*.scss',
+                files: 'iristheatre-wp/wp-content/themes/iristheatre-2014/scss/**/*.scss',
                 tasks: ['compass'],
             },
         },
@@ -16,8 +16,8 @@ module.exports = function(grunt) {
         compass: {
             dist: {
               options: {
-                sassDir: 'iristheatre-flat/scss',
-                cssDir: 'iristheatre-flat/css'
+                sassDir: 'iristheatre-wp/wp-content/themes/iristheatre-2014/scss',
+                cssDir: 'iristheatre-wp/wp-content/themes/iristheatre-2014/css'
               }
             }
         },
@@ -26,13 +26,11 @@ module.exports = function(grunt) {
         browser_sync: {
             dev: {
                 bsFiles: {
-                    src : ['**/*.css','**/*.html']
+                    src : ['**/*.css','**/*.html','iristheatre-wp/wp-content/themes/iristheatre-2014/**/*.php']
                 },
                 options: {
                     watchTask: true,
-                    server: {
-                        baseDir: "iristheatre-flat"
-                    }
+                    host: 'localhost'
                 }
             }
         }

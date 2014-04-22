@@ -1,0 +1,81 @@
+/*------------------------------------*\
+    LAYOUT/PAGE.SCSS
+\*------------------------------------*/
+
+.wrapper {
+    width: 100%;
+}
+
+.wrapper--site-header {
+    @extend .wrapper;
+    background-color: $red;
+}
+
+.wrapper--site-footer {
+    @extend .wrapper;
+    background-color: $off-white;
+    border-top: 1px solid $steel-light;
+}
+
+.page-constrained {
+    margin: 0 auto;    
+    padding: $gutter-std;
+    max-width: $site-max-width;
+    @include breakpoint(mob){
+        padding: $gutter-mob;
+    }
+}
+
+/**
+ * Site areas
+ */
+
+.site-header {
+    @extend .page-constrained;
+    @extend .cf;
+    padding-bottom: 3*$gutter-std;
+    @include breakpoint(mob){
+        padding-bottom: $gutter-mob;
+    }
+}
+
+.site-content {
+    @extend .page-constrained;
+    @extend .cf;
+    position: relative;
+    top: -2*$gutter-std;
+    background-color: $tan;
+    @include breakpoint(mob){
+        top:0;
+    }
+}
+
+.site-footer {
+    @extend .page-constrained;
+}
+
+/**
+ * Columns
+ */
+
+.column {
+    width: 50%;
+    float: left;
+    padding-top: $gutter-std;
+    @include breakpoint(mob){
+        width: 100%;
+    }
+}
+
+.column-left {
+    @extend .column;
+}
+
+.column-right {
+    @extend .column;
+    padding-left: $gutter-std;
+    @include breakpoint(mob) {
+        margin-top: $gutter-std;
+        padding-left: 0;
+    }
+}

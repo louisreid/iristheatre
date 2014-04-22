@@ -1,0 +1,54 @@
+/*------------------------------------*\
+    MODULE/TILE.SCSS
+\*------------------------------------*/
+
+$tile-height--mob: 4*$base-unit;
+$tile-height--std: 10*$base-unit;
+
+.tile {
+    @extend .cf;
+    margin: 0;
+    padding: 0;
+    width: 33.33333%;
+    padding-left: $gutter-std;
+    float: left;
+    position: relative;
+    @include breakpoint(mob){
+        float: none;
+        padding-left: 0;
+        margin-bottom: $gutter-mob;
+        width: 100%;
+        height: $tile-height--mob;
+        background-color: $red;
+    }
+}
+
+.tile__caption {
+    @extend .header--white-block;
+
+    position: absolute;
+    left: $gutter-std;
+    right: 0;
+    bottom: 0;
+    padding: $gutter-caption;
+
+    background-color: $red;
+
+    @include breakpoint (mob){
+        float: left;
+        width: 70%;
+        position: static;
+    }
+}
+
+.tile__image {
+    width: 100%;
+    height: $tile-height--std;
+
+    @include breakpoint (mob){
+        float: left;
+        width: 30%;
+        height: $tile-height--mob;
+        background-size: cover;
+    }
+}

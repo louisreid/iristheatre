@@ -1,0 +1,15 @@
+/*------------------------------------*\
+    MODULE/MORE-SHOWS.SCSS
+\*------------------------------------*/
+
+.more-shows {
+    @extend .cf;
+    margin: 0;
+    margin-left: -$gutter-std;
+    padding: $gutter-std 0;
+    @include breakpoint(mob){
+        margin: 0;
+        padding: $gutter-mob 0;
+    }
+}
+

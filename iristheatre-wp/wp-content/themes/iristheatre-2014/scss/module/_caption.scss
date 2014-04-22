@@ -1,0 +1,20 @@
+/*------------------------------------*\
+    MODULE/CAPTION.SCSS
+\*------------------------------------*/
+
+
+.caption {
+    padding: $gutter-caption;
+    position: absolute;
+    left: $base-unit;
+    right: $base-unit;
+    // bottom: 0.2*$base-unit;
+    bottom: 0;
+    text-align: center;
+    @include breakpoint(mob){
+        position: relative;
+        left: 0; right: 0;
+        top: -$gutter-std;
+    }
+}
+

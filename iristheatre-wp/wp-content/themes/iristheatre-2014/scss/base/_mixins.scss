@@ -1,0 +1,31 @@
+/*------------------------------------*\
+    BASE/MIXINS
+\*------------------------------------*/
+
+
+/**
+ * Media Query Mixin
+ */
+@mixin breakpoint($point) {
+	// Tablet (Portrait) - browser width less than 960px 
+	@if $point == tab {
+		@media only screen and (min-width:48*$base-unit) and (max-width:61.875*$base-unit) { @content; }
+	}
+	// Mobile (Portrait) - browser width less than 768px
+  	@else if $point == mob {
+		@media only screen and (max-width:47.9375*$base-unit) { @content; }
+    }
+}
+
+/**
+ * Responsive Text Mixin
+ */
+ @mixin font-sizing($base-size) {
+    font-size: $base-size;
+    @include breakpoint(tab){
+        font-size: $base-size*$font-size--tab;
+    }
+    @include breakpoint(mob){
+        font-size: $base-size*$font-size--mob;
+    }
+ }

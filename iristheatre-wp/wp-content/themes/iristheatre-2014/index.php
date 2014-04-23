@@ -9,8 +9,8 @@
   <?php 
   $args = array(
     'posts_per_page' => 3,
-    'category' => 'shows',
-    'meta_key' => 'show_start_date',
+    'post_type' => 'tribe_events',
+    'meta_key' => '_EventStartDate',
     'orderby' => 'meta_value_num',
     'order' => 'ASC', 
     'meta_query' => array(

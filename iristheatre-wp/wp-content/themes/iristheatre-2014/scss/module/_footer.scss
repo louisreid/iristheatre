@@ -2,12 +2,80 @@
     MODULE/FOOTER.SCSS
 \*------------------------------------*/
 
-.footer__head {
-    padding-bottom: $gutter-std;
+.footer-head {
+    @extend .cf;
+    padding-bottom: $gutter-med;
     border-bottom: 1px solid $steel-light;
+    color: $steel;
 }
 
-.footer__body {
-    padding-top: $gutter-std;
+.footer-body {
+    @extend .cf;
+    padding-top: $gutter-med;
+}
+
+.footer-strapline {
+    width: 40%;
+    float: left;
+    padding-left: $gutter-lrg;
+    @extend .font-size-blockquote;
+}
+
+.footer-social {
+    float: right;
+    padding-top: $gutter-lrg;
+    @extend .font-size-blockquote;
+    img {
+        height: 20px;
+        padding-left: $gutter-sml;
+    }
+    a:hover {
+        img {
+            opacity: 0.8;
+            @extend .transition-color;
+        }
+    }
+}
+
+
+.footer-newsletter {
+    width: 25%;
+    float: right;
+    position: relative;
+    top: -20px;
+
+    .sml_emaillabel {
+        @extend .font-size-small;
+    }
+
+    .sml_subscribe {
+        @extend .cf;
+    }
+
+    .sml_email, .sml_submit {
+        display: block;
+        float: left;
+    }
+
+    .sml_email, .sml_emailinput {
+        width: 160px;
+    }
+
+    .sml_submit {
+        width: 70px;
+        float: right;
+    }
+
+    input[type="submit"] {
+        width: 70px;
+        position: relative;
+        top: 22px;
+        @extend .font-size-p;
+    }
+
+    .sml_thankyou {
+        position: absolute;
+        background: $off-white;
+    }
 }
 

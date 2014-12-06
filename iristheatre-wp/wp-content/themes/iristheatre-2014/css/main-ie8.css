@@ -1,0 +1,1663 @@
+/*------------------------------------*\
+  UI-OLD-IE.SCSS
+\*------------------------------------*/
+/*------------------------------------*\
+    BASE/BASE.SCSS
+\*------------------------------------*/
+/*------------------------------------*\
+    BASE/VARS
+\*------------------------------------*/
+/**
+ * SETTINGS
+ */
+/**
+ * Colour Variables
+ */
+/**
+ * Size Variables
+ */
+/**
+ * Font Variables
+ */
+/**
+ * Spacing Variables
+ */
+/*------------------------------------*\
+    BASE/RESET.SCSS
+\*------------------------------------*/
+/**
+ * A custom normalized reset. Thanks to Nicolas Gallagher.
+ *
+ * Customisations include:
+ * ul, li 
+ * h1, h2, h3, h4, h5, h6
+ */
+/*! normalize.css v2.1.3 | MIT License | git.io/normalize */
+/* ==========================================================================
+   HTML5 display definitions
+   ========================================================================== */
+/**
+ * Correct `block` display not defined in IE 8/9.
+ */
+/* line 34, ../scss/base/_reset.scss */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/**
+ * Correct `inline-block` display not defined in IE 8/9.
+ */
+/* line 45, ../scss/base/_reset.scss */
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+}
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+/* line 54, ../scss/base/_reset.scss */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/**
+ * Address `[hidden]` styling not present in IE 8/9.
+ * Hide the `template` element in IE, Safari, and Firefox < 22.
+ */
+/* line 65, ../scss/base/_reset.scss */
+[hidden],
+template {
+  display: none;
+}
+
+/* ==========================================================================
+   Base
+   ========================================================================== */
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+/* line 79, ../scss/base/_reset.scss */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/**
+ * Remove default margin.
+ */
+/* line 89, ../scss/base/_reset.scss */
+body {
+  margin: 0;
+}
+
+/* ==========================================================================
+   Links
+   ========================================================================== */
+/**
+ * Remove the gray background color from active links in IE 10.
+ */
+/* line 101, ../scss/base/_reset.scss */
+a {
+  background: transparent;
+}
+
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+/* line 110, ../scss/base/_reset.scss */
+a:active,
+a:hover {
+  outline: 0;
+}
+
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari 5, and Chrome.
+ */
+/* line 123, ../scss/base/_reset.scss */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/**
+ * Address styling not present in IE 8/9, Safari 5, and Chrome.
+ */
+/* line 132, ../scss/base/_reset.scss */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome.
+ */
+/* line 141, ../scss/base/_reset.scss */
+b,
+strong {
+  font-weight: bold;
+}
+
+/**
+ * Address styling not present in Safari 5 and Chrome.
+ */
+/* line 149, ../scss/base/_reset.scss */
+dfn {
+  font-style: italic;
+}
+
+/**
+ * Address differences between Firefox and other browsers.
+ */
+/* line 157, ../scss/base/_reset.scss */
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+/* line 167, ../scss/base/_reset.scss */
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+/**
+ * Correct font family set oddly in Safari 5 and Chrome.
+ */
+/* line 179, ../scss/base/_reset.scss */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, serif;
+  font-size: 1em;
+}
+
+/**
+ * Improve readability of pre-formatted text in all browsers.
+ */
+/* line 188, ../scss/base/_reset.scss */
+pre {
+  white-space: pre-wrap;
+}
+
+/**
+ * Set consistent quote types.
+ */
+/* line 196, ../scss/base/_reset.scss */
+q {
+  quotes: "\201C" "\201D" "\2018" "\2019";
+}
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+/* line 204, ../scss/base/_reset.scss */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+/* line 213, ../scss/base/_reset.scss */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+/* line 220, ../scss/base/_reset.scss */
+sup {
+  top: -0.5em;
+}
+
+/* line 224, ../scss/base/_reset.scss */
+sub {
+  bottom: -0.25em;
+}
+
+/* ==========================================================================
+   Embedded content
+   ========================================================================== */
+/**
+ * Remove border when inside `a` element in IE 8/9.
+ */
+/* line 236, ../scss/base/_reset.scss */
+img {
+  border: 0;
+}
+
+/**
+ * Correct overflow displayed oddly in IE 9.
+ */
+/* line 244, ../scss/base/_reset.scss */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* ==========================================================================
+   Figures
+   ========================================================================== */
+/**
+ * Address margin not present in IE 8/9 and Safari 5.
+ */
+/* line 256, ../scss/base/_reset.scss */
+figure {
+  margin: 1em 40px;
+}
+
+/* ==========================================================================
+   Forms
+   ========================================================================== */
+/**
+ * 1. Define consistent border, margin, and padding.
+ * 2. Address width being affected by wide descendants in Chrome and Firefox.
+ */
+/* line 269, ../scss/base/_reset.scss */
+fieldset {
+  border: 1px solid #c0c0c0;
+  /* 1 */
+  margin: 0 2px;
+  /* 1 */
+  min-width: 0;
+  /* 2 */
+  padding: 0.35em 0.625em 0.75em;
+  /* 1 */
+}
+
+/**
+ * 1. Correct `color` not being inherited in IE 8/9.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+/* line 281, ../scss/base/_reset.scss */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * 1. Correct color not being inherited in all browsers.
+ *    Known issue: `select` will not inherit color in Chrome and Safari on OS X.
+ * 2. Correct font properties not being inherited in all browsers.
+ * 3. Address margins set differently in Firefox 4+, Safari 5, and Chrome.
+ */
+/* line 297, ../scss/base/_reset.scss */
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+  margin: 0;
+  /* 3 */
+}
+
+/**
+ * Re-apply the `font-weight` to avoid modifying the default UX, and because
+ * the default cannot be changed in Chrome and Safari on OS X.
+ */
+/* line 308, ../scss/base/_reset.scss */
+optgroup {
+  font-weight: bold;
+}
+
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+/* line 318, ../scss/base/_reset.scss */
+button,
+input {
+  line-height: normal;
+}
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Chrome, Safari 5+, and IE 8+.
+ * Correct `select` style inheritance in Firefox 4+ and Opera.
+ */
+/* line 330, ../scss/base/_reset.scss */
+button,
+select {
+  text-transform: none;
+}
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+/* line 345, ../scss/base/_reset.scss */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */
+}
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+/* line 355, ../scss/base/_reset.scss */
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+/**
+ * 1. Address box sizing set to `content-box` in IE 8/9/10.
+ * 2. Remove excess padding in IE 8/9/10.
+ */
+/* line 365, ../scss/base/_reset.scss */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
+ *    (include `-moz` to future-proof).
+ */
+/* line 376, ../scss/base/_reset.scss */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  /* 2 */
+  box-sizing: content-box;
+}
+
+/**
+ * Remove inner padding and search cancel button in Safari 5 and Chrome
+ * on OS X.
+ */
+/* line 389, ../scss/base/_reset.scss */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+/* line 398, ../scss/base/_reset.scss */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/**
+ * 1. Remove default vertical scrollbar in IE 8/9.
+ * 2. Improve readability and alignment in all browsers.
+ */
+/* line 408, ../scss/base/_reset.scss */
+textarea {
+  overflow: auto;
+  /* 1 */
+  vertical-align: top;
+  /* 2 */
+}
+
+/* ==========================================================================
+   Tables
+   ========================================================================== */
+/**
+ * Remove most spacing between table cells.
+ */
+/* line 421, ../scss/base/_reset.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 427, ../scss/base/_reset.scss */
+td,
+th {
+  padding: 0;
+}
+
+/*------------------------------------*\
+    CUSTOMISATIONS
+\*------------------------------------*/
+/* line 436, ../scss/base/_reset.scss */
+ul, li {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+/* line 442, ../scss/base/_reset.scss */
+h1, h2, h3, h4, h5, h6 {
+  padding: 0;
+  margin: 0;
+}
+
+/* line 447, ../scss/base/_reset.scss */
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 454, ../scss/base/_reset.scss */
+body {
+  overflow-x: hidden;
+}
+
+/* line 458, ../scss/base/_reset.scss */
+body {
+  color: #333333;
+}
+
+/*------------------------------------*\
+    BASE/MIXINS
+\*------------------------------------*/
+/**
+ * Media Query Mixin
+ */
+/**
+ * Responsive Text Mixin
+ */
+/*------------------------------------*\
+    BASE/EXTENDS.SCSS
+\*------------------------------------*/
+/**
+ * Clear Fix
+ * thanks to: nicolasgallagher.com
+ */
+/* line 11, ../scss/base/_extends.scss */
+.cf:before, .site-header:before, .site-content:before, .tile-wrapper:before, .more-shows:before, .past-work-shows:before, .tile:before, .cal-bar:before, .photo-grid .afg-row:before, .footer-head:before, .footer-body:before, .footer-newsletter .sml_subscribe:before, .show-head:before, .show-body:before, .show-thumbnails:before, .whats-on-list:before,
+.cf:after,
+.site-header:after,
+.site-content:after,
+.tile-wrapper:after,
+.more-shows:after,
+.past-work-shows:after,
+.tile:after,
+.cal-bar:after,
+.photo-grid .afg-row:after,
+.footer-head:after,
+.footer-body:after,
+.footer-newsletter .sml_subscribe:after,
+.show-head:after,
+.show-body:after,
+.show-thumbnails:after,
+.whats-on-list:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+
+/* line 16, ../scss/base/_extends.scss */
+.cf:after, .site-header:after, .site-content:after, .tile-wrapper:after, .more-shows:after, .past-work-shows:after, .tile:after, .cal-bar:after, .photo-grid .afg-row:after, .footer-head:after, .footer-body:after, .footer-newsletter .sml_subscribe:after, .show-head:after, .show-body:after, .show-thumbnails:after, .whats-on-list:after {
+  clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+/* line 24, ../scss/base/_extends.scss */
+.cf, .site-header, .site-content, .tile-wrapper, .more-shows, .past-work-shows, .tile, .cal-bar, .photo-grid .afg-row, .footer-head, .footer-body, .footer-newsletter .sml_subscribe, .show-head, .show-body, .show-thumbnails, .whats-on-list {
+  *zoom: 1;
+}
+
+/**
+ * Animation
+ */
+/* line 31, ../scss/base/_extends.scss */
+.transition-color, .footer-social a:hover img {
+  transition: color 0.1s ease-out;
+}
+
+/*------------------------------------*\
+    BASE/ELEMENTS.SCSS
+\*------------------------------------*/
+/* line 5, ../scss/base/_elements.scss */
+body {
+  background-color: #e0ded3;
+  font-size: 16px;
+}
+
+/* line 10, ../scss/base/_elements.scss */
+hr {
+  margin: 0;
+  border: 0;
+  width: 100%;
+  height: 1px;
+  color: #7f8c8d;
+  background-color: #b5bcbc;
+}
+@media only screen and (max-width: 767px) {
+  /* line 10, ../scss/base/_elements.scss */
+  hr {
+    display: none;
+  }
+}
+
+/* line 20, ../scss/base/_elements.scss */
+.hidden, .tile__hidden {
+  display: none;
+}
+
+/* line 24, ../scss/base/_elements.scss */
+.stars--show {
+  display: inline-block;
+  padding-left: 3px;
+}
+
+/* line 29, ../scss/base/_elements.scss */
+.page_title, .past-work__title, .tickets__title {
+  color: #333333;
+  margin-bototm: 36px;
+}
+
+/*------------------------------------*\
+    BASE/TYPOGRAPHY.SCSS
+\*------------------------------------*/
+/**
+ * FONTS
+ */
+/* line 9, ../scss/base/_typography.scss */
+.font-heading, .header--block, .header--white-block, .hero__caption, .tile__caption, .nav-main ul li a, .nav-main--menu ul li a, .nav-main--footer ul li a, .nav-main--hamburger ul li a, .show-ticketshop-link a, .header--black-block, .page_title, .past-work__title, .tickets__title, .cal-bar__item, .cal-bar__month, .cal-bar__date, .whats-on-widget__header, .news-flash__header, .twitter-link a, .show-twitter-link a, .show-title h1, .show-title h2, .show-title h3, .show-title h4, .show-title h5, .show-title h6, .show-dates, .whats-on-detail, .past-work-year__title, .jobs-page__header, .jobs__rate, .jobs__dates, .news-flash__title, .news-flash__read-more, .show-review {
+  font-family: 'Montserrat', Arial, sans;
+  font-weight: 400;
+}
+
+/* line 14, ../scss/base/_typography.scss */
+.font-body, body, .copy-blockquote, .copy blockquote, .show-title blockquote, .show-text blockquote, .whats-on-detail blockquote, .show-review blockquote {
+  font-family: 'Open Sans', Arial, sans;
+  font-weight: 300;
+}
+
+/**
+ * FONT-SIZES
+ */
+/* line 30, ../scss/base/_typography.scss */
+.font-size-header-page, .page_title, .past-work__title, .tickets__title, .copy h1, .show-title h1, .show-text h1, .whats-on-detail h1 {
+  font-size: 44.8px;
+}
+@media only screen and (min-width: 768px) and (max-width: 990px) {
+  /* line 30, ../scss/base/_typography.scss */
+  .font-size-header-page, .page_title, .past-work__title, .tickets__title, .copy h1, .show-title h1, .show-text h1, .whats-on-detail h1 {
+    font-size: 32px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  /* line 30, ../scss/base/_typography.scss */
+  .font-size-header-page, .page_title, .past-work__title, .tickets__title, .copy h1, .show-title h1, .show-text h1, .whats-on-detail h1 {
+    font-size: 17.6px;
+  }
+}
+
+/* line 31, ../scss/base/_typography.scss */
+.font-size-header, .copy h4, .show-title h4, .show-text h4, .whats-on-detail h4, .copy h5, .show-title h5, .show-text h5, .whats-on-detail h5, .copy h6, .show-title h6, .show-text h6, .whats-on-detail h6, .past-work-year__title {
+  font-size: 32px;
+}
+@media only screen and (min-width: 768px) and (max-width: 990px) {
+  /* line 31, ../scss/base/_typography.scss */
+  .font-size-header, .copy h4, .show-title h4, .show-text h4, .whats-on-detail h4, .copy h5, .show-title h5, .show-text h5, .whats-on-detail h5, .copy h6, .show-title h6, .show-text h6, .whats-on-detail h6, .past-work-year__title {
+    font-size: 16px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  /* line 31, ../scss/base/_typography.scss */
+  .font-size-header, .copy h4, .show-title h4, .show-text h4, .whats-on-detail h4, .copy h5, .show-title h5, .show-text h5, .whats-on-detail h5, .copy h6, .show-title h6, .show-text h6, .whats-on-detail h6, .past-work-year__title {
+    font-size: 14.4px;
+  }
+}
+
+/* line 32, ../scss/base/_typography.scss */
+.font-size-header-sub, .hero__caption, .tile__caption, .copy h2, .show-title h2, .show-text h2, .whats-on-detail h2 {
+  font-size: 24.96px;
+}
+@media only screen and (min-width: 768px) and (max-width: 990px) {
+  /* line 32, ../scss/base/_typography.scss */
+  .font-size-header-sub, .hero__caption, .tile__caption, .copy h2, .show-title h2, .show-text h2, .whats-on-detail h2 {
+    font-size: 16px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  /* line 32, ../scss/base/_typography.scss */
+  .font-size-header-sub, .hero__caption, .tile__caption, .copy h2, .show-title h2, .show-text h2, .whats-on-detail h2 {
+    font-size: 14.4px;
+  }
+}
+
+/* line 33, ../scss/base/_typography.scss */
+.font-size-header-link, .tile__hidden, .news-flash__title {
+  font-size: 20.8px;
+}
+@media only screen and (min-width: 768px) and (max-width: 990px) {
+  /* line 33, ../scss/base/_typography.scss */
+  .font-size-header-link, .tile__hidden, .news-flash__title {
+    font-size: 16px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  /* line 33, ../scss/base/_typography.scss */
+  .font-size-header-link, .tile__hidden, .news-flash__title {
+    font-size: 14.4px;
+  }
+}
+
+/* line 34, ../scss/base/_typography.scss */
+.font-size-header-small, .copy h3, .show-title h3, .show-text h3, .whats-on-detail h3 {
+  font-size: 28.8px;
+}
+@media only screen and (min-width: 768px) and (max-width: 990px) {
+  /* line 34, ../scss/base/_typography.scss */
+  .font-size-header-small, .copy h3, .show-title h3, .show-text h3, .whats-on-detail h3 {
+    font-size: 16px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  /* line 34, ../scss/base/_typography.scss */
+  .font-size-header-small, .copy h3, .show-title h3, .show-text h3, .whats-on-detail h3 {
+    font-size: 14.4px;
+  }
+}
+
+/* line 36, ../scss/base/_typography.scss */
+.font-size-nav, .nav-main ul li a, .nav-main--menu ul li a, .nav-main--footer ul li a, .nav-main--hamburger ul li a {
+  font-size: 17.6px;
+}
+@media only screen and (min-width: 768px) and (max-width: 990px) {
+  /* line 36, ../scss/base/_typography.scss */
+  .font-size-nav, .nav-main ul li a, .nav-main--menu ul li a, .nav-main--footer ul li a, .nav-main--hamburger ul li a {
+    font-size: 14.4px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  /* line 36, ../scss/base/_typography.scss */
+  .font-size-nav, .nav-main ul li a, .nav-main--menu ul li a, .nav-main--footer ul li a, .nav-main--hamburger ul li a {
+    font-size: 12.8px;
+  }
+}
+
+/* line 38, ../scss/base/_typography.scss */
+.font-size-p, .footer-newsletter input[type="submit"], .jobs__rate, .jobs__dates {
+  font-size: 16px;
+}
+@media only screen and (min-width: 768px) and (max-width: 990px) {
+  /* line 38, ../scss/base/_typography.scss */
+  .font-size-p, .footer-newsletter input[type="submit"], .jobs__rate, .jobs__dates {
+    font-size: 16px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  /* line 38, ../scss/base/_typography.scss */
+  .font-size-p, .footer-newsletter input[type="submit"], .jobs__rate, .jobs__dates {
+    font-size: 12.8px;
+  }
+}
+
+/* line 39, ../scss/base/_typography.scss */
+.font-size-small, .footer-newsletter .sml_emaillabel {
+  font-size: 11.2px;
+}
+@media only screen and (min-width: 768px) and (max-width: 990px) {
+  /* line 39, ../scss/base/_typography.scss */
+  .font-size-small, .footer-newsletter .sml_emaillabel {
+    font-size: 16px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  /* line 39, ../scss/base/_typography.scss */
+  .font-size-small, .footer-newsletter .sml_emaillabel {
+    font-size: 12.8px;
+  }
+}
+
+/* line 41, ../scss/base/_typography.scss */
+.font-size-blockquote, .copy-blockquote, .copy blockquote, .show-title blockquote, .show-text blockquote, .whats-on-detail blockquote, .show-review blockquote, .footer-strapline, .footer-social {
+  font-size: 22.4px;
+}
+@media only screen and (min-width: 768px) and (max-width: 990px) {
+  /* line 41, ../scss/base/_typography.scss */
+  .font-size-blockquote, .copy-blockquote, .copy blockquote, .show-title blockquote, .show-text blockquote, .whats-on-detail blockquote, .show-review blockquote, .footer-strapline, .footer-social {
+    font-size: 32px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  /* line 41, ../scss/base/_typography.scss */
+  .font-size-blockquote, .copy-blockquote, .copy blockquote, .show-title blockquote, .show-text blockquote, .whats-on-detail blockquote, .show-review blockquote, .footer-strapline, .footer-social {
+    font-size: 17.6px;
+  }
+}
+
+/* line 42, ../scss/base/_typography.scss */
+.font-size-button, .twitter-link, .show-twitter-link, .show-ticketshop-link a {
+  font-size: 22.4px;
+}
+@media only screen and (min-width: 768px) and (max-width: 990px) {
+  /* line 42, ../scss/base/_typography.scss */
+  .font-size-button, .twitter-link, .show-twitter-link, .show-ticketshop-link a {
+    font-size: 32px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  /* line 42, ../scss/base/_typography.scss */
+  .font-size-button, .twitter-link, .show-twitter-link, .show-ticketshop-link a {
+    font-size: 17.6px;
+  }
+}
+
+/* line 44, ../scss/base/_typography.scss */
+.font-size-date, .show-dates {
+  font-size: 17.6px;
+}
+@media only screen and (min-width: 768px) and (max-width: 990px) {
+  /* line 44, ../scss/base/_typography.scss */
+  .font-size-date, .show-dates {
+    font-size: 16px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  /* line 44, ../scss/base/_typography.scss */
+  .font-size-date, .show-dates {
+    font-size: 14.4px;
+  }
+}
+
+/* line 45, ../scss/base/_typography.scss */
+.font-size-stars, .show-stars {
+  font-size: 32px;
+}
+@media only screen and (min-width: 768px) and (max-width: 990px) {
+  /* line 45, ../scss/base/_typography.scss */
+  .font-size-stars, .show-stars {
+    font-size: 32px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  /* line 45, ../scss/base/_typography.scss */
+  .font-size-stars, .show-stars {
+    font-size: 17.6px;
+  }
+}
+
+/**
+ * HEADERS
+ */
+/* line 52, ../scss/base/_typography.scss */
+h1, h2, h3, h4, h5, h6 {
+  padding: 0;
+  margin: 0;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* line 59, ../scss/base/_typography.scss */
+.header--block, .header--white-block, .hero__caption, .tile__caption, .nav-main ul li a, .nav-main--menu ul li a, .nav-main--footer ul li a, .nav-main--hamburger ul li a, .show-ticketshop-link a, .header--black-block, .page_title, .past-work__title, .tickets__title, .cal-bar__item, .cal-bar__month, .cal-bar__date, .whats-on-widget__header, .news-flash__header, .twitter-link a, .show-twitter-link a, .show-title h1, .show-title h2, .show-title h3, .show-title h4, .show-title h5, .show-title h6, .show-dates, .whats-on-detail, .past-work-year__title, .jobs-page__header, .jobs__rate, .jobs__dates {
+  text-transform: uppercase;
+}
+
+/* line 64, ../scss/base/_typography.scss */
+.header--white-block, .hero__caption, .tile__caption, .nav-main ul li a, .nav-main--menu ul li a, .nav-main--footer ul li a, .nav-main--hamburger ul li a, .show-ticketshop-link a {
+  color: white;
+}
+
+/* line 69, ../scss/base/_typography.scss */
+.header--black-block, .page_title, .past-work__title, .tickets__title, .cal-bar__item, .cal-bar__month, .cal-bar__date, .whats-on-widget__header, .news-flash__header, .twitter-link a, .show-twitter-link a, .show-title h1, .show-title h2, .show-title h3, .show-title h4, .show-title h5, .show-title h6, .show-dates, .whats-on-detail, .past-work-year__title, .jobs-page__header, .jobs__rate, .jobs__dates {
+  color: #252525;
+}
+
+/**
+ * ANCHORS
+ */
+/* line 77, ../scss/base/_typography.scss */
+a {
+  color: #252525;
+  text-decoration: underline;
+}
+/* line 80, ../scss/base/_typography.scss */
+a:hover {
+  color: #111111;
+}
+
+/*------------------------------------*\
+    LAYOUT/LAYOUT.SCSS
+\*------------------------------------*/
+/*------------------------------------*\
+    LAYOUT/PAGE.SCSS
+\*------------------------------------*/
+/* line 5, ../scss/layout/_page.scss */
+.wrapper, .wrapper--site-header, .wrapper--site-footer {
+  width: 100%;
+}
+
+/* line 9, ../scss/layout/_page.scss */
+.wrapper--site-header {
+  background-color: #755190;
+}
+
+/* line 14, ../scss/layout/_page.scss */
+.wrapper--site-footer {
+  background-color: #ececec;
+  border-top: 1px solid #b5bcbc;
+}
+
+/* line 20, ../scss/layout/_page.scss */
+.page-constrained, .site-header, .site-content, .site-footer {
+  margin: 0 auto;
+  padding: 20px;
+  max-width: 1025px;
+}
+@media only screen and (max-width: 767px) {
+  /* line 20, ../scss/layout/_page.scss */
+  .page-constrained, .site-header, .site-content, .site-footer {
+    padding: 8px;
+  }
+}
+
+/**
+ * Site areas
+ */
+/* line 33, ../scss/layout/_page.scss */
+.site-header {
+  padding-bottom: 60px;
+}
+@media only screen and (max-width: 767px) {
+  /* line 33, ../scss/layout/_page.scss */
+  .site-header {
+    padding-bottom: 8px;
+  }
+}
+
+/* line 42, ../scss/layout/_page.scss */
+.site-content {
+  position: relative;
+  top: -40px;
+  background-color: #e0ded3;
+}
+@media only screen and (max-width: 767px) {
+  /* line 42, ../scss/layout/_page.scss */
+  .site-content {
+    top: 0;
+  }
+}
+
+/**
+ * Columns
+ */
+/* line 61, ../scss/layout/_page.scss */
+.column, .column-left, .column-right {
+  width: 50%;
+  float: left;
+  padding-top: 20px;
+}
+@media only screen and (max-width: 767px) {
+  /* line 61, ../scss/layout/_page.scss */
+  .column, .column-left, .column-right {
+    width: 100%;
+  }
+}
+
+/* line 74, ../scss/layout/_page.scss */
+.column-right {
+  padding-left: 20px;
+}
+@media only screen and (max-width: 767px) {
+  /* line 74, ../scss/layout/_page.scss */
+  .column-right {
+    margin-top: 20px;
+    padding-left: 0;
+  }
+}
+
+/*------------------------------------*\
+  MODULE/MODULE.SCSS
+\*------------------------------------*/
+/*------------------------------------*\
+    MODULE/CAPTION.SCSS
+\*------------------------------------*/
+/* line 6, ../scss/module/_caption.scss */
+.caption, .hero__caption {
+  padding: 6.4px;
+  position: absolute;
+  left: 16px;
+  right: 16px;
+  bottom: 0;
+  text-align: center;
+}
+@media only screen and (max-width: 767px) {
+  /* line 6, ../scss/module/_caption.scss */
+  .caption, .hero__caption {
+    position: relative;
+    left: 0;
+    right: 0;
+    top: -20px;
+  }
+}
+
+/*------------------------------------*\
+    MODULE/HERO.SCSS
+\*------------------------------------*/
+/* line 5, ../scss/module/_hero.scss */
+.hero {
+  width: 100%;
+  position: relative;
+  padding-bottom: 20px;
+}
+@media only screen and (max-width: 767px) {
+  /* line 5, ../scss/module/_hero.scss */
+  .hero {
+    padding-bottom: 0;
+    margin-bottom: -20px;
+  }
+}
+
+/* line 15, ../scss/module/_hero.scss */
+.hero__caption {
+  background-color: #755190;
+}
+
+/* line 22, ../scss/module/_hero.scss */
+.hero__image {
+  height: 490px;
+  overflow: hidden;
+}
+/* line 25, ../scss/module/_hero.scss */
+.hero__image img {
+  width: 100%;
+}
+
+/*------------------------------------*\
+    MODULE/TILE.SCSS
+\*------------------------------------*/
+/* line 8, ../scss/module/_tile.scss */
+.tile-wrapper, .more-shows, .past-work-shows {
+  margin: 0;
+  margin-left: -20px;
+  padding: 20px 0;
+}
+@media only screen and (max-width: 767px) {
+  /* line 8, ../scss/module/_tile.scss */
+  .tile-wrapper, .more-shows, .past-work-shows {
+    margin: 0;
+    padding: 8px 0;
+  }
+}
+
+/* line 19, ../scss/module/_tile.scss */
+.tile {
+  margin: 0;
+  padding: 0;
+  width: 33.33333%;
+  padding-left: 20px;
+  margin-bottom: 20px;
+  float: left;
+  position: relative;
+}
+@media only screen and (max-width: 767px) {
+  /* line 19, ../scss/module/_tile.scss */
+  .tile {
+    float: none;
+    padding-left: 0;
+    margin-bottom: 8px;
+    width: 100%;
+    height: 64px;
+    background-color: #755190;
+  }
+}
+
+/* line 38, ../scss/module/_tile.scss */
+.tile__caption {
+  position: absolute;
+  left: 20px;
+  right: 0;
+  bottom: 0;
+  padding: 6.4px;
+  background-color: #755190;
+}
+@media only screen and (max-width: 767px) {
+  /* line 38, ../scss/module/_tile.scss */
+  .tile__caption {
+    float: left;
+    width: 70%;
+    position: static;
+  }
+}
+
+/* line 57, ../scss/module/_tile.scss */
+.tile__hidden {
+  font-weight: 100;
+}
+
+/* line 63, ../scss/module/_tile.scss */
+.tile__image {
+  width: 100%;
+}
+@media only screen and (max-width: 767px) {
+  /* line 63, ../scss/module/_tile.scss */
+  .tile__image {
+    float: left;
+    width: 30%;
+    height: 64px;
+    background-size: cover;
+  }
+}
+
+/*------------------------------------*\
+    MODULE/CAL-BAR.SCSS
+\*------------------------------------*/
+/* line 7, ../scss/module/_cal-bar.scss */
+.cal-bar {
+  padding: 20px 0;
+  margin-left: -10px;
+  width: 100%;
+}
+
+/* line 14, ../scss/module/_cal-bar.scss */
+.cal-bar__item, .cal-bar__month, .cal-bar__date {
+  margin-bottom: 5px;
+  padding: 0 10px;
+  float: left;
+}
+
+/* line 25, ../scss/module/_cal-bar.scss */
+.cal-bar__date {
+  border-right: 1px solid #252525;
+}
+
+/*------------------------------------*\
+    MODULE/LOGO.SCSS
+\*------------------------------------*/
+/* line 9, ../scss/module/_logo.scss */
+.logo-header {
+  float: left;
+}
+@media only screen and (max-width: 767px) {
+  /* line 9, ../scss/module/_logo.scss */
+  .logo-header {
+    width: 15%;
+  }
+}
+
+/* line 16, ../scss/module/_logo.scss */
+.logo-footer {
+  float: left;
+}
+
+/*------------------------------------*\
+    MODULES/MEDIA.SCSS
+\*------------------------------------*/
+/* line 5, ../scss/module/_media.scss */
+.media {
+  float: left;
+  width: 100%/3;
+}
+/* line 8, ../scss/module/_media.scss */
+.media:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-size: cover;
+}
+
+/*------------------------------------*\
+    MODULE/COPY.SCSS
+\*------------------------------------*/
+/* line 20, ../scss/module/_copy.scss */
+.copy-blockquote, .copy blockquote, .show-title blockquote, .show-text blockquote, .whats-on-detail blockquote, .show-review blockquote {
+  margin: 0;
+  padding: 20px 8px 8px 8px;
+  font-style: italic;
+}
+
+/* line 28, ../scss/module/_copy.scss */
+.copy-p, .copy p, .show-title p, .show-text p, .whats-on-detail p {
+  margin: 0;
+  padding: 0 0 8px 0;
+  line-height: 1.8em;
+}
+
+/*------------------------------------*\
+    MODULE/NAV.SCSS
+\*------------------------------------*/
+/* line 8, ../scss/module/_nav.scss */
+.nav-main ul li a, .nav-main--menu ul li a, .nav-main--footer ul li a, .nav-main--hamburger ul li a {
+  text-decoration: none;
+}
+/* line 12, ../scss/module/_nav.scss */
+.nav-main ul li a:hover, .nav-main--menu ul li a:hover, .nav-main--footer ul li a:hover, .nav-main--hamburger ul li a:hover {
+  color: #b5bcbc;
+}
+
+/* line 20, ../scss/module/_nav.scss */
+.nav-main--menu {
+  position: relative;
+  top: 42px;
+  float: right;
+}
+@media only screen and (max-width: 767px) {
+  /* line 20, ../scss/module/_nav.scss */
+  .nav-main--menu {
+    top: 5px;
+    display: none;
+  }
+}
+/* line 30, ../scss/module/_nav.scss */
+.nav-main--menu ul li {
+  padding-left: 20px;
+  float: left;
+}
+
+/* line 40, ../scss/module/_nav.scss */
+.nav-main--footer {
+  display: block;
+  float: left;
+  width: 75%;
+  padding: 20px 0;
+}
+/* line 47, ../scss/module/_nav.scss */
+.nav-main--footer ul li {
+  padding-right: 20px;
+  float: left;
+}
+/* line 50, ../scss/module/_nav.scss */
+.nav-main--footer ul li a {
+  color: #7f8c8d;
+}
+
+/* line 58, ../scss/module/_nav.scss */
+.nav-main--hamburger {
+  display: none;
+  color: white;
+  font-size: 32px;
+}
+@media only screen and (max-width: 767px) {
+  /* line 58, ../scss/module/_nav.scss */
+  .nav-main--hamburger {
+    display: block;
+  }
+}
+
+/*------------------------------------*\
+    MODULE/MORE-SHOWS.SCSS
+\*------------------------------------*/
+/*------------------------------------*\
+    MODULE/WHATS-ON-WIDGET.SCSS
+\*------------------------------------*/
+/* line 5, ../scss/module/_whats-on-widget.scss */
+.whats-on-widget {
+  width: 100%;
+  background-color: #ececec;
+  padding: 20px;
+  padding-bottom: 10px;
+}
+
+/*------------------------------------*\
+  MODULE/NEWS-FLASH.SCSS
+\*------------------------------------*/
+/* line 5, ../scss/module/_news-flash.scss */
+.news-flash {
+  margin-bottom: 20px;
+  padding: 20px;
+  background: #ececec;
+}
+
+/* line 15, ../scss/module/_news-flash.scss */
+.news-flash__title {
+  text-decoration: none;
+  padding: 20px 0 0 0;
+  display: block;
+  color: #252525;
+}
+
+/* line 24, ../scss/module/_news-flash.scss */
+.news-flash__read-more {
+  color: #252525;
+}
+
+/*------------------------------------*\
+    MODULE/TWITTER.SCSS
+\*------------------------------------*/
+/* line 5, ../scss/module/_twitter.scss */
+.twitter, .show-twitter {
+  background-color: #ececec;
+  padding: 20px;
+}
+
+/* line 10, ../scss/module/_twitter.scss */
+.twitter-link, .show-twitter-link {
+  display: block;
+  padding-bottom: 8px;
+}
+/* line 14, ../scss/module/_twitter.scss */
+.twitter-link a, .show-twitter-link a {
+  text-decoration: none;
+}
+/* line 17, ../scss/module/_twitter.scss */
+.twitter-link a img, .show-twitter-link a img {
+  position: relative;
+  top: 3px;
+  width: 25px;
+}
+/* line 22, ../scss/module/_twitter.scss */
+.twitter-link a:hover, .show-twitter-link a:hover {
+  color: #111111;
+}
+
+/* line 28, ../scss/module/_twitter.scss */
+.show-twitter {
+  background: white;
+  padding: 20px;
+  padding-top: 36px;
+}
+
+/*------------------------------------*\
+    MODULE/PHOTO-GRID.SCSS
+\*------------------------------------*/
+/* line 5, ../scss/module/_photo-grid.scss */
+.photo-grid {
+  background-color: #ececec;
+  padding: 20px;
+}
+/* line 11, ../scss/module/_photo-grid.scss */
+.photo-grid .afg-cell {
+  float: left;
+  text-align: center;
+}
+/* line 14, ../scss/module/_photo-grid.scss */
+.photo-grid .afg-cell img {
+  width: 210px;
+}
+
+/*------------------------------------*\
+    MODULE/FOOTER.SCSS
+\*------------------------------------*/
+/* line 5, ../scss/module/_footer.scss */
+.footer-head {
+  padding-bottom: 20px;
+  border-bottom: 1px solid #b5bcbc;
+  color: #7f8c8d;
+}
+
+/* line 12, ../scss/module/_footer.scss */
+.footer-body {
+  padding-top: 20px;
+}
+
+/* line 17, ../scss/module/_footer.scss */
+.footer-strapline {
+  width: 40%;
+  float: left;
+  padding-left: 36px;
+}
+
+/* line 24, ../scss/module/_footer.scss */
+.footer-social {
+  float: right;
+  padding-top: 36px;
+}
+/* line 28, ../scss/module/_footer.scss */
+.footer-social img {
+  height: 20px;
+  padding-left: 8px;
+}
+/* line 33, ../scss/module/_footer.scss */
+.footer-social a:hover img {
+  opacity: 0.8;
+}
+
+/* line 41, ../scss/module/_footer.scss */
+.footer-newsletter {
+  width: 25%;
+  float: right;
+  position: relative;
+  top: -20px;
+}
+/* line 55, ../scss/module/_footer.scss */
+.footer-newsletter .sml_email, .footer-newsletter .sml_submit {
+  display: block;
+  float: left;
+}
+/* line 60, ../scss/module/_footer.scss */
+.footer-newsletter .sml_email, .footer-newsletter .sml_emailinput {
+  width: 160px;
+}
+/* line 64, ../scss/module/_footer.scss */
+.footer-newsletter .sml_submit {
+  width: 70px;
+  float: right;
+}
+/* line 69, ../scss/module/_footer.scss */
+.footer-newsletter input[type="submit"] {
+  width: 70px;
+  position: relative;
+  top: 22px;
+}
+/* line 76, ../scss/module/_footer.scss */
+.footer-newsletter .sml_thankyou {
+  position: absolute;
+  background: #ececec;
+}
+
+/*------------------------------------*\
+    MODULE/FLUIDBOX.SCSS
+\*------------------------------------*/
+/* line 5, ../scss/module/_fluidbox.scss */
+.fluidbox {
+  outline: none;
+}
+
+/* line 8, ../scss/module/_fluidbox.scss */
+.hidden, .tile__hidden {
+  display: none;
+}
+
+/* line 11, ../scss/module/_fluidbox.scss */
+.fluidbox-overlay {
+  background-color: rgba(255, 255, 255, 0.85);
+  cursor: pointer;
+  cursor: -webkit-zoom-out;
+  cursor: -moz-zoom-out;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  transition: all .25s ease-in-out;
+}
+
+/* line 24, ../scss/module/_fluidbox.scss */
+.fluidbox-wrap {
+  background-position: center center;
+  background-size: cover;
+  margin: 0 auto;
+  position: relative;
+  transition: all .25s ease-in-out;
+}
+
+/* line 31, ../scss/module/_fluidbox.scss */
+.fluidbox-ghost {
+  background-size: cover;
+  background-position: center center;
+  position: absolute;
+  transition: all .25s ease-in-out;
+}
+
+/* line 37, ../scss/module/_fluidbox.scss */
+.fluidbox-closed .fluidbox-ghost {
+  -webkit-transition-property: top, left, opacity, -webkit-transform;
+  -moz-transition-property: top, left, opacity, -moz-transform;
+  -o-transition-property: top, left, opacity, -o-transform;
+  transition-property: top, left, opacity, transform;
+  transition-delay: 0, 0, .25s, 0;
+}
+
+/* line 44, ../scss/module/_fluidbox.scss */
+.fluidbox-closed .fluidbox-wrap img {
+  transition-property: opacity;
+  transition-delay: .25s;
+  transition-duration: 0s;
+}
+
+/* Page Areas */
+/*------------------------------------*\
+    MODULE/HOME.SCSS
+\*------------------------------------*/
+/*------------------------------------*\
+    MODULE/SHOW.SCSS
+\*------------------------------------*/
+/* line 7, ../scss/module/_show.scss */
+.show-head .show-head-left, .show-head .show-head-right {
+  float: left;
+}
+/* line 10, ../scss/module/_show.scss */
+.show-head .show-head-left {
+  width: 30%;
+  padding-right: 20px;
+}
+/* line 14, ../scss/module/_show.scss */
+.show-head .show-head-right {
+  width: 70%;
+}
+
+/* line 19, ../scss/module/_show.scss */
+.show-body {
+  padding-top: 20px;
+}
+/* line 22, ../scss/module/_show.scss */
+.show-body .show-body-left, .show-body .show-body-right {
+  float: left;
+}
+/* line 25, ../scss/module/_show.scss */
+.show-body .show-body-left {
+  width: 50%;
+  padding-right: 20px;
+}
+/* line 29, ../scss/module/_show.scss */
+.show-body .show-body-right {
+  width: 50%;
+}
+
+/* line 34, ../scss/module/_show.scss */
+.tribe-events-ajax-loading {
+  display: none;
+}
+
+/* line 40, ../scss/module/_show.scss */
+.show-title h1, .show-title h2, .show-title h3, .show-title h4, .show-title h5, .show-title h6 {
+  padding-bottom: 8px;
+}
+
+/* line 46, ../scss/module/_show.scss */
+.show-image {
+  width: 100%;
+}
+
+/* line 50, ../scss/module/_show.scss */
+.show-dates {
+  border-top: thin #111111 solid;
+  border-bottom: thin #111111 solid;
+  padding: 8px 0;
+}
+
+/* line 58, ../scss/module/_show.scss */
+.show-stars {
+  color: #755190;
+  margin: 0;
+  padding: 8px 0 0 0;
+}
+
+/* line 65, ../scss/module/_show.scss */
+.show-review {
+  padding-top: 8px;
+}
+/* line 68, ../scss/module/_show.scss */
+.show-review p {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 81, ../scss/module/_show.scss */
+.show-ticketshop-link a {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  padding: 20px;
+  background-color: #755190;
+}
+
+/* line 92, ../scss/module/_show.scss */
+.show-thumbnails {
+  padding: 20px 0;
+}
+/* line 95, ../scss/module/_show.scss */
+.show-thumbnails a {
+  display: block;
+  float: left;
+  width: 32%;
+  margin-left: 2%;
+}
+/* line 100, ../scss/module/_show.scss */
+.show-thumbnails a img {
+  background: white;
+  padding: 5px;
+  width: 100%;
+}
+/* line 106, ../scss/module/_show.scss */
+.show-thumbnails a:first-child {
+  margin-left: 0;
+}
+
+/*------------------------------------*\
+    MODULE/WHATS-ON.SCSS
+\*------------------------------------*/
+/* line 5, ../scss/module/_whats-on.scss */
+.whats-on-list {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 11, ../scss/module/_whats-on.scss */
+.whats-on-single {
+  float: left;
+  margin: 0;
+  padding: 0 10px 0 0;
+  width: 50%;
+}
+/* line 16, ../scss/module/_whats-on.scss */
+.whats-on-single a {
+  display: block;
+  padding: 8px;
+  text-decoration: none;
+}
+/* line 20, ../scss/module/_whats-on.scss */
+.whats-on-single a:hover {
+  background-color: white;
+}
+
+/* line 26, ../scss/module/_whats-on.scss */
+.whats-on-single:nth-of-type(2n) {
+  padding-right: 0;
+  padding-left: 10px;
+}
+
+/* line 31, ../scss/module/_whats-on.scss */
+.whats-on-image {
+  width: 100%;
+  overflow: hidden;
+}
+
+/* line 39, ../scss/module/_whats-on.scss */
+.whats-on-detail h3 {
+  color: #676767;
+}
+
+/*------------------------------------*\
+    MODULE/PAST-WORK.SCSS
+\*------------------------------------*/
+/* line 12, ../scss/module/_past-work.scss */
+.past-work-year {
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  border-bottom: #252525 1px dotted;
+}
+
+/* line 23, ../scss/module/_past-work.scss */
+.past-work-shows {
+  padding-top: 0;
+}
+/* line 26, ../scss/module/_past-work.scss */
+.past-work-shows li {
+  padding-bottom: 20px;
+}
+
+/*------------------------------------*\
+    MODULE/TICKETS.SCSS
+\*------------------------------------*/
+/*------------------------------------*\
+    MODULE/JOBS.SCSS
+\*------------------------------------*/
+/* line 10, ../scss/module/_jobs.scss */
+.jobs-page__intro {
+  margin-bottom: 36px;
+}
+
+/* line 14, ../scss/module/_jobs.scss */
+.jobs-list {
+  margin: 36px 72px;
+}
+
+/* line 18, ../scss/module/_jobs.scss */
+.jobs__rate, .jobs__dates {
+  text-transform: uppercase;
+  color: #252525;
+}
+
+/* line 25, ../scss/module/_jobs.scss */
+.jobs__application-deadline {
+  font-style: italic;
+  margin: 0 0 20px 0;
+  padding: 0;
+}
+
+/* line 31, ../scss/module/_jobs.scss */
+.jobs__description {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 36, ../scss/module/_jobs.scss */
+.jobs-list__single {
+  border-bottom: dotted thin #252525;
+  margin-bottom: 72px;
+}

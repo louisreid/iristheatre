@@ -7,16 +7,43 @@
  */
 
 .font-heading {
-    /* Monserrat 400 */
     font-family: 'Montserrat', Arial, sans;
-    font-weight: normal;
+    font-weight: 400;
 }
 
 .font-body {
-    /* Open Sans 300 */
     font-family: 'Open Sans', Arial, sans;
     font-weight: 300;
 }
+
+
+/**
+ * FONT-SIZES
+ */
+
+@mixin font-size($desk,$tab,$mob){
+    font-size: $desk*$font-size;
+    @include breakpoint(tab){ font-size: $tab*$font-size; }
+    @include breakpoint(mob){ font-size: $mob*$font-size; }
+}
+
+.font-size-header-page { @include font-size(2.8, 2, 1.1); }
+.font-size-header { @include font-size(2.0, 1.0, 0.9); }
+.font-size-header-sub { @include font-size(1.56, 1.0, 0.9); }
+.font-size-header-link { @include font-size(1.3, 1.0, 0.9); }
+.font-size-header-small { @include font-size(1.8, 1.0, 0.9); }
+
+.font-size-nav { @include font-size(1.1, 0.9, 0.8); }
+
+.font-size-p { @include font-size(1, 1, 0.8); }
+.font-size-small { @include font-size(0.7, 1, 0.8); }
+
+.font-size-blockquote { @include font-size(1.4, 2, 1.1); }
+.font-size-button { @include font-size(1.4, 2, 1.1); }
+
+.font-size-date { @include font-size(1.1, 1.0, 0.9); }
+.font-size-stars { @include font-size(2, 2, 1.1); }
+
 
 /**
  * HEADERS
@@ -36,17 +63,21 @@ h1, h2, h3, h4, h5, h6 {
 
 .header--white-block {
     @extend .header--block;
-    @extend .font-sizing--block-header;
     color: $white;
 }
 
 .header--black-block {
     @extend .header--block;
-    @extend .font-sizing--block-header;
     color: $grey;
 }
 
-.font-sizing--block-header {
-    $font-sizing--block-header: 1.4*$font-size;
-    @include font-sizing($font-sizing--block-header);
+/**
+ * ANCHORS
+ */
+a {
+    color: $grey;
+    text-decoration: underline;
+    &:hover {
+        color: $black;
+    }
 }

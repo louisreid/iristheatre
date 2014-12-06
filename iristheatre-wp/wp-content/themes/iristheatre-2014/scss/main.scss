@@ -20,64 +20,12 @@
  * 1 - Base rules
  * 2 - Layout rules
  * 3 - Module rules
- * 4 - State rules
- * 5 - Theme rules
  *
  */
 
+@import "base/base";
 
-/*------------------------------------*\
-    1. BASE RULES
-\*------------------------------------*/
+@import "layout/layout";
 
-@import "base/imports";
-@import "base/reset";
-@import "base/vars";
-@import "base/mixins";
-@import "base/extends";
-@import "base/elements";
-@import "base/typography";
-
-
-/*------------------------------------*\
-    2. LAYOUT RULES
-\*------------------------------------*/
-
-@import "layout/page";
-
-
-/*------------------------------------*\
-    3. MODULE RULES
-\*------------------------------------*/
-
-@import "module/caption";
-@import "module/slider";
-@import "module/tile";
-@import "module/cal-bar";
-@import "module/logo";
-
-@import "module/media";
-
-@import "module/nav-main";
-@import "module/more-shows";
-@import "module/whats-on";
-@import "module/news-flash";
-@import "module/twitter";
-@import "module/photo-grid";
-@import "module/footer";
-
-
-/*------------------------------------*\
-    4. STATE RULES
-\*------------------------------------*/
-
-
-
-/*------------------------------------*\
-    5. THEME RULES
-\*------------------------------------*/
-
-@import "theme/site-header";
-@import "theme/site-content";
-@import "theme/site-footer";
+@import "module/module";
 

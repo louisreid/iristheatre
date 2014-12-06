@@ -23,17 +23,17 @@ module.exports = function(grunt) {
         },
 
 
-        browser_sync: {
+        browserSync: {
             dev: {
                 bsFiles: {
-                    src : ['**/*.css','**/*.html','iristheatre-wp/wp-content/themes/iristheatre-2014/**/*.php']
+                    src : ['*wp-content/themes/iristheatre-2014/**/*.css','wp-content/themes/iristheatre-2014/**/*.html','wp-content/themes/iristheatre-2014/**/*.php']
                 },
                 options: {
                     watchTask: true,
                     host: 'localhost'
                 }
             }
-        }
+        },
 
     });
 
@@ -41,5 +41,5 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-compass');
     grunt.loadNpmTasks('grunt-browser-sync');
 
-    grunt.registerTask('default', ['browser_sync','watch']);
+    grunt.registerTask('default', ['browserSync','watch']);
 };

@@ -3,36 +3,49 @@
 \*------------------------------------*/
 
 $tile-height--mob: 4*$base-unit;
-$tile-height--std: 10*$base-unit;
+$tile-height--std: 12*$base-unit;
+
+.tile-wrapper {
+    @extend .cf;
+    margin: 0;
+    margin-left: -$gutter-med;
+    padding: $gutter-med 0;
+    @include breakpoint(mob){
+        margin: 0;
+        padding: $gutter-sml 0;
+    }
+}
 
 .tile {
     @extend .cf;
     margin: 0;
     padding: 0;
     width: 33.33333%;
-    padding-left: $gutter-std;
+    padding-left: $gutter-med;
+    margin-bottom: $gutter-med;
     float: left;
     position: relative;
     @include breakpoint(mob){
         float: none;
         padding-left: 0;
-        margin-bottom: $gutter-mob;
+        margin-bottom: $gutter-sml;
         width: 100%;
         height: $tile-height--mob;
-        background-color: $red;
+        background-color: $clr-primary;
     }
 }
 
 .tile__caption {
     @extend .header--white-block;
+    @extend .font-size-header-sub;
 
     position: absolute;
-    left: $gutter-std;
+    left: $gutter-med;
     right: 0;
     bottom: 0;
     padding: $gutter-caption;
 
-    background-color: $red;
+    background-color: $clr-primary;
 
     @include breakpoint (mob){
         float: left;
@@ -41,9 +54,15 @@ $tile-height--std: 10*$base-unit;
     }
 }
 
+.tile__hidden {
+    @extend .hidden;
+    font-weight: 100;
+    @extend .font-size-header-link;
+}
+
 .tile__image {
     width: 100%;
-    height: $tile-height--std;
+    // height: $tile-height--std;
 
     @include breakpoint (mob){
         float: left;

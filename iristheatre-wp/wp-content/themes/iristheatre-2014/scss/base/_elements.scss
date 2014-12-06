@@ -16,3 +16,19 @@ hr {
     background-color: $steel-light;
     @include breakpoint(mob) { display: none; }
 }
+
+.hidden {
+    display: none;
+}
+
+.stars--show {
+    display: inline-block;
+    padding-left: 3px;
+}
+
+.page_title {
+    @extend .header--black-block;
+    @extend .font-size-header-page;
+    color: $grey-mid;
+    margin-bototm: $gutter-lrg;
+}

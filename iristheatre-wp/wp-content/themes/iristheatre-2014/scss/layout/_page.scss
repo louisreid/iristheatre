@@ -8,7 +8,7 @@
 
 .wrapper--site-header {
     @extend .wrapper;
-    background-color: $red;
+    background-color: $clr-primary;
 }
 
 .wrapper--site-footer {
@@ -19,10 +19,10 @@
 
 .page-constrained {
     margin: 0 auto;    
-    padding: $gutter-std;
+    padding: $gutter-med;
     max-width: $site-max-width;
     @include breakpoint(mob){
-        padding: $gutter-mob;
+        padding: $gutter-sml;
     }
 }
 
@@ -33,9 +33,9 @@
 .site-header {
     @extend .page-constrained;
     @extend .cf;
-    padding-bottom: 3*$gutter-std;
+    padding-bottom: 3*$gutter-med;
     @include breakpoint(mob){
-        padding-bottom: $gutter-mob;
+        padding-bottom: $gutter-sml;
     }
 }
 
@@ -43,7 +43,7 @@
     @extend .page-constrained;
     @extend .cf;
     position: relative;
-    top: -2*$gutter-std;
+    top: -2*$gutter-med;
     background-color: $tan;
     @include breakpoint(mob){
         top:0;
@@ -61,7 +61,7 @@
 .column {
     width: 50%;
     float: left;
-    padding-top: $gutter-std;
+    padding-top: $gutter-med;
     @include breakpoint(mob){
         width: 100%;
     }
@@ -73,9 +73,9 @@
 
 .column-right {
     @extend .column;
-    padding-left: $gutter-std;
+    padding-left: $gutter-med;
     @include breakpoint(mob) {
-        margin-top: $gutter-std;
+        margin-top: $gutter-med;
         padding-left: 0;
     }
 }

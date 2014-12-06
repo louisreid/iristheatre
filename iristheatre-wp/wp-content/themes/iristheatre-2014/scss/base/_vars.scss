@@ -2,6 +2,10 @@
     BASE/VARS
 \*------------------------------------*/
 
+/**
+ * SETTINGS
+ */
+$modern-browser: true;
 
 /**
  * Colour Variables
@@ -10,17 +14,22 @@ $tan: #e0ded3;
 $grey-light: #676767;
 $grey-mid: #333;
 $grey: #252525;
-$red: #d95b43;
+// $clr-primary: #d95b43;
+$clr-primary: #755190;
 $white: #fff;
 $off-white: #ececec;
 $steel: #7f8c8d;
 $steel-light: #b5bcbc;
+$black: #111;
+$black-body: #333;
+
 
 /**
  * Size Variables
  */
 $base-unit: 16px;
 $site-max-width: 1025px;
+
 
 /**
  * Font Variables
@@ -33,6 +42,7 @@ $font-size--mob: 0.8;
 /**
  * Spacing Variables
  */
-$gutter-std: $base-unit*1.25;
-$gutter-mob: $gutter-std*0.5;
-$gutter-caption: $gutter-std*0.4;
+$gutter-lrg: $base-unit*2.25;
+$gutter-med: $base-unit*1.25;
+$gutter-sml: $base-unit*0.5;
+$gutter-caption: $base-unit*0.4;

@@ -15,27 +15,31 @@
  * 1 - Base rules
  * 2 - Layout rules
  * 3 - Module rules
- * 4 - State rules
- * 5 - Theme rules
  *
  */
 /*------------------------------------*\
-    1. BASE RULES
+    BASE/BASE.SCSS
 \*------------------------------------*/
 /*------------------------------------*\
-    BASE/IMPORTS
+    BASE/VARS
 \*------------------------------------*/
 /**
- * Google Font Imports
+ * SETTINGS
  */
-/* Monserrat */
-@import url("http://fonts.googleapis.com/css?family=Montserrat:400,700");
-/* Open Sans */
-@import url("http://fonts.googleapis.com/css?family=Open+Sans:300italic,300,400");
-/* Font Awesome (for icons) */
-@import url("http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css");
+/**
+ * Colour Variables
+ */
+/**
+ * Size Variables
+ */
+/**
+ * Font Variables
+ */
+/**
+ * Spacing Variables
+ */
 /*------------------------------------*\
-    BASE/RESET
+    BASE/RESET.SCSS
 \*------------------------------------*/
 /**
  * A custom normalized reset. Thanks to Nicolas Gallagher.
@@ -505,21 +509,11 @@ body {
   overflow-x: hidden;
 }
 
-/*------------------------------------*\
-    BASE/VARS
-\*------------------------------------*/
-/**
- * Colour Variables
- */
-/**
- * Size Variables
- */
-/**
- * Font Variables
- */
-/**
- * Spacing Variables
- */
+/* line 458, ../scss/base/_reset.scss */
+body {
+  color: #333333;
+}
+
 /*------------------------------------*\
     BASE/MIXINS
 \*------------------------------------*/
@@ -537,13 +531,23 @@ body {
  * thanks to: nicolasgallagher.com
  */
 /* line 11, ../scss/base/_extends.scss */
-.cf:before, .site-header:before, .site-content:before, .tile:before, .cal-bar:before, .more-shows:before,
+.cf:before, .site-header:before, .site-content:before, .tile-wrapper:before, .more-shows:before, .past-work-shows:before, .tile:before, .cal-bar:before, .photo-grid .afg-row:before, .footer-head:before, .footer-body:before, .footer-newsletter .sml_subscribe:before, .show-head:before, .show-body:before, .show-thumbnails:before, .whats-on-list:before,
 .cf:after,
 .site-header:after,
 .site-content:after,
+.tile-wrapper:after,
+.more-shows:after,
+.past-work-shows:after,
 .tile:after,
 .cal-bar:after,
-.more-shows:after {
+.photo-grid .afg-row:after,
+.footer-head:after,
+.footer-body:after,
+.footer-newsletter .sml_subscribe:after,
+.show-head:after,
+.show-body:after,
+.show-thumbnails:after,
+.whats-on-list:after {
   content: " ";
   /* 1 */
   display: table;
@@ -551,7 +555,7 @@ body {
 }
 
 /* line 16, ../scss/base/_extends.scss */
-.cf:after, .site-header:after, .site-content:after, .tile:after, .cal-bar:after, .more-shows:after {
+.cf:after, .site-header:after, .site-content:after, .tile-wrapper:after, .more-shows:after, .past-work-shows:after, .tile:after, .cal-bar:after, .photo-grid .afg-row:after, .footer-head:after, .footer-body:after, .footer-newsletter .sml_subscribe:after, .show-head:after, .show-body:after, .show-thumbnails:after, .whats-on-list:after {
   clear: both;
 }
 
@@ -560,8 +564,16 @@ body {
  * Include this rule to trigger hasLayout and contain floats.
  */
 /* line 24, ../scss/base/_extends.scss */
-.cf, .site-header, .site-content, .tile, .cal-bar, .more-shows {
+.cf, .site-header, .site-content, .tile-wrapper, .more-shows, .past-work-shows, .tile, .cal-bar, .photo-grid .afg-row, .footer-head, .footer-body, .footer-newsletter .sml_subscribe, .show-head, .show-body, .show-thumbnails, .whats-on-list {
   *zoom: 1;
+}
+
+/**
+ * Animation
+ */
+/* line 31, ../scss/base/_extends.scss */
+.transition-color, .footer-social a:hover img {
+  transition: color 0.1s ease-out;
 }
 
 /*------------------------------------*\
@@ -589,6 +601,23 @@ hr {
   }
 }
 
+/* line 20, ../scss/base/_elements.scss */
+.hidden, .tile__hidden {
+  display: none;
+}
+
+/* line 24, ../scss/base/_elements.scss */
+.stars--show {
+  display: inline-block;
+  padding-left: 3px;
+}
+
+/* line 29, ../scss/base/_elements.scss */
+.page_title, .past-work__title, .tickets__title {
+  color: #333333;
+  margin-bototm: 36px;
+}
+
 /*------------------------------------*\
     BASE/TYPOGRAPHY.SCSS
 \*------------------------------------*/
@@ -596,23 +625,228 @@ hr {
  * FONTS
  */
 /* line 9, ../scss/base/_typography.scss */
-.font-heading, .header--block, .header--white-block, .slider__caption, .tile__caption, .nav-main--menu ul li a, .header--black-block, .cal-bar__item, .cal-bar__month, .cal-bar__date, .whats-on__header {
-  /* Monserrat 400 */
+.font-heading, .header--block, .header--white-block, .hero__caption, .tile__caption, .nav-main ul li a, .nav-main--menu ul li a, .nav-main--footer ul li a, .nav-main--hamburger ul li a, .show-ticketshop-link a, .header--black-block, .page_title, .past-work__title, .tickets__title, .cal-bar__item, .cal-bar__month, .cal-bar__date, .whats-on-widget__header, .news-flash__header, .twitter-link a, .show-twitter-link a, .show-title h1, .show-title h2, .show-title h3, .show-title h4, .show-title h5, .show-title h6, .show-dates, .whats-on-detail, .past-work-year__title, .jobs-page__header, .jobs__rate, .jobs__dates, .news-flash__title, .news-flash__read-more, .show-review {
   font-family: 'Montserrat', Arial, sans;
-  font-weight: normal;
+  font-weight: 400;
 }
 
-/* line 15, ../scss/base/_typography.scss */
-.font-body {
-  /* Open Sans 300 */
+/* line 14, ../scss/base/_typography.scss */
+.font-body, body, .copy-blockquote, .copy blockquote, .show-title blockquote, .show-text blockquote, .whats-on-detail blockquote, .show-review blockquote {
   font-family: 'Open Sans', Arial, sans;
   font-weight: 300;
 }
 
 /**
+ * FONT-SIZES
+ */
+/* line 30, ../scss/base/_typography.scss */
+.font-size-header-page, .page_title, .past-work__title, .tickets__title, .copy h1, .show-title h1, .show-text h1, .whats-on-detail h1 {
+  font-size: 44.8px;
+}
+@media only screen and (min-width: 768px) and (max-width: 990px) {
+  /* line 30, ../scss/base/_typography.scss */
+  .font-size-header-page, .page_title, .past-work__title, .tickets__title, .copy h1, .show-title h1, .show-text h1, .whats-on-detail h1 {
+    font-size: 32px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  /* line 30, ../scss/base/_typography.scss */
+  .font-size-header-page, .page_title, .past-work__title, .tickets__title, .copy h1, .show-title h1, .show-text h1, .whats-on-detail h1 {
+    font-size: 17.6px;
+  }
+}
+
+/* line 31, ../scss/base/_typography.scss */
+.font-size-header, .copy h4, .show-title h4, .show-text h4, .whats-on-detail h4, .copy h5, .show-title h5, .show-text h5, .whats-on-detail h5, .copy h6, .show-title h6, .show-text h6, .whats-on-detail h6, .past-work-year__title {
+  font-size: 32px;
+}
+@media only screen and (min-width: 768px) and (max-width: 990px) {
+  /* line 31, ../scss/base/_typography.scss */
+  .font-size-header, .copy h4, .show-title h4, .show-text h4, .whats-on-detail h4, .copy h5, .show-title h5, .show-text h5, .whats-on-detail h5, .copy h6, .show-title h6, .show-text h6, .whats-on-detail h6, .past-work-year__title {
+    font-size: 16px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  /* line 31, ../scss/base/_typography.scss */
+  .font-size-header, .copy h4, .show-title h4, .show-text h4, .whats-on-detail h4, .copy h5, .show-title h5, .show-text h5, .whats-on-detail h5, .copy h6, .show-title h6, .show-text h6, .whats-on-detail h6, .past-work-year__title {
+    font-size: 14.4px;
+  }
+}
+
+/* line 32, ../scss/base/_typography.scss */
+.font-size-header-sub, .hero__caption, .tile__caption, .copy h2, .show-title h2, .show-text h2, .whats-on-detail h2 {
+  font-size: 24.96px;
+}
+@media only screen and (min-width: 768px) and (max-width: 990px) {
+  /* line 32, ../scss/base/_typography.scss */
+  .font-size-header-sub, .hero__caption, .tile__caption, .copy h2, .show-title h2, .show-text h2, .whats-on-detail h2 {
+    font-size: 16px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  /* line 32, ../scss/base/_typography.scss */
+  .font-size-header-sub, .hero__caption, .tile__caption, .copy h2, .show-title h2, .show-text h2, .whats-on-detail h2 {
+    font-size: 14.4px;
+  }
+}
+
+/* line 33, ../scss/base/_typography.scss */
+.font-size-header-link, .tile__hidden, .news-flash__title {
+  font-size: 20.8px;
+}
+@media only screen and (min-width: 768px) and (max-width: 990px) {
+  /* line 33, ../scss/base/_typography.scss */
+  .font-size-header-link, .tile__hidden, .news-flash__title {
+    font-size: 16px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  /* line 33, ../scss/base/_typography.scss */
+  .font-size-header-link, .tile__hidden, .news-flash__title {
+    font-size: 14.4px;
+  }
+}
+
+/* line 34, ../scss/base/_typography.scss */
+.font-size-header-small, .copy h3, .show-title h3, .show-text h3, .whats-on-detail h3 {
+  font-size: 28.8px;
+}
+@media only screen and (min-width: 768px) and (max-width: 990px) {
+  /* line 34, ../scss/base/_typography.scss */
+  .font-size-header-small, .copy h3, .show-title h3, .show-text h3, .whats-on-detail h3 {
+    font-size: 16px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  /* line 34, ../scss/base/_typography.scss */
+  .font-size-header-small, .copy h3, .show-title h3, .show-text h3, .whats-on-detail h3 {
+    font-size: 14.4px;
+  }
+}
+
+/* line 36, ../scss/base/_typography.scss */
+.font-size-nav, .nav-main ul li a, .nav-main--menu ul li a, .nav-main--footer ul li a, .nav-main--hamburger ul li a {
+  font-size: 17.6px;
+}
+@media only screen and (min-width: 768px) and (max-width: 990px) {
+  /* line 36, ../scss/base/_typography.scss */
+  .font-size-nav, .nav-main ul li a, .nav-main--menu ul li a, .nav-main--footer ul li a, .nav-main--hamburger ul li a {
+    font-size: 14.4px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  /* line 36, ../scss/base/_typography.scss */
+  .font-size-nav, .nav-main ul li a, .nav-main--menu ul li a, .nav-main--footer ul li a, .nav-main--hamburger ul li a {
+    font-size: 12.8px;
+  }
+}
+
+/* line 38, ../scss/base/_typography.scss */
+.font-size-p, .footer-newsletter input[type="submit"], .jobs__rate, .jobs__dates {
+  font-size: 16px;
+}
+@media only screen and (min-width: 768px) and (max-width: 990px) {
+  /* line 38, ../scss/base/_typography.scss */
+  .font-size-p, .footer-newsletter input[type="submit"], .jobs__rate, .jobs__dates {
+    font-size: 16px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  /* line 38, ../scss/base/_typography.scss */
+  .font-size-p, .footer-newsletter input[type="submit"], .jobs__rate, .jobs__dates {
+    font-size: 12.8px;
+  }
+}
+
+/* line 39, ../scss/base/_typography.scss */
+.font-size-small, .footer-newsletter .sml_emaillabel {
+  font-size: 11.2px;
+}
+@media only screen and (min-width: 768px) and (max-width: 990px) {
+  /* line 39, ../scss/base/_typography.scss */
+  .font-size-small, .footer-newsletter .sml_emaillabel {
+    font-size: 16px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  /* line 39, ../scss/base/_typography.scss */
+  .font-size-small, .footer-newsletter .sml_emaillabel {
+    font-size: 12.8px;
+  }
+}
+
+/* line 41, ../scss/base/_typography.scss */
+.font-size-blockquote, .copy-blockquote, .copy blockquote, .show-title blockquote, .show-text blockquote, .whats-on-detail blockquote, .show-review blockquote, .footer-strapline, .footer-social {
+  font-size: 22.4px;
+}
+@media only screen and (min-width: 768px) and (max-width: 990px) {
+  /* line 41, ../scss/base/_typography.scss */
+  .font-size-blockquote, .copy-blockquote, .copy blockquote, .show-title blockquote, .show-text blockquote, .whats-on-detail blockquote, .show-review blockquote, .footer-strapline, .footer-social {
+    font-size: 32px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  /* line 41, ../scss/base/_typography.scss */
+  .font-size-blockquote, .copy-blockquote, .copy blockquote, .show-title blockquote, .show-text blockquote, .whats-on-detail blockquote, .show-review blockquote, .footer-strapline, .footer-social {
+    font-size: 17.6px;
+  }
+}
+
+/* line 42, ../scss/base/_typography.scss */
+.font-size-button, .twitter-link, .show-twitter-link, .show-ticketshop-link a {
+  font-size: 22.4px;
+}
+@media only screen and (min-width: 768px) and (max-width: 990px) {
+  /* line 42, ../scss/base/_typography.scss */
+  .font-size-button, .twitter-link, .show-twitter-link, .show-ticketshop-link a {
+    font-size: 32px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  /* line 42, ../scss/base/_typography.scss */
+  .font-size-button, .twitter-link, .show-twitter-link, .show-ticketshop-link a {
+    font-size: 17.6px;
+  }
+}
+
+/* line 44, ../scss/base/_typography.scss */
+.font-size-date, .show-dates {
+  font-size: 17.6px;
+}
+@media only screen and (min-width: 768px) and (max-width: 990px) {
+  /* line 44, ../scss/base/_typography.scss */
+  .font-size-date, .show-dates {
+    font-size: 16px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  /* line 44, ../scss/base/_typography.scss */
+  .font-size-date, .show-dates {
+    font-size: 14.4px;
+  }
+}
+
+/* line 45, ../scss/base/_typography.scss */
+.font-size-stars, .show-stars {
+  font-size: 32px;
+}
+@media only screen and (min-width: 768px) and (max-width: 990px) {
+  /* line 45, ../scss/base/_typography.scss */
+  .font-size-stars, .show-stars {
+    font-size: 32px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  /* line 45, ../scss/base/_typography.scss */
+  .font-size-stars, .show-stars {
+    font-size: 17.6px;
+  }
+}
+
+/**
  * HEADERS
  */
-/* line 25, ../scss/base/_typography.scss */
+/* line 52, ../scss/base/_typography.scss */
 h1, h2, h3, h4, h5, h6 {
   padding: 0;
   margin: 0;
@@ -620,40 +854,36 @@ h1, h2, h3, h4, h5, h6 {
   font-style: normal;
 }
 
-/* line 32, ../scss/base/_typography.scss */
-.header--block, .header--white-block, .slider__caption, .tile__caption, .nav-main--menu ul li a, .header--black-block, .cal-bar__item, .cal-bar__month, .cal-bar__date, .whats-on__header {
+/* line 59, ../scss/base/_typography.scss */
+.header--block, .header--white-block, .hero__caption, .tile__caption, .nav-main ul li a, .nav-main--menu ul li a, .nav-main--footer ul li a, .nav-main--hamburger ul li a, .show-ticketshop-link a, .header--black-block, .page_title, .past-work__title, .tickets__title, .cal-bar__item, .cal-bar__month, .cal-bar__date, .whats-on-widget__header, .news-flash__header, .twitter-link a, .show-twitter-link a, .show-title h1, .show-title h2, .show-title h3, .show-title h4, .show-title h5, .show-title h6, .show-dates, .whats-on-detail, .past-work-year__title, .jobs-page__header, .jobs__rate, .jobs__dates {
   text-transform: uppercase;
 }
 
-/* line 37, ../scss/base/_typography.scss */
-.header--white-block, .slider__caption, .tile__caption, .nav-main--menu ul li a {
+/* line 64, ../scss/base/_typography.scss */
+.header--white-block, .hero__caption, .tile__caption, .nav-main ul li a, .nav-main--menu ul li a, .nav-main--footer ul li a, .nav-main--hamburger ul li a, .show-ticketshop-link a {
   color: white;
 }
 
-/* line 43, ../scss/base/_typography.scss */
-.header--black-block, .cal-bar__item, .cal-bar__month, .cal-bar__date, .whats-on__header {
+/* line 69, ../scss/base/_typography.scss */
+.header--black-block, .page_title, .past-work__title, .tickets__title, .cal-bar__item, .cal-bar__month, .cal-bar__date, .whats-on-widget__header, .news-flash__header, .twitter-link a, .show-twitter-link a, .show-title h1, .show-title h2, .show-title h3, .show-title h4, .show-title h5, .show-title h6, .show-dates, .whats-on-detail, .past-work-year__title, .jobs-page__header, .jobs__rate, .jobs__dates {
   color: #252525;
 }
 
-/* line 49, ../scss/base/_typography.scss */
-.font-sizing--block-header, .header--white-block, .slider__caption, .tile__caption, .nav-main--menu ul li a, .header--black-block, .cal-bar__item, .cal-bar__month, .cal-bar__date, .whats-on__header {
-  font-size: 22.4px;
+/**
+ * ANCHORS
+ */
+/* line 77, ../scss/base/_typography.scss */
+a {
+  color: #252525;
+  text-decoration: underline;
 }
-@media only screen and (min-width: 768px) and (max-width: 990px) {
-  /* line 49, ../scss/base/_typography.scss */
-  .font-sizing--block-header, .header--white-block, .slider__caption, .tile__caption, .nav-main--menu ul li a, .header--black-block, .cal-bar__item, .cal-bar__month, .cal-bar__date, .whats-on__header {
-    font-size: 20.16px;
-  }
-}
-@media only screen and (max-width: 767px) {
-  /* line 49, ../scss/base/_typography.scss */
-  .font-sizing--block-header, .header--white-block, .slider__caption, .tile__caption, .nav-main--menu ul li a, .header--black-block, .cal-bar__item, .cal-bar__month, .cal-bar__date, .whats-on__header {
-    font-size: 17.92px;
-  }
+/* line 80, ../scss/base/_typography.scss */
+a:hover {
+  color: #111111;
 }
 
 /*------------------------------------*\
-    2. LAYOUT RULES
+    LAYOUT/LAYOUT.SCSS
 \*------------------------------------*/
 /*------------------------------------*\
     LAYOUT/PAGE.SCSS
@@ -665,7 +895,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* line 9, ../scss/layout/_page.scss */
 .wrapper--site-header {
-  background-color: #d95b43;
+  background-color: #755190;
 }
 
 /* line 14, ../scss/layout/_page.scss */
@@ -683,7 +913,7 @@ h1, h2, h3, h4, h5, h6 {
 @media only screen and (max-width: 767px) {
   /* line 20, ../scss/layout/_page.scss */
   .page-constrained, .site-header, .site-content, .site-footer {
-    padding: 10px;
+    padding: 8px;
   }
 }
 
@@ -697,7 +927,7 @@ h1, h2, h3, h4, h5, h6 {
 @media only screen and (max-width: 767px) {
   /* line 33, ../scss/layout/_page.scss */
   .site-header {
-    padding-bottom: 10px;
+    padding-bottom: 8px;
   }
 }
 
@@ -743,14 +973,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*------------------------------------*\
-    3. MODULE RULES
+  MODULE/MODULE.SCSS
 \*------------------------------------*/
 /*------------------------------------*\
     MODULE/CAPTION.SCSS
 \*------------------------------------*/
 /* line 6, ../scss/module/_caption.scss */
-.caption, .slider__caption {
-  padding: 8px;
+.caption, .hero__caption {
+  padding: 6.4px;
   position: absolute;
   left: 16px;
   right: 16px;
@@ -759,7 +989,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 @media only screen and (max-width: 767px) {
   /* line 6, ../scss/module/_caption.scss */
-  .caption, .slider__caption {
+  .caption, .hero__caption {
     position: relative;
     left: 0;
     right: 0;
@@ -768,29 +998,34 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*------------------------------------*\
-    MODULE/SLIDER.SCSS
+    MODULE/HERO.SCSS
 \*------------------------------------*/
-/* line 5, ../scss/module/_slider.scss */
-.slider {
+/* line 5, ../scss/module/_hero.scss */
+.hero {
   width: 100%;
   position: relative;
   padding-bottom: 20px;
 }
 @media only screen and (max-width: 767px) {
-  /* line 5, ../scss/module/_slider.scss */
-  .slider {
+  /* line 5, ../scss/module/_hero.scss */
+  .hero {
     padding-bottom: 0;
     margin-bottom: -20px;
   }
 }
 
-/* line 15, ../scss/module/_slider.scss */
-.slider__caption {
-  background-color: #d95b43;
+/* line 15, ../scss/module/_hero.scss */
+.hero__caption {
+  background-color: #755190;
 }
 
-/* line 21, ../scss/module/_slider.scss */
-.slider__image {
+/* line 22, ../scss/module/_hero.scss */
+.hero__image {
+  height: 490px;
+  overflow: hidden;
+}
+/* line 25, ../scss/module/_hero.scss */
+.hero__image img {
   width: 100%;
 }
 
@@ -798,37 +1033,52 @@ h1, h2, h3, h4, h5, h6 {
     MODULE/TILE.SCSS
 \*------------------------------------*/
 /* line 8, ../scss/module/_tile.scss */
+.tile-wrapper, .more-shows, .past-work-shows {
+  margin: 0;
+  margin-left: -20px;
+  padding: 20px 0;
+}
+@media only screen and (max-width: 767px) {
+  /* line 8, ../scss/module/_tile.scss */
+  .tile-wrapper, .more-shows, .past-work-shows {
+    margin: 0;
+    padding: 8px 0;
+  }
+}
+
+/* line 19, ../scss/module/_tile.scss */
 .tile {
   margin: 0;
   padding: 0;
   width: 33.33333%;
   padding-left: 20px;
+  margin-bottom: 20px;
   float: left;
   position: relative;
 }
 @media only screen and (max-width: 767px) {
-  /* line 8, ../scss/module/_tile.scss */
+  /* line 19, ../scss/module/_tile.scss */
   .tile {
     float: none;
     padding-left: 0;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
     width: 100%;
     height: 64px;
-    background-color: #d95b43;
+    background-color: #755190;
   }
 }
 
-/* line 26, ../scss/module/_tile.scss */
+/* line 38, ../scss/module/_tile.scss */
 .tile__caption {
   position: absolute;
   left: 20px;
   right: 0;
   bottom: 0;
-  padding: 8px;
-  background-color: #d95b43;
+  padding: 6.4px;
+  background-color: #755190;
 }
 @media only screen and (max-width: 767px) {
-  /* line 26, ../scss/module/_tile.scss */
+  /* line 38, ../scss/module/_tile.scss */
   .tile__caption {
     float: left;
     width: 70%;
@@ -836,13 +1086,17 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-/* line 44, ../scss/module/_tile.scss */
+/* line 57, ../scss/module/_tile.scss */
+.tile__hidden {
+  font-weight: 100;
+}
+
+/* line 63, ../scss/module/_tile.scss */
 .tile__image {
   width: 100%;
-  height: 160px;
 }
 @media only screen and (max-width: 767px) {
-  /* line 44, ../scss/module/_tile.scss */
+  /* line 63, ../scss/module/_tile.scss */
   .tile__image {
     float: left;
     width: 30%;
@@ -877,14 +1131,19 @@ h1, h2, h3, h4, h5, h6 {
     MODULE/LOGO.SCSS
 \*------------------------------------*/
 /* line 9, ../scss/module/_logo.scss */
-.logo--header {
+.logo-header {
   float: left;
 }
 @media only screen and (max-width: 767px) {
   /* line 9, ../scss/module/_logo.scss */
-  .logo--header {
+  .logo-header {
     width: 15%;
   }
+}
+
+/* line 16, ../scss/module/_logo.scss */
+.logo-footer {
+  float: left;
 }
 
 /*------------------------------------*\
@@ -907,49 +1166,78 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*------------------------------------*\
-    MODULE/NAV-MAIN.SCSS
+    MODULE/COPY.SCSS
 \*------------------------------------*/
-/* line 5, ../scss/module/_nav-main.scss */
-.nav-main, .nav-main--menu, .nav-main--hamburger {
-  float: right;
-  position: relative;
-  top: 42px;
-}
-@media only screen and (max-width: 767px) {
-  /* line 5, ../scss/module/_nav-main.scss */
-  .nav-main, .nav-main--menu, .nav-main--hamburger {
-    top: 5px;
-  }
+/* line 20, ../scss/module/_copy.scss */
+.copy-blockquote, .copy blockquote, .show-title blockquote, .show-text blockquote, .whats-on-detail blockquote, .show-review blockquote {
+  margin: 0;
+  padding: 20px 8px 8px 8px;
+  font-style: italic;
 }
 
-@media only screen and (max-width: 767px) {
-  /* line 14, ../scss/module/_nav-main.scss */
-  .nav-main--menu {
-    display: none;
-  }
+/* line 28, ../scss/module/_copy.scss */
+.copy-p, .copy p, .show-title p, .show-text p, .whats-on-detail p {
+  margin: 0;
+  padding: 0 0 8px 0;
+  line-height: 1.8em;
 }
-/* line 20, ../scss/module/_nav-main.scss */
-.nav-main--menu ul li {
-  float: left;
-  padding-left: 20px;
-}
-/* line 23, ../scss/module/_nav-main.scss */
-.nav-main--menu ul li a {
+
+/*------------------------------------*\
+    MODULE/NAV.SCSS
+\*------------------------------------*/
+/* line 8, ../scss/module/_nav.scss */
+.nav-main ul li a, .nav-main--menu ul li a, .nav-main--footer ul li a, .nav-main--hamburger ul li a {
   text-decoration: none;
 }
-/* line 26, ../scss/module/_nav-main.scss */
-.nav-main--menu ul li a:hover {
+/* line 12, ../scss/module/_nav.scss */
+.nav-main ul li a:hover, .nav-main--menu ul li a:hover, .nav-main--footer ul li a:hover, .nav-main--hamburger ul li a:hover {
   color: #b5bcbc;
 }
 
-/* line 34, ../scss/module/_nav-main.scss */
+/* line 20, ../scss/module/_nav.scss */
+.nav-main--menu {
+  position: relative;
+  top: 42px;
+  float: right;
+}
+@media only screen and (max-width: 767px) {
+  /* line 20, ../scss/module/_nav.scss */
+  .nav-main--menu {
+    top: 5px;
+    display: none;
+  }
+}
+/* line 30, ../scss/module/_nav.scss */
+.nav-main--menu ul li {
+  padding-left: 20px;
+  float: left;
+}
+
+/* line 40, ../scss/module/_nav.scss */
+.nav-main--footer {
+  display: block;
+  float: left;
+  width: 75%;
+  padding: 20px 0;
+}
+/* line 47, ../scss/module/_nav.scss */
+.nav-main--footer ul li {
+  padding-right: 20px;
+  float: left;
+}
+/* line 50, ../scss/module/_nav.scss */
+.nav-main--footer ul li a {
+  color: #7f8c8d;
+}
+
+/* line 58, ../scss/module/_nav.scss */
 .nav-main--hamburger {
   display: none;
   color: white;
   font-size: 32px;
 }
 @media only screen and (max-width: 767px) {
-  /* line 34, ../scss/module/_nav-main.scss */
+  /* line 58, ../scss/module/_nav.scss */
   .nav-main--hamburger {
     display: block;
   }
@@ -958,25 +1246,11 @@ h1, h2, h3, h4, h5, h6 {
 /*------------------------------------*\
     MODULE/MORE-SHOWS.SCSS
 \*------------------------------------*/
-/* line 5, ../scss/module/_more-shows.scss */
-.more-shows {
-  margin: 0;
-  margin-left: -20px;
-  padding: 20px 0;
-}
-@media only screen and (max-width: 767px) {
-  /* line 5, ../scss/module/_more-shows.scss */
-  .more-shows {
-    margin: 0;
-    padding: 10px 0;
-  }
-}
-
 /*------------------------------------*\
-    MODULE/WHATS-ON.SCSS
+    MODULE/WHATS-ON-WIDGET.SCSS
 \*------------------------------------*/
-/* line 5, ../scss/module/_whats-on.scss */
-.whats-on {
+/* line 5, ../scss/module/_whats-on-widget.scss */
+.whats-on-widget {
   width: 100%;
   background-color: #ececec;
   padding: 20px;
@@ -984,45 +1258,422 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*------------------------------------*\
-    MODULE/NEWS-FLASH.SCSS
+  MODULE/NEWS-FLASH.SCSS
 \*------------------------------------*/
 /* line 5, ../scss/module/_news-flash.scss */
 .news-flash {
   margin-bottom: 20px;
+  padding: 20px;
+  background: #ececec;
+}
+
+/* line 15, ../scss/module/_news-flash.scss */
+.news-flash__title {
+  text-decoration: none;
+  padding: 20px 0 0 0;
+  display: block;
+  color: #252525;
+}
+
+/* line 24, ../scss/module/_news-flash.scss */
+.news-flash__read-more {
+  color: #252525;
 }
 
 /*------------------------------------*\
     MODULE/TWITTER.SCSS
 \*------------------------------------*/
+/* line 5, ../scss/module/_twitter.scss */
+.twitter, .show-twitter {
+  background-color: #ececec;
+  padding: 20px;
+}
+
+/* line 10, ../scss/module/_twitter.scss */
+.twitter-link, .show-twitter-link {
+  display: block;
+  padding-bottom: 8px;
+}
+/* line 14, ../scss/module/_twitter.scss */
+.twitter-link a, .show-twitter-link a {
+  text-decoration: none;
+}
+/* line 17, ../scss/module/_twitter.scss */
+.twitter-link a img, .show-twitter-link a img {
+  position: relative;
+  top: 3px;
+  width: 25px;
+}
+/* line 22, ../scss/module/_twitter.scss */
+.twitter-link a:hover, .show-twitter-link a:hover {
+  color: #111111;
+}
+
+/* line 28, ../scss/module/_twitter.scss */
+.show-twitter {
+  background: white;
+  padding: 20px;
+  padding-top: 36px;
+}
+
 /*------------------------------------*\
     MODULE/PHOTO-GRID.SCSS
 \*------------------------------------*/
+/* line 5, ../scss/module/_photo-grid.scss */
+.photo-grid {
+  background-color: #ececec;
+  padding: 20px;
+}
+/* line 11, ../scss/module/_photo-grid.scss */
+.photo-grid .afg-cell {
+  float: left;
+  text-align: center;
+}
+/* line 14, ../scss/module/_photo-grid.scss */
+.photo-grid .afg-cell img {
+  width: 210px;
+}
+
 /*------------------------------------*\
     MODULE/FOOTER.SCSS
 \*------------------------------------*/
 /* line 5, ../scss/module/_footer.scss */
-.footer__head {
+.footer-head {
   padding-bottom: 20px;
   border-bottom: 1px solid #b5bcbc;
+  color: #7f8c8d;
 }
 
-/* line 10, ../scss/module/_footer.scss */
-.footer__body {
+/* line 12, ../scss/module/_footer.scss */
+.footer-body {
   padding-top: 20px;
 }
 
+/* line 17, ../scss/module/_footer.scss */
+.footer-strapline {
+  width: 40%;
+  float: left;
+  padding-left: 36px;
+}
+
+/* line 24, ../scss/module/_footer.scss */
+.footer-social {
+  float: right;
+  padding-top: 36px;
+}
+/* line 28, ../scss/module/_footer.scss */
+.footer-social img {
+  height: 20px;
+  padding-left: 8px;
+}
+/* line 33, ../scss/module/_footer.scss */
+.footer-social a:hover img {
+  opacity: 0.8;
+}
+
+/* line 41, ../scss/module/_footer.scss */
+.footer-newsletter {
+  width: 25%;
+  float: right;
+  position: relative;
+  top: -20px;
+}
+/* line 55, ../scss/module/_footer.scss */
+.footer-newsletter .sml_email, .footer-newsletter .sml_submit {
+  display: block;
+  float: left;
+}
+/* line 60, ../scss/module/_footer.scss */
+.footer-newsletter .sml_email, .footer-newsletter .sml_emailinput {
+  width: 160px;
+}
+/* line 64, ../scss/module/_footer.scss */
+.footer-newsletter .sml_submit {
+  width: 70px;
+  float: right;
+}
+/* line 69, ../scss/module/_footer.scss */
+.footer-newsletter input[type="submit"] {
+  width: 70px;
+  position: relative;
+  top: 22px;
+}
+/* line 76, ../scss/module/_footer.scss */
+.footer-newsletter .sml_thankyou {
+  position: absolute;
+  background: #ececec;
+}
+
 /*------------------------------------*\
-    4. STATE RULES
+    MODULE/FLUIDBOX.SCSS
+\*------------------------------------*/
+/* line 5, ../scss/module/_fluidbox.scss */
+.fluidbox {
+  outline: none;
+}
+
+/* line 8, ../scss/module/_fluidbox.scss */
+.hidden, .tile__hidden {
+  display: none;
+}
+
+/* line 11, ../scss/module/_fluidbox.scss */
+.fluidbox-overlay {
+  background-color: rgba(255, 255, 255, 0.85);
+  cursor: pointer;
+  cursor: -webkit-zoom-out;
+  cursor: -moz-zoom-out;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  transition: all .25s ease-in-out;
+}
+
+/* line 24, ../scss/module/_fluidbox.scss */
+.fluidbox-wrap {
+  background-position: center center;
+  background-size: cover;
+  margin: 0 auto;
+  position: relative;
+  transition: all .25s ease-in-out;
+}
+
+/* line 31, ../scss/module/_fluidbox.scss */
+.fluidbox-ghost {
+  background-size: cover;
+  background-position: center center;
+  position: absolute;
+  transition: all .25s ease-in-out;
+}
+
+/* line 37, ../scss/module/_fluidbox.scss */
+.fluidbox-closed .fluidbox-ghost {
+  -webkit-transition-property: top, left, opacity, -webkit-transform;
+  -moz-transition-property: top, left, opacity, -moz-transform;
+  -o-transition-property: top, left, opacity, -o-transform;
+  transition-property: top, left, opacity, transform;
+  transition-delay: 0, 0, .25s, 0;
+}
+
+/* line 44, ../scss/module/_fluidbox.scss */
+.fluidbox-closed .fluidbox-wrap img {
+  transition-property: opacity;
+  transition-delay: .25s;
+  transition-duration: 0s;
+}
+
+/* Page Areas */
+/*------------------------------------*\
+    MODULE/HOME.SCSS
 \*------------------------------------*/
 /*------------------------------------*\
-    5. THEME RULES
+    MODULE/SHOW.SCSS
+\*------------------------------------*/
+/* line 7, ../scss/module/_show.scss */
+.show-head .show-head-left, .show-head .show-head-right {
+  float: left;
+}
+/* line 10, ../scss/module/_show.scss */
+.show-head .show-head-left {
+  width: 30%;
+  padding-right: 20px;
+}
+/* line 14, ../scss/module/_show.scss */
+.show-head .show-head-right {
+  width: 70%;
+}
+
+/* line 19, ../scss/module/_show.scss */
+.show-body {
+  padding-top: 20px;
+}
+/* line 22, ../scss/module/_show.scss */
+.show-body .show-body-left, .show-body .show-body-right {
+  float: left;
+}
+/* line 25, ../scss/module/_show.scss */
+.show-body .show-body-left {
+  width: 50%;
+  padding-right: 20px;
+}
+/* line 29, ../scss/module/_show.scss */
+.show-body .show-body-right {
+  width: 50%;
+}
+
+/* line 34, ../scss/module/_show.scss */
+.tribe-events-ajax-loading {
+  display: none;
+}
+
+/* line 40, ../scss/module/_show.scss */
+.show-title h1, .show-title h2, .show-title h3, .show-title h4, .show-title h5, .show-title h6 {
+  padding-bottom: 8px;
+}
+
+/* line 46, ../scss/module/_show.scss */
+.show-image {
+  width: 100%;
+}
+
+/* line 50, ../scss/module/_show.scss */
+.show-dates {
+  border-top: thin #111111 solid;
+  border-bottom: thin #111111 solid;
+  padding: 8px 0;
+}
+
+/* line 58, ../scss/module/_show.scss */
+.show-stars {
+  color: #755190;
+  margin: 0;
+  padding: 8px 0 0 0;
+}
+
+/* line 65, ../scss/module/_show.scss */
+.show-review {
+  padding-top: 8px;
+}
+/* line 68, ../scss/module/_show.scss */
+.show-review p {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 81, ../scss/module/_show.scss */
+.show-ticketshop-link a {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  padding: 20px;
+  background-color: #755190;
+}
+
+/* line 92, ../scss/module/_show.scss */
+.show-thumbnails {
+  padding: 20px 0;
+}
+/* line 95, ../scss/module/_show.scss */
+.show-thumbnails a {
+  display: block;
+  float: left;
+  width: 32%;
+  margin-left: 2%;
+}
+/* line 100, ../scss/module/_show.scss */
+.show-thumbnails a img {
+  background: white;
+  padding: 5px;
+  width: 100%;
+}
+/* line 106, ../scss/module/_show.scss */
+.show-thumbnails a:first-child {
+  margin-left: 0;
+}
+
+/*------------------------------------*\
+    MODULE/WHATS-ON.SCSS
+\*------------------------------------*/
+/* line 5, ../scss/module/_whats-on.scss */
+.whats-on-list {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 11, ../scss/module/_whats-on.scss */
+.whats-on-single {
+  float: left;
+  margin: 0;
+  padding: 0 10px 0 0;
+  width: 50%;
+}
+/* line 16, ../scss/module/_whats-on.scss */
+.whats-on-single a {
+  display: block;
+  padding: 8px;
+  text-decoration: none;
+}
+/* line 20, ../scss/module/_whats-on.scss */
+.whats-on-single a:hover {
+  background-color: white;
+}
+
+/* line 26, ../scss/module/_whats-on.scss */
+.whats-on-single:nth-of-type(2n) {
+  padding-right: 0;
+  padding-left: 10px;
+}
+
+/* line 31, ../scss/module/_whats-on.scss */
+.whats-on-image {
+  width: 100%;
+  overflow: hidden;
+}
+
+/* line 39, ../scss/module/_whats-on.scss */
+.whats-on-detail h3 {
+  color: #676767;
+}
+
+/*------------------------------------*\
+    MODULE/PAST-WORK.SCSS
+\*------------------------------------*/
+/* line 12, ../scss/module/_past-work.scss */
+.past-work-year {
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  border-bottom: #252525 1px dotted;
+}
+
+/* line 23, ../scss/module/_past-work.scss */
+.past-work-shows {
+  padding-top: 0;
+}
+/* line 26, ../scss/module/_past-work.scss */
+.past-work-shows li {
+  padding-bottom: 20px;
+}
+
+/*------------------------------------*\
+    MODULE/TICKETS.SCSS
 \*------------------------------------*/
 /*------------------------------------*\
-    THEME/SITE-HEADER.SCSS
+    MODULE/JOBS.SCSS
 \*------------------------------------*/
-/*------------------------------------*\
-    THEME/SITE-CONTENT.SCSS
-\*------------------------------------*/
-/*------------------------------------*\
-    THEME/SITE-FOOTER.SCSS
-\*------------------------------------*/
+/* line 10, ../scss/module/_jobs.scss */
+.jobs-page__intro {
+  margin-bottom: 36px;
+}
+
+/* line 14, ../scss/module/_jobs.scss */
+.jobs-list {
+  margin: 36px 72px;
+}
+
+/* line 18, ../scss/module/_jobs.scss */
+.jobs__rate, .jobs__dates {
+  text-transform: uppercase;
+  color: #252525;
+}
+
+/* line 25, ../scss/module/_jobs.scss */
+.jobs__application-deadline {
+  font-style: italic;
+  margin: 0 0 20px 0;
+  padding: 0;
+}
+
+/* line 31, ../scss/module/_jobs.scss */
+.jobs__description {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 36, ../scss/module/_jobs.scss */
+.jobs-list__single {
+  border-bottom: dotted thin #252525;
+  margin-bottom: 72px;
+}

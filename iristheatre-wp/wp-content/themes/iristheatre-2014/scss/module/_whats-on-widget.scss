@@ -1,0 +1,14 @@
+/*------------------------------------*\
+    MODULE/WHATS-ON-WIDGET.SCSS
+\*------------------------------------*/
+
+.whats-on-widget {
+    width: 100%;
+    background-color: $off-white; 
+    padding: $gutter-med;
+    padding-bottom: $gutter-med/2;
+}
+
+.whats-on-widget__header {
+    @extend .header--black-block;
+}

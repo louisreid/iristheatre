@@ -3,5 +3,36 @@
 \*------------------------------------*/
 
 .twitter {
-    
+  background-color: $off-white; 
+  padding: $gutter-med;
 }
+
+.twitter-link {
+  @extend .font-size-button;
+  display: block;
+  padding-bottom: $gutter-sml;
+  a {
+      @extend .header--black-block;
+      text-decoration: none;
+      img {
+          position: relative;
+          top: 3px;
+          width: 25px;
+      }
+      &:hover {
+          color: $black;
+      }
+  }
+}
+
+.show-twitter {
+  @extend .twitter;
+  background: $white;
+  padding: $gutter-med;
+  padding-top: $gutter-lrg;
+}
+
+.show-twitter-link {
+  @extend .twitter-link;
+}
+

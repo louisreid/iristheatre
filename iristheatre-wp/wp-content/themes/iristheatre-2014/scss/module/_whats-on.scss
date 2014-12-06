@@ -2,13 +2,49 @@
     MODULE/WHATS-ON.SCSS
 \*------------------------------------*/
 
-.whats-on {
-    width: 100%;
-    background-color: $off-white; 
-    padding: $gutter-std;
-    padding-bottom: $gutter-std/2;
+.whats-on-list {
+  @extend .cf;
+  margin: 0;
+  padding: 0;
 }
 
-.whats-on__header {
-    @extend .header--black-block;
+.whats-on-single {
+  float: left;
+  margin: 0;
+  padding: 0 $gutter-med/2 0 0;
+  width: 50%;
+  a {
+    display: block;
+    padding: $gutter-sml;
+    text-decoration: none;
+    &:hover {
+      background-color: $white;
+    } 
+  }
 }
+
+.whats-on-single:nth-of-type(2n) {
+  padding-right: 0;
+  padding-left: $gutter-med/2;
+}
+
+.whats-on-image {
+  width: 100%;
+  overflow: hidden;
+}
+
+.whats-on-detail {
+  @extend .header--black-block;
+  @extend .copy;
+  h3 {
+    color: $grey-light;
+  }
+  // h2 {
+  //   @extend .font-size-header-sub;
+  // }
+  // @extend .font-size-header-small;
+  // p {
+  //   @extend .fon;
+  // }
+}
+

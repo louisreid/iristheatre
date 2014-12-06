@@ -1,0 +1,66 @@
+/*------------------------------------*\
+    MODULE/NAV.SCSS
+\*------------------------------------*/
+
+.nav-main {
+    ul {
+        li {
+            a {
+                @extend .header--white-block;
+                @extend .font-size-nav;
+                text-decoration: none;
+                &:hover {
+                    color: $steel-light;
+                }
+            }
+        } 
+    }
+}
+
+.nav-main--menu {
+    @include breakpoint(mob){
+        top: 5px;
+        display: none;
+    }
+    position: relative;
+    top: 42px;
+    @extend .nav-main;
+    float: right;
+    ul {
+        li {
+            padding-left: $gutter-med;
+            float: left;
+            a {
+                @extend .header--white-block;
+            }
+        }
+    }
+}
+
+.nav-main--footer {
+    display: block;
+    float: left;
+    width: 75%;
+    padding: $gutter-med 0;
+    @extend .nav-main;
+    ul {
+        li {
+            padding-right: $gutter-med;
+            float: left;
+            a {
+                @extend .header--block;
+                color: $steel;
+            }
+        }
+    }
+}
+
+.nav-main--hamburger {
+    @extend .nav-main;
+    display: none;
+    @include breakpoint(mob){
+        display: block;
+    }
+    color: $white;
+    font-size: 2*$font-size;
+}

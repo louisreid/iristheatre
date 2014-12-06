@@ -2,11 +2,11 @@
     MODULE/CAL-BAR.SCSS
 \*------------------------------------*/
 
-$gutter-cal-bar: $gutter-std * 0.5;
+$gutter-cal-bar: $gutter-med * 0.5;
 
 .cal-bar {
     @extend .cf;
-    padding: $gutter-std 0;
+    padding: $gutter-med 0;
     margin-left: -$gutter-cal-bar;
     width: 100%;
 }

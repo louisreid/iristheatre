@@ -14,7 +14,7 @@
     @include breakpoint(mob){
         position: relative;
         left: 0; right: 0;
-        top: -$gutter-std;
+        top: -$gutter-med;
     }
 }
 

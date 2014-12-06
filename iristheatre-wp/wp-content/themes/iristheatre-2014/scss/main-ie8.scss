@@ -1,0 +1,12 @@
+@charset "UTF-8";
+/*------------------------------------*\
+  UI-OLD-IE.SCSS
+\*------------------------------------*/
+
+@import "base/base.scss";
+
+$modern-browser: false;
+
+@import "layout/layout.scss";
+
+@import "module/module.scss";

@@ -6,10 +6,14 @@
 
 }
 
-.logo--header {
-    @extend .logo !optional; 
+.logo-header {
     float: left;
     @include breakpoint(mob){
         width: 15%; 
     }
 }
+
+.logo-footer {
+    float: left;  
+}
+

@@ -1,0 +1,29 @@
+/*------------------------------------*\
+    MODULE/PAST-WORK.SCSS
+\*------------------------------------*/
+
+.past-work {
+}
+
+.past-work__title {
+  @extend .page_title;
+}
+
+.past-work-year {
+  padding-bottom: $gutter-med;
+  margin-bottom: $gutter-med;
+  border-bottom: $grey 1px dotted;
+}
+
+.past-work-year__title {
+  @extend .header--black-block;
+  @extend .font-size-header;
+}
+
+.past-work-shows {
+  @extend .tile-wrapper;
+  padding-top: 0;
+  li {
+    padding-bottom: $gutter-med;
+  }
+}

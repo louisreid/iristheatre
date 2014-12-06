@@ -7,7 +7,7 @@ get_header();
 
 ?>
 
-<h1>What's On</h1>
+<h1 class="whats-on-title">What's On</h1>
 
 <ul class="whats-on-list">
 <?php

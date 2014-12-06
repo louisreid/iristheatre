@@ -95,59 +95,7 @@ get_header();
       <?php }  ?>
 </ul>
 
-<section class="whats-on-widget">
-  <h3 class="whats-on-widget__header">Whats On</h4> 
-  <ul class="cal-bar">
-    <li class="cal-bar__month">JUNE:</li>
-    <li class="cal-bar__date">1</li>
-    <li class="cal-bar__date">2</li>
-    <li class="cal-bar__date">3</li>
-    <li class="cal-bar__date">4</li>
-    <li class="cal-bar__date">5</li>
-    <li class="cal-bar__date">6</li>
-    <li class="cal-bar__date">7</li>
-    <li class="cal-bar__date">8</li>
-    <li class="cal-bar__date">9</li>
-    <li class="cal-bar__date">10</li>
-    <li class="cal-bar__date">11</li>
-    <li class="cal-bar__date">12</li>
-    <li class="cal-bar__date">13</li>
-    <li class="cal-bar__date">14</li>
-    <li class="cal-bar__date">15</li>
-    <li class="cal-bar__date">16</li>
-    <li class="cal-bar__date">17</li>
-    <li class="cal-bar__date">18</li>
-    <li class="cal-bar__date">19</li>
-    <li class="cal-bar__date">20</li>
-    <li class="cal-bar__date">21</li>
-  </ul>
-  <?php
-      // Ensure the global $post variable is in scope
-    global $post;
-
-    // Retrieve the next 5 upcoming events
-    $events = tribe_get_events( array(
-      'posts_per_page' => 5,
-      'meta_query' => array(
-        array(
-          'key' => 'select_for_homepage_hero',
-          'value' => 'no',
-          'compare' => '='
-          )
-        )
-    ) );
-    foreach ( $events as $post ) {
-      setup_postdata( $post );
-      the_title();
-    }
-  ?>
-
-
-  <!-- Main Events Content -->
-  <?php tribe_get_template_part( 'month/content' ); ?>
-
-
-</section> 
+<?php // include 'whats-on-widget.php' ?>
 
 <div class="column-left">
   <section class="news-flash"><h3 class="news-flash__header">News</h3>
@@ -158,9 +106,9 @@ get_header();
       foreach ( $news_posts as $post ) : setup_postdata ( $post ); 
 
       ?>
-      <a class="news-flash__title" href="<?php echo get_permalink(); ?>"><?php the_title(); ?></a>
+      <a class="news-item__title" href="<?php echo get_permalink(); ?>"><?php the_title(); ?></a>
       <?php the_excerpt(); ?>
-      <a class="news-flash__read-more" href="<?php echo get_permalink(); ?>">Read more</a>
+      <a class="news-item__read-more" href="<?php echo get_permalink(); ?>">Read more</a>
 
       <?php endforeach;
       wp_reset_postdata();

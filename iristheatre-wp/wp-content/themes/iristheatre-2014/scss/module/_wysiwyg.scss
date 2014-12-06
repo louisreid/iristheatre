@@ -1,7 +1,7 @@
 /*------------------------------------*\
-    MODULE/TICKETS.SCSS
+    MODULE/WYSIWYG.SCSS
 \*------------------------------------*/
 
-.tickets__title {
-  @extend .page-title;
+.wysiwyg-content {
+  margin: $gutter-lrg $gutter-lrg*2;
 }

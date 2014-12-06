@@ -7,16 +7,22 @@ get_header();
 
 ?>
 
-<?php 
+<h1 class="page-title"><?php the_title(); ?></h1>
 
-    $pageContent = get_field('page-content'); 
+<section class="wysiwyg-content">
+  
+  <?php 
 
-    if ( !empty($pageContent) ) {
-        the_field('page-content');
-    } else {
-        echo 'Sorry there is no content on this page';
-    }
+      $pageContent = get_field('page-content'); 
 
-?>
+      if ( !empty($pageContent) ) {
+          the_field('page-content');
+      } else {
+          echo 'Sorry there is no content on this page';
+      }
+
+  ?>
+
+</section>
 
 <?php get_footer(); ?>

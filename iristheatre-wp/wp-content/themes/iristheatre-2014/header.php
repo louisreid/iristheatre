@@ -4,7 +4,7 @@
     <head>
       <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <title>Iris Theatre 2014</title>
+      <title>Iris Theatre - <?php the_title(); ?></title>
       <meta name="description" content="">
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -15,7 +15,7 @@
       <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
       <script src="<?php echo get_template_directory_uri(); ?>/js/modernizr-2.7.1.js"></script>
     </head>
-    <body>
+    <body <?php body_class(); ?>>
       <div class="wrapper--site-header">
         <header class="site-header">
           <a href="<?php echo esc_url( home_url( '/' ) ); ?>">

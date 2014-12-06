@@ -61,7 +61,6 @@
 .column {
     width: 50%;
     float: left;
-    padding-top: $gutter-med;
     @include breakpoint(mob){
         width: 100%;
     }

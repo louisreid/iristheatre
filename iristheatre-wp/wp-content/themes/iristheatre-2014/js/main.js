@@ -15,4 +15,22 @@ $(document).ready(function(){
     .mouseleave(function(){
         $(this).find(".tile__hidden").slideToggle(300);
     });
+
+    $(".tooltip").each(function(){
+      $(this).qtip({
+        style: { classes: 'qtip-dark qtip-tipsy'},
+        position: {
+          my: 'center bottom',
+          at: 'top center',
+          // target: $(".tooltip"),
+          adjust: {
+            y: -12
+          }
+        },
+        content: {
+          text: $(this).next('div')
+        }
+      });
+    });
+
 });

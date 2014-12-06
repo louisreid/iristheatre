@@ -508,108 +508,13 @@ body {
  * Responsive Text Mixin
  */
 /*------------------------------------*\
-    BASE/EXTENDS.SCSS
-\*------------------------------------*/
-/**
- * Clear Fix
- * thanks to: nicolasgallagher.com
- */
-/* line 11, ../scss/base/_extends.scss */
-.cf:before, .site-header:before, .site-content:before, .tile-wrapper:before, .more-shows:before, .past-work-shows:before, .tile:before, .cal-bar:before, .photo-grid .afg-row:before, .footer-head:before, .footer-body:before, .footer-newsletter .sml_subscribe:before, .show-head:before, .show-body:before, .show-thumbnails:before, .whats-on-list:before,
-.cf:after,
-.site-header:after,
-.site-content:after,
-.tile-wrapper:after,
-.more-shows:after,
-.past-work-shows:after,
-.tile:after,
-.cal-bar:after,
-.photo-grid .afg-row:after,
-.footer-head:after,
-.footer-body:after,
-.footer-newsletter .sml_subscribe:after,
-.show-head:after,
-.show-body:after,
-.show-thumbnails:after,
-.whats-on-list:after {
-  content: " ";
-  /* 1 */
-  display: table;
-  /* 2 */
-}
-
-/* line 16, ../scss/base/_extends.scss */
-.cf:after, .site-header:after, .site-content:after, .tile-wrapper:after, .more-shows:after, .past-work-shows:after, .tile:after, .cal-bar:after, .photo-grid .afg-row:after, .footer-head:after, .footer-body:after, .footer-newsletter .sml_subscribe:after, .show-head:after, .show-body:after, .show-thumbnails:after, .whats-on-list:after {
-  clear: both;
-}
-
-/**
- * For IE 6/7 only
- * Include this rule to trigger hasLayout and contain floats.
- */
-/* line 24, ../scss/base/_extends.scss */
-.cf, .site-header, .site-content, .tile-wrapper, .more-shows, .past-work-shows, .tile, .cal-bar, .photo-grid .afg-row, .footer-head, .footer-body, .footer-newsletter .sml_subscribe, .show-head, .show-body, .show-thumbnails, .whats-on-list {
-  *zoom: 1;
-}
-
-/**
- * Animation
- */
-/* line 31, ../scss/base/_extends.scss */
-.transition-color, .footer-social a:hover img {
-  transition: color 0.1s ease-out;
-}
-
-/*------------------------------------*\
-    BASE/ELEMENTS.SCSS
-\*------------------------------------*/
-/* line 5, ../scss/base/_elements.scss */
-body {
-  background-color: #e0ded3;
-  font-size: 16px;
-}
-
-/* line 10, ../scss/base/_elements.scss */
-hr {
-  margin: 0;
-  border: 0;
-  width: 100%;
-  height: 1px;
-  color: #7f8c8d;
-  background-color: #b5bcbc;
-}
-@media only screen and (max-width: 767px) {
-  /* line 10, ../scss/base/_elements.scss */
-  hr {
-    display: none;
-  }
-}
-
-/* line 20, ../scss/base/_elements.scss */
-.hidden, .tile__hidden {
-  display: none;
-}
-
-/* line 24, ../scss/base/_elements.scss */
-.stars--show {
-  display: inline-block;
-  padding-left: 3px;
-}
-
-/* line 29, ../scss/base/_elements.scss */
-.page_title, .past-work__title, .tickets__title {
-  color: #333333;
-  margin-bototm: 36px;
-}
-
-/*------------------------------------*\
     BASE/TYPOGRAPHY.SCSS
 \*------------------------------------*/
 /**
  * FONTS
  */
 /* line 9, ../scss/base/_typography.scss */
-.font-heading, .header--block, .header--white-block, .hero__caption, .tile__caption, .nav-main ul li a, .nav-main--menu ul li a, .nav-main--footer ul li a, .nav-main--hamburger ul li a, .show-ticketshop-link a, .header--black-block, .page_title, .past-work__title, .tickets__title, .cal-bar__item, .cal-bar__month, .cal-bar__date, .whats-on-widget__header, .news-flash__header, .twitter-link a, .show-twitter-link a, .show-title h1, .show-title h2, .show-title h3, .show-title h4, .show-title h5, .show-title h6, .show-dates, .whats-on-detail, .past-work-year__title, .jobs-page__header, .jobs__rate, .jobs__dates, .news-flash__title, .news-flash__read-more, .show-review {
+.font-heading, .header--block, .header--white-block, .hero__caption, .tile__caption, .nav-main ul li a, .nav-main--menu ul li a, .nav-main--footer ul li a, .nav-main--hamburger ul li a, .show-ticketshop-link a, .header--black-block, .page-title, .whats-on-title, .past-work__title, .tickets__title, .news-page__header, .people-page__header, .cal-bar__item, .cal-bar__month, .cal-bar__date, .whats-on-widget__header, .twitter-link a, .show-twitter-link a, .month-view th, .show-title h1, .show-title h2, .show-title h3, .show-title h4, .show-title h5, .show-title h6, .show-dates, .whats-on-detail, .past-work-year__title, .jobs-page__header, .jobs__rate, .jobs__dates, .news-flash__header, .news-item-meta, .show-review, .news-item__header, .news-item__read-more {
   font-family: 'Montserrat', Arial, sans;
   font-weight: 400;
 }
@@ -624,18 +529,18 @@ hr {
  * FONT-SIZES
  */
 /* line 30, ../scss/base/_typography.scss */
-.font-size-header-page, .page_title, .past-work__title, .tickets__title, .copy h1, .show-title h1, .show-text h1, .whats-on-detail h1 {
+.font-size-header-page, .page-title, .whats-on-title, .past-work__title, .tickets__title, .news-page__header, .people-page__header, .copy h1, .show-title h1, .show-text h1, .whats-on-detail h1 {
   font-size: 44.8px;
 }
 @media only screen and (min-width: 768px) and (max-width: 990px) {
   /* line 30, ../scss/base/_typography.scss */
-  .font-size-header-page, .page_title, .past-work__title, .tickets__title, .copy h1, .show-title h1, .show-text h1, .whats-on-detail h1 {
+  .font-size-header-page, .page-title, .whats-on-title, .past-work__title, .tickets__title, .news-page__header, .people-page__header, .copy h1, .show-title h1, .show-text h1, .whats-on-detail h1 {
     font-size: 32px;
   }
 }
 @media only screen and (max-width: 767px) {
   /* line 30, ../scss/base/_typography.scss */
-  .font-size-header-page, .page_title, .past-work__title, .tickets__title, .copy h1, .show-title h1, .show-text h1, .whats-on-detail h1 {
+  .font-size-header-page, .page-title, .whats-on-title, .past-work__title, .tickets__title, .news-page__header, .people-page__header, .copy h1, .show-title h1, .show-text h1, .whats-on-detail h1 {
     font-size: 17.6px;
   }
 }
@@ -658,35 +563,35 @@ hr {
 }
 
 /* line 32, ../scss/base/_typography.scss */
-.font-size-header-sub, .hero__caption, .tile__caption, .copy h2, .show-title h2, .show-text h2, .whats-on-detail h2 {
+.font-size-header-sub, .hero__caption, .tile__caption, .copy h2, .show-title h2, .show-text h2, .whats-on-detail h2, .news-item-meta {
   font-size: 24.96px;
 }
 @media only screen and (min-width: 768px) and (max-width: 990px) {
   /* line 32, ../scss/base/_typography.scss */
-  .font-size-header-sub, .hero__caption, .tile__caption, .copy h2, .show-title h2, .show-text h2, .whats-on-detail h2 {
+  .font-size-header-sub, .hero__caption, .tile__caption, .copy h2, .show-title h2, .show-text h2, .whats-on-detail h2, .news-item-meta {
     font-size: 16px;
   }
 }
 @media only screen and (max-width: 767px) {
   /* line 32, ../scss/base/_typography.scss */
-  .font-size-header-sub, .hero__caption, .tile__caption, .copy h2, .show-title h2, .show-text h2, .whats-on-detail h2 {
+  .font-size-header-sub, .hero__caption, .tile__caption, .copy h2, .show-title h2, .show-text h2, .whats-on-detail h2, .news-item-meta {
     font-size: 14.4px;
   }
 }
 
 /* line 33, ../scss/base/_typography.scss */
-.font-size-header-link, .tile__hidden, .news-flash__title {
-  font-size: 20.8px;
+.font-size-header-link, .tile__hidden, .news-item__header, .people-page__header p {
+  font-size: 16px;
 }
 @media only screen and (min-width: 768px) and (max-width: 990px) {
   /* line 33, ../scss/base/_typography.scss */
-  .font-size-header-link, .tile__hidden, .news-flash__title {
+  .font-size-header-link, .tile__hidden, .news-item__header, .people-page__header p {
     font-size: 16px;
   }
 }
 @media only screen and (max-width: 767px) {
   /* line 33, ../scss/base/_typography.scss */
-  .font-size-header-link, .tile__hidden, .news-flash__title {
+  .font-size-header-link, .tile__hidden, .news-item__header, .people-page__header p {
     font-size: 14.4px;
   }
 }
@@ -743,18 +648,18 @@ hr {
 }
 
 /* line 39, ../scss/base/_typography.scss */
-.font-size-small, .footer-newsletter .sml_emaillabel {
+.font-size-small, .footer-newsletter .sml_emaillabel, .month-view th {
   font-size: 11.2px;
 }
 @media only screen and (min-width: 768px) and (max-width: 990px) {
   /* line 39, ../scss/base/_typography.scss */
-  .font-size-small, .footer-newsletter .sml_emaillabel {
+  .font-size-small, .footer-newsletter .sml_emaillabel, .month-view th {
     font-size: 16px;
   }
 }
 @media only screen and (max-width: 767px) {
   /* line 39, ../scss/base/_typography.scss */
-  .font-size-small, .footer-newsletter .sml_emaillabel {
+  .font-size-small, .footer-newsletter .sml_emaillabel, .month-view th {
     font-size: 12.8px;
   }
 }
@@ -839,7 +744,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* line 59, ../scss/base/_typography.scss */
-.header--block, .header--white-block, .hero__caption, .tile__caption, .nav-main ul li a, .nav-main--menu ul li a, .nav-main--footer ul li a, .nav-main--hamburger ul li a, .show-ticketshop-link a, .header--black-block, .page_title, .past-work__title, .tickets__title, .cal-bar__item, .cal-bar__month, .cal-bar__date, .whats-on-widget__header, .news-flash__header, .twitter-link a, .show-twitter-link a, .show-title h1, .show-title h2, .show-title h3, .show-title h4, .show-title h5, .show-title h6, .show-dates, .whats-on-detail, .past-work-year__title, .jobs-page__header, .jobs__rate, .jobs__dates {
+.header--block, .header--white-block, .hero__caption, .tile__caption, .nav-main ul li a, .nav-main--menu ul li a, .nav-main--footer ul li a, .nav-main--hamburger ul li a, .show-ticketshop-link a, .header--black-block, .page-title, .whats-on-title, .past-work__title, .tickets__title, .news-page__header, .people-page__header, .cal-bar__item, .cal-bar__month, .cal-bar__date, .whats-on-widget__header, .twitter-link a, .show-twitter-link a, .month-view th, .show-title h1, .show-title h2, .show-title h3, .show-title h4, .show-title h5, .show-title h6, .show-dates, .whats-on-detail, .past-work-year__title, .jobs-page__header, .jobs__rate, .jobs__dates, .news-flash__header, .news-item-meta {
   text-transform: uppercase;
 }
 
@@ -849,7 +754,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* line 69, ../scss/base/_typography.scss */
-.header--black-block, .page_title, .past-work__title, .tickets__title, .cal-bar__item, .cal-bar__month, .cal-bar__date, .whats-on-widget__header, .news-flash__header, .twitter-link a, .show-twitter-link a, .show-title h1, .show-title h2, .show-title h3, .show-title h4, .show-title h5, .show-title h6, .show-dates, .whats-on-detail, .past-work-year__title, .jobs-page__header, .jobs__rate, .jobs__dates {
+.header--black-block, .page-title, .whats-on-title, .past-work__title, .tickets__title, .news-page__header, .people-page__header, .cal-bar__item, .cal-bar__month, .cal-bar__date, .whats-on-widget__header, .twitter-link a, .show-twitter-link a, .month-view th, .show-title h1, .show-title h2, .show-title h3, .show-title h4, .show-title h5, .show-title h6, .show-dates, .whats-on-detail, .past-work-year__title, .jobs-page__header, .jobs__rate, .jobs__dates, .news-flash__header, .news-item-meta {
   color: #252525;
 }
 
@@ -864,6 +769,107 @@ a {
 /* line 80, ../scss/base/_typography.scss */
 a:hover {
   color: #111111;
+}
+
+/*------------------------------------*\
+    BASE/ELEMENTS.SCSS
+\*------------------------------------*/
+/* line 5, ../scss/base/_elements.scss */
+body {
+  background-color: #e0ded3;
+  font-size: 16px;
+}
+
+/* line 10, ../scss/base/_elements.scss */
+hr {
+  margin: 0;
+  border: 0;
+  width: 100%;
+  height: 1px;
+  color: #7f8c8d;
+  background-color: #b5bcbc;
+}
+@media only screen and (max-width: 767px) {
+  /* line 10, ../scss/base/_elements.scss */
+  hr {
+    display: none;
+  }
+}
+
+/* line 20, ../scss/base/_elements.scss */
+.hidden, .tile__hidden {
+  display: none;
+}
+
+/* line 24, ../scss/base/_elements.scss */
+.stars--show {
+  display: inline-block;
+  padding-left: 3px;
+}
+
+/* line 29, ../scss/base/_elements.scss */
+.page-title, .whats-on-title, .past-work__title, .tickets__title, .news-page__header, .people-page__header {
+  color: #333333;
+  margin-bototm: 36px;
+}
+
+/*------------------------------------*\
+    BASE/EXTENDS.SCSS
+\*------------------------------------*/
+/**
+ * Clear Fix
+ * thanks to: nicolasgallagher.com
+ */
+/* line 11, ../scss/base/_extends.scss */
+.cf:before, .site-header:before, .site-content:before, .tile-wrapper:before, .more-shows:before, .past-work-shows:before, .tile:before, .cal-bar:before, .photo-grid .afg-row:before, .footer-head:before, .footer-body:before, .footer-newsletter .sml_subscribe:before, .show-head:before, .show-body:before, .show-thumbnails:before, .whats-on-list:before, .people-single:before,
+.cf:after,
+.site-header:after,
+.site-content:after,
+.tile-wrapper:after,
+.more-shows:after,
+.past-work-shows:after,
+.tile:after,
+.cal-bar:after,
+.photo-grid .afg-row:after,
+.footer-head:after,
+.footer-body:after,
+.footer-newsletter .sml_subscribe:after,
+.show-head:after,
+.show-body:after,
+.show-thumbnails:after,
+.whats-on-list:after,
+.people-single:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+
+/* line 16, ../scss/base/_extends.scss */
+.cf:after, .site-header:after, .site-content:after, .tile-wrapper:after, .more-shows:after, .past-work-shows:after, .tile:after, .cal-bar:after, .photo-grid .afg-row:after, .footer-head:after, .footer-body:after, .footer-newsletter .sml_subscribe:after, .show-head:after, .show-body:after, .show-thumbnails:after, .whats-on-list:after, .people-single:after {
+  clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+/* line 24, ../scss/base/_extends.scss */
+.cf, .site-header, .site-content, .tile-wrapper, .more-shows, .past-work-shows, .tile, .cal-bar, .photo-grid .afg-row, .footer-head, .footer-body, .footer-newsletter .sml_subscribe, .show-head, .show-body, .show-thumbnails, .whats-on-list, .people-single {
+  *zoom: 1;
+}
+
+/**
+ * Animation
+ */
+/* line 31, ../scss/base/_extends.scss */
+.transition-color, .footer-social a:hover img {
+  transition: color 0.1s ease-out;
+}
+
+/* line 35, ../scss/base/_extends.scss */
+.hidden, .tile__hidden {
+  display: none;
 }
 
 /*------------------------------------*\
@@ -935,7 +941,6 @@ a:hover {
 .column, .column-left, .column-right {
   width: 50%;
   float: left;
-  padding-top: 20px;
 }
 @media only screen and (max-width: 767px) {
   /* line 61, ../scss/layout/_page.scss */
@@ -944,12 +949,12 @@ a:hover {
   }
 }
 
-/* line 74, ../scss/layout/_page.scss */
+/* line 73, ../scss/layout/_page.scss */
 .column-right {
   padding-left: 20px;
 }
 @media only screen and (max-width: 767px) {
-  /* line 74, ../scss/layout/_page.scss */
+  /* line 73, ../scss/layout/_page.scss */
   .column-right {
     margin-top: 20px;
     padding-left: 0;
@@ -1230,6 +1235,11 @@ a:hover {
 /*------------------------------------*\
     MODULE/MORE-SHOWS.SCSS
 \*------------------------------------*/
+/* line 5, ../scss/module/_more-shows.scss */
+.more-shows {
+  padding-bottom: 0;
+}
+
 /*------------------------------------*\
     MODULE/WHATS-ON-WIDGET.SCSS
 \*------------------------------------*/
@@ -1239,29 +1249,6 @@ a:hover {
   background-color: #ececec;
   padding: 20px;
   padding-bottom: 10px;
-}
-
-/*------------------------------------*\
-  MODULE/NEWS-FLASH.SCSS
-\*------------------------------------*/
-/* line 5, ../scss/module/_news-flash.scss */
-.news-flash {
-  margin-bottom: 20px;
-  padding: 20px;
-  background: #ececec;
-}
-
-/* line 15, ../scss/module/_news-flash.scss */
-.news-flash__title {
-  text-decoration: none;
-  padding: 20px 0 0 0;
-  display: block;
-  color: #252525;
-}
-
-/* line 24, ../scss/module/_news-flash.scss */
-.news-flash__read-more {
-  color: #252525;
 }
 
 /*------------------------------------*\
@@ -1449,6 +1436,44 @@ a:hover {
   transition-duration: 0s;
 }
 
+/*------------------------------------*\
+    MODULE/MONTH-VIEW.SCSS
+\*------------------------------------*/
+/* line 5, ../scss/module/_month-view.scss */
+.month-view {
+  width: 100%;
+  margin: 36px auto;
+}
+/* line 15, ../scss/module/_month-view.scss */
+.month-view th {
+  color: #252525;
+}
+/* line 21, ../scss/module/_month-view.scss */
+.month-view td {
+  text-align: center;
+  height: 30px;
+  width: 14.2%;
+}
+
+/* line 28, ../scss/module/_month-view.scss */
+.month-view-event {
+  display: inline-block;
+}
+
+/* line 32, ../scss/module/_month-view.scss */
+.month-view-thumbnail {
+  display: inline-block;
+  border-radius: 50%;
+  background-size: cover;
+  width: 40px;
+  height: 40px;
+}
+/* line 38, ../scss/module/_month-view.scss */
+.month-view-thumbnail:hover {
+  opacity: 0.6;
+  cursor: pointer;
+}
+
 /* Page Areas */
 /*------------------------------------*\
     MODULE/HOME.SCSS
@@ -1561,43 +1586,43 @@ a:hover {
 /*------------------------------------*\
     MODULE/WHATS-ON.SCSS
 \*------------------------------------*/
-/* line 5, ../scss/module/_whats-on.scss */
+/* line 9, ../scss/module/_whats-on.scss */
 .whats-on-list {
   margin: 0;
   padding: 0;
 }
 
-/* line 11, ../scss/module/_whats-on.scss */
+/* line 15, ../scss/module/_whats-on.scss */
 .whats-on-single {
   float: left;
   margin: 0;
   padding: 0 10px 0 0;
   width: 50%;
 }
-/* line 16, ../scss/module/_whats-on.scss */
+/* line 20, ../scss/module/_whats-on.scss */
 .whats-on-single a {
   display: block;
   padding: 8px;
   text-decoration: none;
 }
-/* line 20, ../scss/module/_whats-on.scss */
+/* line 24, ../scss/module/_whats-on.scss */
 .whats-on-single a:hover {
   background-color: white;
 }
 
-/* line 26, ../scss/module/_whats-on.scss */
+/* line 30, ../scss/module/_whats-on.scss */
 .whats-on-single:nth-of-type(2n) {
   padding-right: 0;
   padding-left: 10px;
 }
 
-/* line 31, ../scss/module/_whats-on.scss */
+/* line 35, ../scss/module/_whats-on.scss */
 .whats-on-image {
   width: 100%;
   overflow: hidden;
 }
 
-/* line 39, ../scss/module/_whats-on.scss */
+/* line 43, ../scss/module/_whats-on.scss */
 .whats-on-detail h3 {
   color: #676767;
 }
@@ -1627,37 +1652,137 @@ a:hover {
 /*------------------------------------*\
     MODULE/JOBS.SCSS
 \*------------------------------------*/
-/* line 10, ../scss/module/_jobs.scss */
+/* line 9, ../scss/module/_jobs.scss */
 .jobs-page__intro {
   margin-bottom: 36px;
 }
 
-/* line 14, ../scss/module/_jobs.scss */
+/* line 13, ../scss/module/_jobs.scss */
 .jobs-list {
   margin: 36px 72px;
 }
 
-/* line 18, ../scss/module/_jobs.scss */
+/* line 17, ../scss/module/_jobs.scss */
 .jobs__rate, .jobs__dates {
   text-transform: uppercase;
   color: #252525;
 }
 
-/* line 25, ../scss/module/_jobs.scss */
+/* line 24, ../scss/module/_jobs.scss */
 .jobs__application-deadline {
   font-style: italic;
   margin: 0 0 20px 0;
   padding: 0;
 }
 
-/* line 31, ../scss/module/_jobs.scss */
+/* line 30, ../scss/module/_jobs.scss */
 .jobs__description {
   margin: 0;
   padding: 0;
 }
 
-/* line 36, ../scss/module/_jobs.scss */
+/* line 35, ../scss/module/_jobs.scss */
 .jobs-list__single {
   border-bottom: dotted thin #252525;
   margin-bottom: 72px;
+}
+
+/*------------------------------------*\
+    MODULE/JOBS.SCSS
+\*------------------------------------*/
+/* line 9, ../scss/module/_news.scss */
+.news-list {
+  margin: 36px 72px;
+}
+
+/* line 13, ../scss/module/_news.scss */
+.news-item {
+  border-bottom: thin dashed #252525;
+  margin-bottom: 20px;
+}
+
+/* line 18, ../scss/module/_news.scss */
+.news-item__header {
+  text-decoration: underline;
+  margin-top: 20px;
+  padding: 0;
+  display: block;
+  color: #252525;
+}
+/* line 26, ../scss/module/_news.scss */
+.news-item__header:hover {
+  color: #676767;
+}
+
+/* line 31, ../scss/module/_news.scss */
+.news-item__read-more {
+  color: #252525;
+}
+
+/* NEWS FLASH WIDGET */
+/* line 38, ../scss/module/_news.scss */
+.news-flash {
+  margin-bottom: 20px;
+  padding: 20px;
+  background: #ececec;
+}
+
+/* line 48, ../scss/module/_news.scss */
+.news-item-meta {
+  text-transform: uppercase;
+  color: #333333;
+}
+
+/*------------------------------------*\
+    MODULE/PEOPLE.SCSS
+\*------------------------------------*/
+/* line 7, ../scss/module/_people.scss */
+.people-page__header p {
+  margin-top: 0;
+}
+/* line 10, ../scss/module/_people.scss */
+.people-page__header p a {
+  display: inline-block;
+  padding-right: 8px;
+}
+
+/* line 17, ../scss/module/_people.scss */
+.people-section {
+  margin: 20px 0;
+  border-bottom: thin dashed #252525;
+}
+
+/* line 22, ../scss/module/_people.scss */
+.people-list {
+  margin: 36px 72px;
+}
+
+/* line 26, ../scss/module/_people.scss */
+.people-single {
+  margin-bottom: 20px;
+}
+
+/* line 31, ../scss/module/_people.scss */
+.people-single__image {
+  float: left;
+  display: block;
+  background-size: cover;
+  border-radius: 50%;
+  width: 12%;
+  height: 100px;
+  margin: 0 20px 20px 0;
+}
+
+/* line 44, ../scss/module/_people.scss */
+.people-right {
+  float: left;
+  width: 85%;
+}
+
+/*------------------------------------*\
+    MODULE/WYSIWYG.SCSS
+\*------------------------------------*/
+/* line 5, ../scss/module/_wysiwyg.scss */
+.wysiwyg-content {
+  margin: 36px 72px;
 }

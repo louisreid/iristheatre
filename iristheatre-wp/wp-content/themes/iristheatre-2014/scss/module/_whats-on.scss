@@ -2,6 +2,10 @@
     MODULE/WHATS-ON.SCSS
 \*------------------------------------*/
 
+.whats-on-title {
+  @extend .page-title;
+}
+
 .whats-on-list {
   @extend .cf;
   margin: 0;

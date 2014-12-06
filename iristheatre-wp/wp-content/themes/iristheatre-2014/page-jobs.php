@@ -17,15 +17,12 @@ get_header();
 
 
 
-<?php
-if( have_rows('jobs')):
-?>
-
+<?php if( have_rows('jobs')): ?>
+  
 <section class="jobs-list">
 
-<?php
-    while (have_rows('jobs')) : the_row();
-?>
+<?php while (have_rows('jobs')) : the_row(); ?>
+
   <div class="jobs-list__single">
 
     <h2 class="jobs__title"><?php the_sub_field('jobs-title'); ?></h2> 
@@ -49,11 +46,6 @@ if( have_rows('jobs')):
 
 <?php else: ?>
 <h4>Sorry, there are no positions available at the moment, check back soon. </h4>
-<?php
-
-endif;
-
-?>
-
+<?php endif; ?>
 
 <?php get_footer(); ?>

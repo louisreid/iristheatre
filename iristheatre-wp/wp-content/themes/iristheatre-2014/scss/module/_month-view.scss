@@ -1,0 +1,42 @@
+/*------------------------------------*\
+    MODULE/MONTH-VIEW.SCSS
+\*------------------------------------*/
+
+.month-view {
+
+  width: 100%;
+  margin: $gutter-lrg auto;
+
+  thead {
+    tr {
+    }
+  }
+ 
+      th {
+        @extend .header--black-block;
+        @extend .font-size-small;
+        color: $grey;
+      }
+
+  td {
+    text-align: center; 
+    height: 30px;
+    width: 14.2%;
+  }
+}
+
+.month-view-event {
+  display: inline-block;
+}
+
+.month-view-thumbnail {
+  display: inline-block;
+  border-radius: 50%;
+  background-size: cover;
+  width: 40px;
+  height: 40px;
+  &:hover {
+    opacity: 0.6;
+    cursor: pointer;
+  }
+}

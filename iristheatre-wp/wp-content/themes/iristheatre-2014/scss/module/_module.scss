@@ -14,11 +14,12 @@
 @import "nav";
 @import "more-shows";
 @import "whats-on-widget";
-@import "news-flash";
 @import "twitter";
 @import "photo-grid";
 @import "footer";
 @import "fluidbox";
+
+@import "month-view";
 
 /* Page Areas */
 @import "home";
@@ -27,3 +28,6 @@
 @import "past-work";
 @import "tickets";
 @import "jobs";
+@import "news";
+@import "people";
+@import "wysiwyg";

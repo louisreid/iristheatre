@@ -91,8 +91,11 @@ $event_id = get_the_ID();
             <?php } ?>
         </div>
 
+        <?php 
+            $numberOfImages = get_field('number_of_show_thumnails'); 
+            if ($numberOfImages > 0) {
+        ?>
         <div class="show-thumbnails">
-            <?php $numberOfImages = get_field('number_of_show_thumnails'); ?>
 
             <?php if ($numberOfImages = 1 or 2 or 3){ 
                 $imageArray = get_field('show-thumbnail-image-1');
@@ -128,10 +131,14 @@ $event_id = get_the_ID();
                 </a>
                 
                 
-            <?php } ?>
-            
-        </div>
+            <?php } ?> 
+        </div> 
+        <?php } ?>
 
+        <?php 
+            $twitter = get_field('twitter-code'); 
+            if (!empty($twitter)){
+        ?>
         <div class="show-twitter">
             <h4 class="show-twitter-link">
                 <a href="https://twitter.com/hashtag/<?php the_field('twitter-link') ?>">
@@ -140,11 +147,11 @@ $event_id = get_the_ID();
                 </a>
             </h4>
             <?php 
-              $twitter = get_field('twitter-code'); 
               if ( !empty($twitter)) {
                   echo '<a data-chrome="nofooter noheader noborders transparent"',substr($twitter, 3); 
               }
             ?>
         </div>
+        <?php } ?>
     </div>
 </section>

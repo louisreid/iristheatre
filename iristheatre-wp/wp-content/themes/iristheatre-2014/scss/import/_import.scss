@@ -1,7 +1,5 @@
 /*------------------------------------*\
-    MODULE/TICKETS.SCSS
+    IMPORT/IMPORT.SCSS
 \*------------------------------------*/
 
-.tickets__title {
-  @extend .page-title;
-}
+@import "qtip";

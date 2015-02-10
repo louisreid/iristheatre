@@ -113,50 +113,6 @@ $event_id = get_the_ID();
                 }
             ?>
             
-        <!-- SHOW THUMBNAILS -->
-        <?php 
-            $numberOfImages = get_field('number_of_show_thumnails'); 
-            if ($numberOfImages > 0) {
-        ?>
-        <div class="show-thumbnails">
-
-            <?php if ($numberOfImages = 1 or 2 or 3){ 
-                $imageArray = get_field('show-thumbnail-image-1');
-                $imageURL = $imageArray['url'];
-                $imageAlt = $imageArray['alt'];
-                $imageThumbURL = $imageArray['sizes']['thumbnail'];
-            ?>
-                <a class="fluidbox-thumbnail" href="<?php echo $imageURL; ?>">
-                    <img src="<?php echo $imageThumbURL ?>" alt="<?php echo $imageAlt ?>">
-                </a>
-            <?php } ?>
-
-            <?php if ($numberOfImages = 2 or 3) {
-                $imageArray = get_field('show-thumbnail-image-2');
-                $imageURL = $imageArray['url'];
-                $imageAlt = $imageArray['alt'];
-                $imageThumbURL = $imageArray['sizes']['thumbnail'];
-            ?>
-                <a class="fluidbox-thumbnail" href="<?php echo $imageURL; ?>">
-                    <img src="<?php echo $imageThumbURL ?>" alt="<?php echo $imageAlt ?>">
-                </a>
-                
-            <?php } ?>
-
-            <?php if ($numberOfImages = 3) { 
-                $imageArray = get_field('show-thumbnail-image-3');
-                $imageURL = $imageArray['url'];
-                $imageAlt = $imageArray['alt'];
-                $imageThumbURL = $imageArray['sizes']['thumbnail'];
-            ?>
-                <a class="fluidbox-thumbnail" href="<?php echo $imageURL; ?>">
-                    <img src="<?php echo $imageThumbURL ?>" alt="<?php echo $imageAlt ?>">
-                </a>
-                
-                
-            <?php } ?> 
-        </div> 
-        <?php } ?>
 
         <?php 
             $twitter = get_field('twitter-code'); 

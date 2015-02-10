@@ -1,0 +1,64 @@
+/*------------------------------------*\
+    MODULE/WHATS-ON.SCSS
+\*------------------------------------*/
+
+.whats-on-title {
+  @extend .page-title;
+}
+
+.whats-on-list {
+  @extend .cf;
+  margin: 0;
+  padding: 0;
+}
+
+.whats-on-single {
+  float: left;
+  margin: 0;
+  padding: 0 $gutter-med/2 0 0;
+  width: 50%;
+  a {
+    display: block;
+    padding: $gutter-sml;
+    text-decoration: none;
+    &:hover {
+      background-color: $white;
+      .whats-on-detail {
+        background-color: $white;
+      }
+    } 
+  }
+  @include breakpoint(mob){
+    width: 100%;
+    padding-right: 0;
+  }
+}
+
+.whats-on-single:nth-of-type(even) {
+  padding-right: 0;
+  padding-left: $gutter-med/2;
+  @include breakpoint(mob){
+    padding-left: 0;
+  }
+}
+
+.whats-on-image {
+  width: 100%;
+  overflow: hidden;
+}
+
+.whats-on-detail {
+  padding: $gutter-caption;
+
+  @extend .copy;
+  h2, h3 {
+    @extend .header--black-block;
+  }
+  h3 {
+    color: $grey-light;
+  }
+}
+
+.whats-on-hidden {
+  @extend .hidden;
+}

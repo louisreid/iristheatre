@@ -1,0 +1,89 @@
+/*------------------------------------*\
+    BASE/TYPOGRAPHY.SCSS
+\*------------------------------------*/
+
+/**
+ * FONTS
+ */
+
+.font-heading {
+    font-family: 'Montserrat', Arial, sans;
+    font-weight: 400;
+}
+
+.font-body {
+    font-family: 'Open Sans', Arial, sans;
+    font-weight: 300;
+}
+
+
+/**
+ * FONT-SIZES
+ */
+
+@mixin font-size($desk,$tab,$mob){
+    font-size: $desk*$font-size;
+    @include breakpoint(tab){ font-size: $tab*$font-size; }
+    @include breakpoint(mob){ font-size: $mob*$font-size; }
+}
+
+.font-size-header-page { @include font-size(2.8, 2, 2); }
+.font-size-header { @include font-size(2.0, 1.8, 1.5); }
+.font-size-header-sub { @include font-size(1.76, 1.5, 1); }
+.font-size-header-link { @include font-size(1, 1, 0.9); }
+.font-size-header-small { @include font-size(1.8, 1.1, 1); }
+.font-size-footer-nav { @include font-size(0.9375, 1.0, 0.9); }
+
+.font-size-header-4 { @include font-size(1.1, 1, 0.9); }
+.font-size-header-5 { @include font-size(1, 0.9, 0.8); }
+.font-size-header-6 { @include font-size(0.9, 0.8, 0.7); }
+
+
+.font-size-nav { @include font-size(1.1, 0.9, 0.8); }
+
+.font-size-p { @include font-size(1, 1, 0.8); }
+.font-size-small { @include font-size(0.7, 1, 0.8); }
+
+.font-size-blockquote { @include font-size(1.4, 1.1, 1.1); }
+.font-size-button { @include font-size(1.4, 1.3, 1.1); }
+
+.font-size-date { @include font-size(1.1, 1.0, 0.9); }
+.font-size-stars { @include font-size(2, 2, 1.1); }
+
+
+/**
+ * HEADERS
+ */
+
+h1, h2, h3, h4, h5, h6 {
+    padding:0; 
+    margin:0;
+    font-weight:400;
+    font-style:normal;
+}
+
+.header--block {
+    @extend .font-heading;
+    text-transform: uppercase;
+}
+
+.header--white-block {
+    @extend .header--block;
+    color: $white;
+}
+
+.header--black-block {
+    @extend .header--block;
+    color: $grey;
+}
+
+/**
+ * ANCHORS
+ */
+a {
+    color: $grey;
+    text-decoration: underline;
+    &:hover {
+        color: $black;
+    }
+}

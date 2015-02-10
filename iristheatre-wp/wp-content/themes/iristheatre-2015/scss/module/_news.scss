@@ -1,0 +1,81 @@
+/*------------------------------------*\
+    MODULE/JOBS.SCSS
+\*------------------------------------*/
+
+.news-page__header {
+  @extend .page-title;
+}
+
+.news-list {
+  @extend .content-outside-columns;
+}
+
+.news-item {
+  border-bottom: thin dashed $grey;
+  margin-bottom: $gutter-med;
+}
+
+.news-item__header {
+  @extend .font-heading;  
+  @extend .font-size-header-sub;
+  text-decoration: underline;
+  margin-top: $gutter-med;
+  padding: 0;
+  display: block;
+  color: $grey;
+  &:hover {
+    color: $grey-light;
+  }
+}
+
+.news-item__read-more {
+  @extend .font-heading;  
+  color: $grey;
+}
+
+/* NEWS FLASH WIDGET */
+
+.news-flash {
+  margin-bottom: $gutter-med; 
+  padding: $gutter-med;
+  background: $off-white;
+}
+
+.news-flash__header {
+  @extend .header--black-block;
+}
+
+.news-item-meta {
+  @extend .font-size-header-link;
+  text-transform: uppercase;
+  @extend .header--black-block;
+  color: $grey-mid;
+}
+
+
+/**
+ * News Item Page
+ */
+
+
+.news-item-page {
+  @extend .content-outside-columns;
+}
+
+.news-item-page__header-small {
+  @extend .font-heading;
+  @extend .font-size-header-4;
+  text-transform: uppercase;
+}
+
+.news-item-page__header {
+  @extend .font-heading;
+  @extend .font-size-header-sub;
+}
+
+
+.news-item-content {
+  @extend .news-list;
+  @extend .news-item;
+}
+

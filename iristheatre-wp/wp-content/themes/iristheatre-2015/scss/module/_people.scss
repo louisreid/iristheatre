@@ -1,0 +1,69 @@
+/*------------------------------------*\
+    MODULE/PEOPLE.SCSS
+\*------------------------------------*/
+
+.people-page__header {
+  @extend .page-title;
+  p {
+    margin-top: 0;
+    @extend .font-size-header-link;
+    a {
+      display: inline-block;
+      padding-right: $gutter-sml;
+    }
+  }
+}
+
+.people-section {
+  margin: $gutter-med 0;
+  border-bottom: thin dashed $grey;
+}
+
+.people-list {
+  @extend .content-outside-columns;  
+}
+
+.people-single {
+  @extend .cf;
+  margin-bottom: $gutter-med;
+}
+
+.people-single__image {
+  float: left;
+  display: block;
+
+  background-size: cover;
+  border-radius: 50%;
+
+  width: 12%;
+  height: 100px;
+
+  margin: 0 3% $gutter-med 0;
+
+  @include breakpoint(tab){
+    height: 80px;
+  }
+  @include breakpoint(mob){
+    width: 80px;
+    height: 80px;
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.people-single__image-wrapper {
+  width: 100%;
+  display: block;
+}
+
+.people-right {
+  float: left;
+  width: 85%;
+  @include breakpoint(mob){
+    width: 100%;
+    h3, h4 {
+      text-align: center;
+    }
+  }
+}

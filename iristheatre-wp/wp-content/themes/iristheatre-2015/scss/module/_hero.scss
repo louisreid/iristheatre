@@ -1,0 +1,37 @@
+/*------------------------------------*\
+    MODULE/HERO.SCSS
+\*------------------------------------*/
+
+.hero {
+    width: 100%;
+    position: relative;
+    padding-bottom: $gutter-med;
+    @include breakpoint(mob){
+        padding-bottom: 0;
+        margin-bottom: -$gutter-med;
+    }
+}
+
+.hero__caption {
+    @extend .caption;
+    @extend .header--white-block;
+    @extend .font-size-header-sub;
+    background-color: $clr-primary;
+    @include breakpoint(mob){
+
+    }
+}
+
+.hero__image {
+    height: 490px;
+    overflow: hidden;
+    img {
+        width: 100%;
+    }
+    @include breakpoint(mob){
+        height: auto;
+    }
+    @include breakpoint(tab){
+        height: auto;
+    }
+}

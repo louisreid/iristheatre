@@ -1,0 +1,101 @@
+/*------------------------------------*\
+    MODULE/NAV.SCSS
+\*------------------------------------*/
+
+.nav-main {
+    ul {
+        li {
+            a {
+                @extend .header--white-block;
+                text-decoration: none;
+                &:hover {
+                    color: $steel-light;
+                }
+            }
+        } 
+    }
+}
+
+.nav-main--menu {
+    // position: relative;
+    // top: 42px;
+    @extend .nav-main;
+    float: right;
+    ul {
+        @extend .cf;
+        li {
+            padding-left: $gutter-med;
+            float: left;
+            a {
+                @extend .font-size-nav;
+                @extend .header--white-block;
+            }
+        }
+    }
+    @include breakpoint(mob){
+        display: none;
+        float: none;
+        background-color: $grey;
+        position: relative;
+        z-index: 10;
+        ul {
+            li {
+                border-top: solid $off-white 1px;
+                float: none;
+                padding: 0;
+                a {
+                    padding: $gutter-sml;
+                    display: block;
+                }
+            }
+            li:first-child {
+                border-top: none;
+            }
+        }
+    }
+}
+
+.nav-main--footer {
+    display: block;
+    float: left;
+    width: 75%;
+    padding: $gutter-med 0;
+    @extend .nav-main;
+    ul {
+        li {
+            padding-right: $gutter-med;
+            float: left;
+            a {
+                @extend .header--block;
+                @extend .font-size-footer-nav;
+                color: $black-body;
+                @include breakpoint(mob){
+                    text-decoration: underline; 
+                }
+            }
+        }
+    }
+}
+
+.nav-main--hamburger {
+    display: none;
+    @extend .cf;
+
+    padding-top: $gutter-med;
+    padding-bottom: $gutter-med;
+    padding-left: $gutter-sml;
+    padding-right: $gutter-sml;
+
+    cursor: pointer;
+    
+    @include breakpoint(mob){
+        display: block;
+    }
+    i {
+        float: right;   
+    }
+    color: $white;
+    font-size: 2*$font-size;
+
+}
+

@@ -8,25 +8,24 @@ module.exports = function(grunt) {
 
         watch: {
             scss: {
-                files: 'iristheatre-wp/wp-content/themes/iristheatre-2014/scss/**/*.scss',
-                tasks: ['compass'],
+                files: 'iristheatre-wp/wp-content/themes/iristheatre-2015/scss/**/*.scss',
+                tasks: ['sass'],
             },
         },
 
-        compass: {
-            dist: {
-              options: {
-                sassDir: 'iristheatre-wp/wp-content/themes/iristheatre-2014/scss',
-                cssDir: 'iristheatre-wp/wp-content/themes/iristheatre-2014/css'
-              }
+        sass: {
+            dev: {
+                files: {
+                    'iristheatre-wp/wp-content/themes/iristheatre-2015/css/main.css':'iristheatre-wp/wp-content/themes/iristheatre-2015/scss/main.scss',
+                    'iristheatre-wp/wp-content/themes/iristheatre-2015/css/main-ie8.css':'iristheatre-wp/wp-content/themes/iristheatre-2015/scss/main-ie8.scss'
+                }
             }
         },
-
 
         browserSync: {
             dev: {
                 bsFiles: {
-                    src : ['*wp-content/themes/iristheatre-2014/**/*.css','wp-content/themes/iristheatre-2014/**/*.html','wp-content/themes/iristheatre-2014/**/*.php']
+                    src : ['*wp-content/themes/iristheatre-2015/**/*.css','wp-content/themes/iristheatre-2015/**/*.html','wp-content/themes/iristheatre-2015/**/*.php']
                 },
                 options: {
                     watchTask: true,
@@ -38,8 +37,9 @@ module.exports = function(grunt) {
     });
 
     grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.loadNpmTasks('grunt-contrib-compass');
+    grunt.loadNpmTasks('grunt-sass');
     grunt.loadNpmTasks('grunt-browser-sync');
 
     grunt.registerTask('default', ['browserSync','watch']);
+    grunt.registerTask('compile', ['sass']);
 };

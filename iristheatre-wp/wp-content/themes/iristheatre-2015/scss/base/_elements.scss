@@ -1,0 +1,41 @@
+/*------------------------------------*\
+    BASE/ELEMENTS.SCSS
+\*------------------------------------*/
+
+body {
+    background-color: $tan;
+    font-size: $font-size;
+}
+
+hr {
+    margin:0;
+    border:0;
+    width: 100%;
+    height: 1px;
+    color: $steel;
+    background-color: $steel-light;
+    @include breakpoint(mob) { display: none; }
+}
+
+.hidden {
+    display: none;
+}
+
+.stars--show {
+    display: inline-block;
+    padding-left: 3px;
+}
+
+.page-title {
+    @extend .header--black-block;
+    @extend .font-size-header-page;
+    color: $grey-mid;
+    margin-bototm: $gutter-lrg;
+}
+
+.content-outside-columns {
+    margin: $gutter-lrg $gutter-lrg*2;
+    @include breakpoint(mob) {
+        margin: $gutter-lrg $gutter-sml;
+    }
+}

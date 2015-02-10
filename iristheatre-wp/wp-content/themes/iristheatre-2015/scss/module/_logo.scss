@@ -1,0 +1,26 @@
+/*------------------------------------*\
+    MODULE/LOGO.SCSS
+\*------------------------------------*/
+
+.logo {
+
+}
+
+.logo-header {
+  @extend .logo;
+  float: left;
+  display: block;
+  position: absolute;
+  bottom: 28px;
+  @include breakpoint(mob){
+    bottom: -10px;
+    img {
+        width: 75%; 
+    }
+  }
+}
+
+.logo-footer {
+  float: left;  
+}
+

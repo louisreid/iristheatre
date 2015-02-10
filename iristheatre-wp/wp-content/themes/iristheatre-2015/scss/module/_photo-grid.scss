@@ -1,0 +1,67 @@
+/*------------------------------------*\
+    MODULE/PHOTO-GRID.SCSS
+\*------------------------------------*/
+
+.photo-grid {
+  background-color: $clr-primary;
+  padding: $gutter-med;
+  // $gutter-med-plus-5: 5 + $gutter-med;
+  // padding: $gutter-med $gutter-med $gutter-med $gutter-med-plus-5;
+  // padding: 25px 20px 15px 25px;
+
+  
+  // ORIGINAL FACEBOOK
+
+  // .jfbalbum {
+  //   @extend .cf;
+  //   display: inline-block;
+  //   text-align: center;
+  // }
+
+  // .imgboxouter {
+  //   float: left;
+  //   padding-right: 5px;
+  // }
+  // .imgboxouter:nth-child(even) {
+  //   padding-right: 0px;
+  // }
+
+  // .imgboxblack {
+  //   display: inline-block;
+  // }
+
+  // #tnt_pagination {
+  //   display: none;
+  // }
+
+  // FLICKR
+
+  // .afg-row {
+  //   @extend .cf;
+  // }
+  // .afg-cell {
+  //   float: left;
+  //   text-align: center;
+  //   img {
+  //     width: 210px;
+  //   }
+  // }
+
+  // NEW FACEBOOK
+
+  #tnt_pagination {
+    display: none;
+  } 
+
+  .imgboxblack {
+    border-radius: 0;
+  }
+  
+  .imgboxwhite {
+    border-radius: 0;
+  }
+
+  .imgboxouter {
+    margin: 4px;
+  }
+}

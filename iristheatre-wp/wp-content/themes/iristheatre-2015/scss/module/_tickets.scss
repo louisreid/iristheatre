@@ -1,0 +1,14 @@
+/*------------------------------------*\
+    MODULE/TICKETS.SCSS
+\*------------------------------------*/
+
+.tickets__title {
+  @extend .page-title;
+}
+
+.tickets__ticketshop-iframe {
+  margin-top: $gutter-med;
+  padding: $gutter-med 0;
+  background-color: $white;
+  text-align: center;
+}

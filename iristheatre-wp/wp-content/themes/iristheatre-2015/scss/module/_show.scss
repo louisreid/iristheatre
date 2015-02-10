@@ -1,0 +1,192 @@
+/*------------------------------------*\
+  MODULE/SHOW.SCSS
+\*------------------------------------*/
+
+.show-head {
+  @extend .cf;
+  .show-head-left, .show-head-right {
+    float: left;
+  }
+  .show-head-left {
+    width: 30%;
+    padding-right: 20px;
+  }
+  .show-head-right {
+    width: 70%;
+  }
+  @include breakpoint(mob){
+    .show-head-left {
+      float: none;
+      width: 100%;
+      padding: 0;
+    }
+    .show-head-right {
+      width: 100%;
+    }
+  }
+}
+
+.show-body {
+  padding-top: $gutter-med;
+  @extend .cf;
+  .show-body-left, .show-body-right {
+    float: left;
+  }
+  .show-body-left {
+    width: 50%;
+    padding-right: 20px;
+  }
+  .show-body-right {
+    width: 50%;
+  }
+  @include breakpoint(mob){
+    .show-body-left, .show-body-right {
+      float: none;
+      width: 100%;
+      padding: 0;
+    }
+  }
+}
+
+.tribe-events-ajax-loading {
+  display: none;
+}
+
+.show-title {
+  @extend .copy;
+  h1, h2, h3, h4, h5, h6 {
+    @extend .font-heading;
+    @extend .header--black-block;
+    padding-bottom: $gutter-sml;
+  }
+}
+.show-image {
+  width: 100%;
+}
+
+.show-dates {
+  @extend .header--black-block;
+  @extend .font-size-date;
+  border-top: thin $black solid;
+  border-bottom: thin $black solid;
+  padding: $gutter-sml 0;
+}
+
+.show-stars {
+  color: $clr-primary;
+  margin: 0;
+  padding: $gutter-sml 0 0 0;
+  @extend .font-size-stars;
+  @include breakpoint(mob){
+    text-align: center;
+  }
+}
+
+.show-review {
+  padding-top: $gutter-sml;
+  @extend .font-heading;
+  p {
+    margin: 0; padding: 0;
+  }
+  blockquote {
+    @extend .copy-blockquote;
+  }
+  @include breakpoint(mob){
+    padding-bottom: $gutter-med;
+  }
+  @include breakpoint(mob){
+    text-align: center;
+  }
+}
+
+.show-text {
+  @extend .copy;
+}
+
+.show-ticketshop-link {
+  a {
+    display: block;
+    text-align: center;
+    @extend .header--white-block;
+    @extend .font-size-button;
+    text-decoration: none;
+    padding: $gutter-med;
+    background-color: $clr-primary;
+  }
+}
+
+.show-thumbnails {
+  @extend .cf;
+  padding: $gutter-med 0;
+  a {
+    display: block;
+    float: left;
+    width: 32%;
+    margin-left: 2%;
+    img {
+      background: $white;
+      padding: 5px;
+      width: 100%;
+    }
+  }
+  a:first-child {
+    margin-left: 0;
+  }
+}
+
+.show-tickets {
+  margin-top: $gutter-lrg;
+  border-top: dashed thin $grey-mid;
+  padding-top: $gutter-lrg;   
+  @extend .cf;
+}
+
+.show-tickets__details {
+  float: left;    
+  width: 30%;
+  padding: $gutter-med $gutter-lrg 0 0;
+  h2 {
+    @extend .header--black-block;
+    @extend .font-size-header;
+  }
+  @include breakpoint(mob){
+    float: none;
+    width: 100%;
+  }
+}
+
+.show-tickets__ticketscript {
+  padding: $gutter-med 0;
+  float: left; 
+  background: $white;
+  text-align: center;
+  width: 70%;
+  @include breakpoint(mob){
+    float: none;
+    width: 100%;
+  }
+}
+
+.photo-grid--show {
+  background-color: $white;
+  padding: 9px;
+  
+  #tnt_pagination {
+    display: none;
+  } 
+
+  .imgbox {
+    border-radius: 0;
+    box-shadow: none;
+  }
+  .imgboxblack {
+    @extend .imgbox;
+  }
+  .imgboxwhite {
+    @extend .imgbox;
+  }
+
+  .imgboxouter {
+    margin: 4px;
+  }
+}

@@ -1,0 +1,38 @@
+/*------------------------------------*\
+    MODULE/JOBS.SCSS
+\*------------------------------------*/
+
+.jobs-page__header {
+  @extend .header--black-block;
+}
+
+.jobs-page__intro {
+  margin-bottom: $gutter-lrg;
+} 
+
+.jobs-list {
+  @extend .content-outside-columns;
+}
+
+.jobs__rate, .jobs__dates {
+  text-transform: uppercase;
+  color: $grey;
+  @extend .header--black-block;
+  @extend .font-size-p;
+}
+
+.jobs__application-deadline {
+  font-style: italic;
+  margin: 0 0 $gutter-med 0;
+  padding: 0;
+}
+
+.jobs__description {
+  margin: 0;
+  padding: 0;
+}
+
+.jobs-list__single {
+  border-bottom: dotted thin $grey;
+  margin-bottom: $gutter-lrg*2;
+}

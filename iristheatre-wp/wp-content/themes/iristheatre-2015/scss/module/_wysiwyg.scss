@@ -1,0 +1,8 @@
+/*------------------------------------*\
+    MODULE/WYSIWYG.SCSS
+\*------------------------------------*/
+
+.wysiwyg-content {
+  @extend .content-outside-columns;
+  @extend .copy;
+}

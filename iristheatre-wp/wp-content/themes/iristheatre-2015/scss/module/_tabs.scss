@@ -1,0 +1,68 @@
+/*------------------------------------*\
+  MODULE/TABS.SCSS
+\*------------------------------------*/
+
+/* Tab styling from refills.bourbon.io */
+
+.tabs {
+  $tab-border-color: $grey-mid;
+  $tab-border: 1px solid $grey-mid;
+  $tab-content-background: $white;
+  $tab-active-background: $white;
+  // $tab-inactive-color: $gradient-greys;
+  // $tab-inactive-hover-color: $gradient-greys-dark;
+
+  @extend .cf;
+  margin-bottom: $gutter-med;
+
+  li.tab-header-and-content {
+      display: inline;
+  }
+
+  a.tab-link {
+    // background-color: $tab-inactive-color;
+    // @extend .gradient-greys;
+    border-top: $tab-border;
+    color: $black-body;
+    display: block;
+    font-weight: 400;
+    padding: $gutter-sml $gutter-med;
+
+    display: inline-block;
+    border: 1px solid $white;
+    border-bottom: none;
+
+
+    &:hover {
+      // color: $base-link-color;
+      // @extend .gradient-greys-dark;
+      color: $grey-light;
+      text-decoration: none;
+    }
+
+    &:focus {
+      outline: none;
+      text-decoration: none;
+    }
+
+    &.is-active {
+      border-bottom: 0;
+      text-decoration: none;
+
+      border: $tab-border;
+      border-bottom-color: $tab-active-background;
+      margin-bottom: -1px;
+      background-image: none;
+      background-color: $white;
+    }
+  }
+
+  .tab-content {display: none;
+    // padding: $base-spacing $gutter;
+    padding: $gutter-sml $gutter-med;
+
+    border-top: $tab-border;
+    float: left;
+  }
+
+}
